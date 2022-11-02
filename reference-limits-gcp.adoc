@@ -1,0 +1,235 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-gcp.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM 
+summary: Cloud Volumes ONTAP présente des limites de configuration du stockage dans Google Cloud pour assurer la fiabilité des opérations. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales. 
+---
+= Limites de stockage dans Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP présente des limites de configuration du stockage pour assurer des opérations fiables. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales.
+
+
+
+== Capacité système maximale par licence
+
+La capacité système maximale d'un système Cloud Volumes ONTAP est déterminée par sa licence. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données.
+
+NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
+
+Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus de détails, reportez-vous aux limites de disques ci-dessous.
+
+[cols="25,75"]
+|===
+| Licence | Capacité système maximale (disques + stockage objet) 
+
+
+| Fréemium | 500 GO 
+
+
+| PAYGO Explore | 2 To (le Tiering des données n'est pas pris en charge par Explore) 
+
+
+| PAIEMENT À L'UTILISATION Standard | 10 TO 
+
+
+| PAIEMENT À L'UTILISATION Premium | 368 TO 
+
+
+| Licence basée sur les nœuds | 368 To par licence 
+
+
+| Licence basée sur la capacité | 2 Pio 
+|===
+La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité maximale de 368 To entre les deux nœuds.
+
+Non, ce n'est pas le cas. Les données d'une paire HA sont mises en miroir de manière synchrone entre les nœuds, de sorte que les données soient disponibles en cas de défaillance dans Google Cloud. Par exemple, si vous achetez un disque de 8 To sur le nœud A, BlueXP alloue également un disque de 8 To sur le nœud B utilisé pour les données en miroir. Bien que 16 To de capacité aient été provisionnés, seulement 8 To comptent par rapport à la limite de licence.
+
+
+
+== Restrictions agrégées
+
+Cloud Volumes ONTAP regroupe les disques Google Cloud Platform dans des _aggrégats_. Les agrégats fournissent du stockage aux volumes.
+
+[cols="2*"]
+|===
+| Paramètre | Limite 
+
+
+| Nombre maximal d'agrégats de données ^1^  a| 
+* 99 pour un seul nœud
+* 64 pour l'ensemble d'une paire haute disponibilité
+
+
+
+
+| Taille maximale des agrégats | 256 To de capacité brute ^2^ 
+
+
+| Disques par agrégat | 1-6 ^3^ 
+
+
+| Nombre maximal de groupes RAID par agrégat | 1 
+|===
+Remarques :
+
+. Le nombre maximal d'agrégats de données n'inclut pas l'agrégat racine.
+. La limite de capacité de l'agrégat dépend des disques qui composent l'agrégat. La limite n'inclut pas le stockage objet utilisé pour le Tiering des données.
+. Tous les disques qui composent un agrégat doivent être de la même taille.
+
+
+
+
+== Limites de disque et de hiérarchisation
+
+Le tableau ci-dessous présente la capacité maximale du système avec des disques seuls et des disques avec Tiering des données inactives vers le stockage objet. Les limites de disque sont spécifiques aux disques qui contiennent des données utilisateur. Les limites n'incluent pas le disque de démarrage, le disque racine ou la NVRAM.
+
+[cols="60,40"]
+|===
+| Paramètre | Limite 
+
+
+| Nombre maximal de disques de données  a| 
+* 124 pour les systèmes à un seul nœud
+* 123 par nœud pour les paires haute disponibilité
+
+
+
+
+| Taille maximale des disques | 64 TO 
+
+
+| Capacité système maximale avec disques seuls | 256 TO ^1^ 
+
+
+| Capacité système maximale avec disques et Tiering des données inactives vers un compartiment Google Cloud Storage | Dépend de la licence. Reportez-vous aux limites de capacité maximum du système ci-dessus. 
+|===
+^1^ cette limite est définie par les limites des machines virtuelles dans Google Cloud Platform.
+
+
+
+== Limites des machines virtuelles de stockage
+
+Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
+
+Ce sont les limites testées. Bien qu'il soit théoriquement possible de configurer des machines virtuelles de stockage supplémentaires, elles ne sont pas prises en charge.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
+
+[cols="2*"]
+|===
+| Type de licence | Limite des machines virtuelles de stockage 
+
+
+| *Freemium*  a| 
+24 machines virtuelles de stockage total ^1^
+
+
+
+| *PayGO basé sur la capacité ou BYOL* ^2^  a| 
+24 machines virtuelles de stockage total ^1^
+
+
+
+| *BYOL sur nœud* ^3^  a| 
+24 machines virtuelles de stockage total ^1^
+
+
+
+| *Facturation basée sur un nœud*  a| 
+* 1 VM de stockage pour l'accès aux données
+* 1 VM de stockage pour la reprise après incident
+
+
+|===
+. Ces 24 machines virtuelles de stockage peuvent servir de données ou être configurées pour la reprise après incident.
+. Pour les licences basées sur la capacité, aucun coût de licence supplémentaire n'est requis pour les machines virtuelles de stockage supplémentaires, mais une charge de capacité minimale de 4 Tio par machine virtuelle de stockage. Par exemple, si vous créez deux machines virtuelles de stockage et que chacune possède une capacité provisionnée de 2 To, vous serez facturé au total de 8 Tio.
+. Le modèle BYOL basé sur les nœuds requiert une licence d'extension pour chaque machine virtuelle de stockage _service_ de _données au-delà de la première machine virtuelle de stockage fournie par défaut avec Cloud Volumes ONTAP. Contactez l'équipe en charge de votre compte pour obtenir une licence d'extension de machine virtuelle de stockage.
++
+Les machines virtuelles de stockage que vous configurez pour la reprise après incident ne nécessitent pas de licence supplémentaire (elles sont gratuites), mais elles ne tiennent pas compte de la limite des machines virtuelles de stockage. Par exemple, si vous disposez de 12 machines virtuelles de stockage servant les données et de 12 machines virtuelles de stockage configurées pour la reprise sur incident, vous avez atteint ces limites et ne pouvez pas créer de machines virtuelles de stockage supplémentaires.
+
+
+
+
+
+== Limites de stockage logique
+
+[cols="22,22,56"]
+|===
+| Stockage logique | Paramètre | Limite 
+
+
+.2+| *Fichiers* | Taille maximale | 16 TO 
+
+
+| Maximum par volume | Selon la taille du volume, jusqu'à 2 milliards 
+
+
+| *Volumes FlexClone* | Profondeur de clone hiérarchique ^12^ | 499 
+
+
+.3+| *Volumes FlexVol* | Maximale par nœud | 500 
+
+
+| Taille minimale | 20 MO 
+
+
+| Taille maximale | 100 TO 
+
+
+| *Qtrees* | Maximum par volume FlexVol | 4,995 
+
+
+| *Copies snapshot* | Maximum par volume FlexVol | 1,023 
+|===
+. La profondeur de clone hiérarchique correspond à la profondeur maximale d'une hiérarchie imbriquée de volumes FlexClone qui peut être créée à partir d'un seul volume FlexVol.
+
+
+
+
+== Limites de stockage iSCSI
+
+[cols="3*"]
+|===
+| Stockage iSCSI | Paramètre | Limite 
+
+
+.4+| *LUN* | Maximale par nœud | 1,024 
+
+
+| Nombre maximal de mappages de LUN | 1,024 
+
+
+| Taille maximale | 16 TO 
+
+
+| Maximum par volume | 512 
+
+
+| *igroups* | Maximale par nœud | 256 
+
+
+.2+| *Initiateurs* | Maximale par nœud | 512 
+
+
+| Maximum par groupe initiateur | 128 
+
+
+| *Sessions iSCSI* | Maximale par nœud | 1,024 
+
+
+.2+| *Lifs* | Maximum par port | 1 
+
+
+| Maximum par ensemble de ports | 32 
+
+
+| *Porsets* | Maximale par nœud | 256 
+|===

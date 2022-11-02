@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept-licensing.html 
+keywords: freemium, professional, essential, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go 
+summary: 'Plusieurs options de licence sont disponibles pour Cloud Volumes ONTAP. Chacune d"elles vous permet de choisir une configuration qui répond à vos besoins.' 
+---
+= Licences pour Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP propose différentes options de licence qui vous permettent de choisir le modèle de consommation le mieux adapté à vos besoins.
+
+Des options de licence sont disponibles pour les nouveaux clients :
+
+Packs de licences basés sur la capacité:: La licence basée sur la capacité vous permet de payer pour le Cloud Volumes ONTAP par Tio de capacité. La licence est associée à votre compte NetApp et vous permet de facturer plusieurs systèmes par rapport à la licence, tant que la capacité disponible par le biais de la licence est suffisante.
++
+--
+Une licence basée sur la capacité est disponible sous la forme d'un _package_. Lorsque vous déployez un système Cloud Volumes ONTAP, vous avez le choix entre plusieurs packages de licences en fonction des besoins de votre entreprise.
+
+--
+Abonnement Keystone Flex:: Service basé sur un abonnement avec paiement à l'utilisation qui offre une expérience de cloud hybride transparente, pour les modèles de consommation OpEx, qui préfèrent les CapEx ou les crédits sur investissement en amont.
++
+--
+Le chargement est basé sur la taille de la capacité engagée pour une ou plusieurs paires haute disponibilité Cloud Volumes ONTAP dans votre abonnement Keystone Flex.
+
+--
+
+
+Le modèle de licence par nœud précédent reste disponible pour les clients qui ont déjà acheté une licence ou qui disposent d'un abonnement actif sur le marché.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["En savoir plus sur ces options de licence"^]

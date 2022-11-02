@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-azure.html 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3 
+summary: Ces limitations connues sont spécifiques à Cloud Volumes ONTAP dans Microsoft Azure. 
+---
+= Restrictions connues dans Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans Microsoft Azure. N'oubliez pas de consulter également link:reference-limitations.html["Restrictions liées à Cloud Volumes ONTAP dans tous les fournisseurs de cloud"].
+
+
+
+== Limites de Flash cache
+
+Le type de machine virtuelle Standard_L8S_v2 inclut le stockage NVMe local, utilisé par Cloud Volumes ONTAP comme _Flash cache_. Notez les limitations suivantes pour Flash cache :
+
+* La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache.
++
+Vous pouvez choisir l'absence d'efficacité du stockage lors de la création d'un volume depuis BlueXP, ou vous pouvez créer un volume puis http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Désactiver la compression des données à l'aide de l'interface de ligne de commande"^].
+
+* La réactivation du cache après un redémarrage n'est pas prise en charge avec Cloud Volumes ONTAP.
+
+
+
+
+== Limitations de LA HAUTE DISPONIBILITÉ
+
+Les paires HAUTE DISPONIBILITÉ ne sont pas prises en charge dans certaines régions.
+
+https://cloud.netapp.com/cloud-volumes-global-regions["Affichez la liste des régions Azure prises en charge"^].
+
+
+
+== Le paiement à l'utilisation n'est pas disponible pour les partenaires de FST
+
+Si vous êtes un partenaire de fournisseur de solutions cloud Microsoft, vous ne pouvez pas déployer Cloud Volumes ONTAP Explore, Standard ou Premium car les abonnements avec paiement à l'utilisation ne sont pas disponibles pour les partenaires d'un FST. Vous devez acheter une licence et déployer Cloud Volumes ONTAP BYOL.

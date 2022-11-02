@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm 
+summary: Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites. 
+---
+= Restrictions applicables dans tous les fournisseurs de cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites.
+
+Cloud Volumes ONTAP s'applique à tous les fournisseurs cloud : AWS, Azure et Google Cloud.
+
+
+
+== Nombre maximal d'opérations de réplication simultanées
+
+Le nombre maximal de transferts SnapMirror ou SnapVault simultanés pour Cloud Volumes ONTAP est de 100 par nœud, indépendamment du type d'instance ou du type d'ordinateur.
+
+
+
+== Les snapshots des fournisseurs cloud ne doivent pas être utilisés dans vos plans de sauvegarde et de restauration
+
+Vous ne devez pas utiliser les copies Snapshot de votre fournisseur cloud dans le cadre de votre plan de sauvegarde et de restauration des données Cloud Volumes ONTAP. Utilisez toujours des copies Snapshot ONTAP ou des solutions de sauvegarde tierces pour sauvegarder et restaurer les données hébergées sur Cloud Volumes ONTAP.
+
+https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["Découvrez comment utiliser Cloud Backup Service pour sauvegarder et restaurer des données ONTAP"^].
+
+
+NOTE: Les points de cohérence ONTAP dans le système de fichiers WAFL déterminent la cohérence des données. Seul ONTAP peut suspendre le système de fichiers WAFL pour assurer une sauvegarde cohérente après panne.
+
+
+
+== Soutien dans les régions chinoises
+
+Cloud Volumes ONTAP est pris en charge dans les régions chinoises comme suit.
+
+* Cloud Volumes ONTAP 9.6 est pris en charge dans les régions AWS Chine.
+* Les systèmes à un seul nœud sont pris en charge.
+* Les licences achetées directement auprès de NetApp sont prises en charge.
+
+
+Tous les autres emplacements, versions, configurations et licences ne sont pas pris en charge.
+
+
+
+== Cloud Volumes ONTAP prend en charge les instances de machine virtuelle réservées et à la demande
+
+Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les autres types d'instances de VM ne sont pas pris en charge.
+
+
+
+== Les solutions automatiques de gestion des ressources applicatives ne doivent pas être utilisées
+
+Les solutions automatiques de gestion des ressources applicatives ne doivent pas gérer les systèmes Cloud Volumes ONTAP. Cela peut entraîner une modification de la configuration non prise en charge. Par exemple, la solution peut remplacer Cloud Volumes ONTAP par un type d'instance de machine virtuelle non pris en charge.
+
+
+
+== Les mises à jour logicielles doivent être effectuées par BlueXP
+
+Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées depuis BlueXP. Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l'aide de System Manager ou de l'interface de ligne de commandes. Cela peut affecter la stabilité du système.
+
+
+
+== Le déploiement Cloud Volumes ONTAP ne doit pas être modifié depuis la console de votre fournisseur cloud
+
+Toute modification apportée à une configuration Cloud Volumes ONTAP depuis la console de votre fournisseur cloud entraîne la prise en charge d'une configuration non prise en charge. Toute modification des ressources Cloud Volumes ONTAP que BlueXP crée et gère peut avoir un impact sur la stabilité du système et la capacité de BlueXP à gérer le système.
+
+
+
+== Les disques et les agrégats doivent être gérés depuis BlueXP
+
+Tous les disques et agrégats doivent être créés et supprimés directement depuis BlueXP. Vous ne devez pas effectuer ces actions à partir d'un autre outil de gestion. Cela peut avoir un impact sur la stabilité du système, entraver la possibilité d'ajouter des disques à l'avenir et générer potentiellement des frais de fournisseur de cloud redondant.
+
+
+
+== Limitation des licences SnapManager
+
+Les licences SnapManager par serveur sont prises en charge par Cloud Volumes ONTAP. Les licences par système de stockage (suite SnapManager) ne sont pas prises en charge.
+
+
+
+== Fonctions ONTAP non prises en charge
+
+Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ONTAP :
+
+* Déduplication à la volée au niveau des agrégats
+* La déduplication en arrière-plan au niveau de l'agrégat
+* Protection contre les ransomwares
+* Centre de maintenance du disque
+* Nettoyage de disque
+* Mise en miroir FabricPool
+* Fibre Channel (FC)
+* Pools Flash
+* Infinite volumes
+* Groupes d'interface
+* Le basculement LIF monomode d'un cluster
+* MetroCluster
+* Vérification multi-administrateurs
++
+L'activation de la vérification multi-administration sur Cloud Volumes ONTAP entraîne une configuration non prise en charge.
+
+* ONTAP S3 dans Google Cloud (le protocole S3 est pris en charge dans Azure et AWS)
+* RAID4, RAID-DP, RAID-TEC (RAID0 PRIS EN CHARGE)
+* Le processeur de service
+* Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)
+* SnapMirror synchrone
+* VLAN
+

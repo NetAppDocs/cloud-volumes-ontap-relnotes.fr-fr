@@ -1,0 +1,131 @@
+---
+settings:
+  name: Cloud Volumes ONTAP 9.11.1 release notes
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  versions:
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-relnotes"
+    version-number: 9.11.1
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-9110-relnotes"
+    version-number: 9.11.0
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-9101-relnotes"
+    version-number: 9.10.1
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-9100-relnotes"
+    version-number: 9.10.0
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-991-relnotes"
+    version-number: 9.9.1
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-990-relnotes"
+    version-number: 9.9.0
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-98-relnotes"
+    version-number: '9.8'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-97-relnotes"
+    version-number: '9.7'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-96-relnotes"
+    version-number: '9.6'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-95-relnotes"
+    version-number: '9.5'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-94-relnotes"
+    version-number: '9.4'
+  - name: Cloud ONTAP
+    url: "/cloud-volumes-ontap-93-relnotes"
+    version-number: '9.3'
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: Accueil des notes de mise à jour
+    url: "/index.html"
+  - title: Quoi de neuf
+    url: "/reference-new.html"
+  - title: Présentation des licences
+    url: "/concept-licensing.html"
+  - title: Configurations compatibles
+    entries:
+    - title: AWS
+      url: "/reference-configs-aws.html"
+    - title: Azure
+      url: "/reference-configs-azure.html"
+    - title: Google Cloud
+      url: "/reference-configs-gcp.html"
+  - title: Limites de stockage
+    entries:
+    - title: AWS
+      url: "/reference-limits-aws.html"
+    - title: Azure
+      url: "/reference-limits-azure.html"
+    - title: Google Cloud
+      url: "/reference-limits-gcp.html"
+  - title: Problèmes connus
+    url: "/reference-issues.html"
+  - title: Limites connues
+    entries:
+    - title: Limitations communes
+      url: "/reference-limitations.html"
+    - title: Restrictions dans AWS
+      url: "/reference-limitations-aws.html"
+    - title: Restrictions dans Azure
+      url: "/reference-limitations-azure.html"
+    - title: Restrictions dans Google Cloud
+      url: "/reference-limitations-gcp.html"
+  - title: Les intégrations avec les fournisseurs cloud
+    url: "/reference-provider-integrations.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Commencez
+    links:
+    - title: Quoi de neuf
+      url: reference-new.html
+    - title: Présentation des licences
+      url: concept-licensing.html
+  - title: Amazon Web Services
+    links:
+    - title: Configurations compatibles
+      url: reference-configs-aws.html
+    - title: Limites de stockage
+      url: reference-limits-aws.html
+    - title: Limites
+      url: reference-limitations-aws.html
+  - title: Google Cloud
+    links:
+    - title: Configurations compatibles
+      url: reference-configs-gcp.html
+    - title: Limites de stockage
+      url: reference-limits-gcp.html
+    - title: Limites
+      url: reference-limitations-gcp.html
+  - title: Microsoft Azure
+    links:
+    - title: Configurations compatibles
+      url: reference-configs-azure.html
+    - title: Limites de stockage
+      url: reference-limits-azure.html
+    - title: Limites
+      url: reference-limitations-azure.html
+  - title: Communauté sur les blogs
+    links:
+    - title: Communauté NetApp
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Blog BlueXP
+      url: https://cloud.netapp.com/blog
+    - title: Webinaires sur le cloud
+      url: https://cloud.netapp.com/events
+product-family:
+  name: BlueXP
+  repo: cloud-manager-family
+  sidebar_label: Toute la documentation BlueXP

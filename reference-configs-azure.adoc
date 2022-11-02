@@ -1,0 +1,279 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-azure.html 
+keywords: vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, disks, sizes 
+summary: Azure prend en charge plusieurs configurations Cloud Volumes ONTAP. 
+---
+= Configurations prises en charge dans Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Azure prend en charge plusieurs configurations Cloud Volumes ONTAP.
+
+
+
+== Configurations prises en charge par licence
+
+Cloud Volumes ONTAP est disponible dans Azure en tant que système à un seul nœud et en tant que paire de nœuds haute disponibilité pour la tolérance aux pannes et la continuité de l'activité.
+
+La mise à niveau d'un système à un seul nœud vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à un seul nœud à une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau.
+
+
+
+=== Systèmes à un seul nœud
+
+Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœud dans Azure, vous pouvez choisir l'une des configurations suivantes :
+
+[cols="h,d,d,d,d,d,d"]
+|===
+|  | Fréemium | PAYGO Explore | PAIEMENT À L'UTILISATION Standard | PAIEMENT À L'UTILISATION Premium | BYOL basé sur les nœuds | Licence basée sur la capacité 
+
+
+| Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Tio ^1^ | 10 To | 368 To | 368 Tio par licence | 2 Pio 
+
+
+| Types de machines virtuelles pris en charge  a| 
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* L8S_v2 ^2^
+* E4S_v3
+* E8s_v3
+* E32S_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E4ds_v4 ^3^
+* E8ds_v4 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+ a| 
+* E4S_v3
+* E4ds_v4 ^3^
+
+ a| 
+* DS4_v2
+* DS13_v2
+* E8s_v3
+* E8ds_v4 ^3^
+
+ a| 
+* DS5_v2
+* DS14_v2
+* DS15_v2
+* E32S_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+ a| 
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* L8S_v2 ^2^
+* E4S_v3
+* E8s_v3
+* E32S_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E4ds_v4 ^3^
+* E8ds_v4 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+ a| 
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* L8S_v2 ^2^
+* E4S_v3
+* E8s_v3
+* E32S_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E4ds_v4 ^3^
+* E8ds_v4 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+
+
+
+| Types de disque pris en charge ^4^ 6+| Disques gérés HDD standard, disques gérés SSD standard et disques gérés SSD premium 
+|===
+Remarques :
+
+. Le Tiering des données vers le stockage Azure Blob n'est pas pris en charge avec PAYGO Explore.
+. Ce type de serveur virtuel inclut le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Il est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus >>"^].
+. Ces types de VM utilisent un https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["SSD Ultra"^] Pour VNVRAM, ce qui offre de meilleures performances d'écriture.
++
+Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas passer à un autre type de VM qui _n'utilise pas_ un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8ds_v4 à E8s_v3, mais vous pouvez passer de E8ds_v4 à E32ds_v4 car ces deux types de VM utilisent des SSD Ultra.
+
++
+Inversement, si vous avez déployé Cloud Volumes ONTAP à l'aide d'un autre type de VM, vous ne pourrez pas passer à un type de VM utilisant un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8s_v3 à E8ds_v4.
+
+. Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances. Vous pouvez activer la vitesse d'écriture élevée depuis BlueXP pendant le déploiement ou à tout moment après. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^].
+. Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
+. Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+. Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
+
+
+
+
+=== Paires HA
+
+Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vous pouvez choisir l'une des configurations suivantes.
+
+[cols="h,d,d,d,d,d"]
+|===
+|  | Fréemium | PAIEMENT À L'UTILISATION Standard | PAIEMENT À L'UTILISATION Premium | BYOL basé sur les nœuds | Licence basée sur la capacité 
+
+
+| Capacité système maximale (disques + stockage objet) | 500 Gio | 10 To | 368 To | 368 Tio par licence | 2 Pio 
+
+
+| Types de machines virtuelles pris en charge  a| 
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
+
+ a| 
+* DS4_v2
+* DS13_v2
+* E8ds_v4 ^1^
+
+ a| 
+* DS5_v2 ^1^
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
+
+ a| 
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
+
+ a| 
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
+
+
+
+
+| Types de disques pris en charge 5+| Blobs de page Premium 
+|===
+Remarques :
+
+. Avec Cloud Volumes ONTAP, la vitesse d'écriture est élevée pour ces types de VM lors de l'utilisation d'une paire haute disponibilité. Vous pouvez activer la vitesse d'écriture élevée depuis BlueXP pendant le déploiement ou à tout moment après. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^].
+. Cette machine virtuelle est recommandée uniquement lorsque le contrôle de maintenance Azure est nécessaire. Cette utilisation n'est pas recommandée pour les autres cas d'utilisation en raison des tarifs plus élevés.
+. PAYGO Explore n'est pas pris en charge avec les paires haute disponibilité dans Azure.
+. Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+. Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
+
+
+
+
+== Tailles de disque prises en charge
+
+Dans Azure, un agrégat peut contenir jusqu'à 12 disques de même type et de même taille.
+
+
+
+=== Systèmes à un seul nœud
+
+Les systèmes à un seul nœud utilisent des disques gérés Azure. Les tailles de disque suivantes sont prises en charge :
+
+[cols="3*"]
+|===
+| SSD premium | SSD standard | Disque dur standard 
+
+
+ a| 
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 8 To
+* 16 To
+* 32 To
+
+ a| 
+* 100 Gio
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 8 To
+* 16 To
+* 32 To
+
+ a| 
+* 100 Gio
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 8 To
+* 16 To
+* 32 To
+
+
+|===
+
+
+=== Paires HA
+
+Les paires HAUTE DISPONIBILITÉ utilisent des objets blob de pages Premium. Les tailles de disque suivantes sont prises en charge :
+
+* 500 Gio
+* 1 To
+* 2 To
+* 4 To
+* 8 To
+

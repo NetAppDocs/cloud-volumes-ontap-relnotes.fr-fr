@@ -1,0 +1,459 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-aws.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs 
+summary: Cloud Volumes ONTAP présente des limites de configuration de stockage dans AWS pour assurer la fiabilité des opérations. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales. 
+---
+= Limites de stockage dans AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP présente des limites de configuration du stockage pour assurer des opérations fiables. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales.
+
+
+
+== Capacité système maximale par licence
+
+La capacité système maximale d'un système Cloud Volumes ONTAP est déterminée par sa licence. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données.
+
+NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
+
+Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Reportez-vous aux limites de capacité et de disques ci-dessous pour plus de détails.
+
+[cols="25,75"]
+|===
+| Licence | Capacité système maximale (disques + stockage objet) 
+
+
+| Fréemium | 500 Gio 
+
+
+| PAYGO Explore | 2 Tio (le Tiering des données n'est pas pris en charge sur Explore) 
+
+
+| PAIEMENT À L'UTILISATION Standard | 10 To 
+
+
+| PAIEMENT À L'UTILISATION Premium | 368 To 
+
+
+| Licence basée sur les nœuds | 368 Tio par licence 
+
+
+| Licence basée sur la capacité | 2 Pio 
+|===
+La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité pouvant atteindre 368 Tio entre les deux nœuds.
+
+Non, ce n'est pas le cas. Les données d'une paire HA AWS sont mises en miroir de manière synchrone entre les nœuds, de sorte que les données soient disponibles en cas de panne. Par exemple, si vous achetez un disque de 8 Tio sur le nœud A, BlueXP alloue également un disque de 8 Tio sur le nœud B utilisé pour les données en miroir. Tandis que la capacité de 16 Tio a été provisionnée, seuls 8 Tio compte par rapport à la limite de licence.
+
+
+
+== Restrictions agrégées
+
+Cloud Volumes ONTAP utilise les volumes EBS comme disques et les regroupe dans _aggrégats_. Les agrégats fournissent du stockage aux volumes.
+
+[cols="2*"]
+|===
+| Paramètre | Limite 
+
+
+| Nombre maximal d'agrégats | Un seul nœud : identique à la paire haute disponibilité de limite de disque : 18 dans un nœud ^1^ 
+
+
+| Taille maximale de l'agrégat ^2^  a| 
+* 96 Tio de capacité brute
+* 128 Tio de capacité brute avec des volumes élastiques ^3^
+
+
+
+
+| Disques par agrégat ^4^  a| 
+* 1-6
+* 1-8 avec des volumes élastiques ^3^
+
+
+
+
+| Nombre maximal de groupes RAID par agrégat | 1 
+|===
+Remarques :
+
+. Il n'est pas possible de créer 18 agrégats sur les deux nœuds d'une paire haute disponibilité, car cela dépasserait la limite sur le disque de données.
+. La taille maximale de l'agrégat dépend des disques qui composent l'agrégat. La limite n'inclut pas le stockage objet utilisé pour le Tiering des données.
+. Si vous disposez d'une configuration prenant en charge la fonctionnalité Amazon EBS Elastic volumes, un agrégat peut contenir jusqu'à 8 disques, ce qui assure une capacité de 128 Tio. La fonctionnalité Amazon EBS Elastic volumes est activée par défaut sur les systèmes _New_ Cloud Volumes ONTAP 9.11.0 ou versions ultérieures lors de l'utilisation de disques gp3 ou io1. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["En savoir plus sur la prise en charge d'Elastic volumes"^]
+. Tous les disques qui composent un agrégat doivent être de la même taille.
+
+
+
+
+== Limites de disque et de Tiering par instance EC2
+
+Les limites de capacité varient en fonction de la famille de types d'instances EC2 que vous utilisez et si vous utilisez un système à un seul nœud ou une paire haute disponibilité.
+
+Les remarques suivantes fournissent des détails sur les numéros que vous verrez dans les tableaux ci-dessous :
+
+* Les limites de disque sont spécifiques aux disques qui contiennent des données utilisateur.
++
+Les limites n'incluent pas le disque d'amorçage et le disque racine.
+
+* Une capacité système maximale est indiquée lors de l'utilisation de disques seuls et lors de l'utilisation de disques et du Tiering des données inactives vers le stockage objet.
+* Cloud Volumes ONTAP utilise les volumes EBS comme disques, avec une taille de disque maximale de 16 Tio.
+
+
+
+
+=== Des limites en matière de licences basées sur la capacité
+
+Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^]
+
+
+
+==== Un seul nœud
+
+[cols="18,18,32,32"]
+|===
+| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+
+
+| instances c5, m5 et r5 | 21 | 336 To | 2 Pio 
+
+
+| m5dn.24xlarge | 19 ^1^ | 304 To | 2 Pio 
+|===
+. Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
+
+
+
+
+==== Paires HA
+
+[cols="18,18,32,32"]
+|===
+| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+
+
+| instances c5, m5 et r5 | 18 | 288 To | 2 Pio 
+
+
+| m5dn.24xlarge | 16 ^1^ | 256 To | 2 Pio 
+|===
+. Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
+
+
+
+
+=== Limites des licences basées sur des nœuds
+
+Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent une licence basée sur les nœuds. Il s'agit du modèle de licence de génération précédente qui permet d'obtenir une licence Cloud Volumes ONTAP par nœud. Une licence basée sur les nœuds est toujours disponible pour les clients existants.
+
+* Si vous utilisez une licence basée sur les nœuds, vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL pour allouer plus de 368 Tio de capacité.
++
+Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^].
+
+
+
+
+
+==== Un seul nœud avec PAYGO Premium
+
+[cols="18,18,32,32"]
+|===
+| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+
+
+| instances c5, m5 et r5 | 21 ^1^ | 336 To | 368 To 
+
+
+| m5dn.24xlarge | 19 ^2^ | 304 To | 368 To 
+|===
+. La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 21 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 22 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
+. Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
+
+
+
+
+==== Un seul nœud avec BYOL
+
+[cols="18,18,16,16,16,16"]
+|===
+| Fréquence | Nombre maximal de disques par nœud 2+| Capacité système max. Avec une licence 2+| Capacité système max. Avec plusieurs licences 
+
+
+2+|  | *Disques seuls* | *Disques + hiérarchisation des données* | *Disques seuls* | *Disques + hiérarchisation des données* 
+
+
+| instances c5, m5 et r5 | 21 ^1^ | 336 To | 368 To | 336 To | 368 Tio x chaque licence 
+
+
+| m5dn.24xlarge | 19 ^2^ | 304 To | 368 To | 304 To | 368 Tio x chaque licence 
+|===
+. La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 21 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 22 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
+. Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
+
+
+
+
+==== Paires HAUTE DISPONIBILITÉ avec PAYGO Premium
+
+[cols="18,18,32,32"]
+|===
+| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+
+
+| instances c5, m5 et r5 | 18 ^1^ | 288 To | 368 To 
+
+
+| m5dn.24xlarge | 16 ^2^ | 256 To | 368 To 
+|===
+. La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 18 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 19 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
+. Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
+
+
+
+
+==== Paires HAUTE DISPONIBILITÉ avec BYOL
+
+[cols="18,18,16,16,16,16"]
+|===
+| Fréquence | Nombre maximal de disques par nœud 2+| Capacité système max. Avec une licence 2+| Capacité système max. Avec plusieurs licences 
+
+
+2+|  | *Disques seuls* | *Disques + hiérarchisation des données* | *Disques seuls* | *Disques + hiérarchisation des données* 
+
+
+| instances c5, m5 et r5 | 18 ^1^ | 288 To | 368 To | 288 To | 368 Tio x chaque licence 
+
+
+| m5dn.24xlarge | 16 ^2^ | 256 To | 368 To | 256 To | 368 Tio x chaque licence 
+|===
+. La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 18 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 19 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
+. Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
+
+
+
+
+== Limites des machines virtuelles de stockage
+
+Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
+
+[cols="40,60"]
+|===
+| Type de licence | Limite des machines virtuelles de stockage 
+
+
+| *Freemium*  a| 
+24 machines virtuelles de stockage total ^1,2^
+
+
+
+| *PayGO basé sur la capacité ou BYOL* ^3^  a| 
+24 machines virtuelles de stockage total ^1,2^
+
+
+
+| *Facturation basée sur un nœud*  a| 
+* 1 VM de stockage pour l'accès aux données
+* 1 VM de stockage pour la reprise après incident
+
+
+
+
+| *BYOL sur nœud* ^4^  a| 
+* 24 machines virtuelles de stockage total ^1,2^
+
+
+|===
+. La limite peut être inférieure, selon le type d'instance EC2 que vous utilisez. Les limites par instance sont répertoriées dans la section ci-dessous.
+. Ces 24 machines virtuelles de stockage peuvent servir de données ou être configurées pour la reprise après incident.
+. Pour les licences basées sur la capacité, aucun coût de licence supplémentaire n'est requis pour les machines virtuelles de stockage supplémentaires, mais une charge de capacité minimale de 4 Tio par machine virtuelle de stockage. Par exemple, si vous créez deux machines virtuelles de stockage et que chacune possède une capacité provisionnée de 2 To, vous serez facturé au total de 8 Tio.
+. Le modèle BYOL basé sur les nœuds requiert une licence d'extension pour chaque machine virtuelle de stockage _service_ de _données au-delà de la première machine virtuelle de stockage fournie par défaut avec Cloud Volumes ONTAP. Contactez l'équipe en charge de votre compte pour obtenir une licence d'extension de machine virtuelle de stockage.
++
+Les machines virtuelles de stockage que vous configurez pour la reprise après incident ne nécessitent pas de licence supplémentaire (elles sont gratuites), mais elles ne tiennent pas compte de la limite des machines virtuelles de stockage. Par exemple, si vous disposez de 12 machines virtuelles de stockage servant les données et de 12 machines virtuelles de stockage configurées pour la reprise sur incident, vous avez atteint ces limites et ne pouvez pas créer de machines virtuelles de stockage supplémentaires.
+
+
+
+
+
+=== Limite de VM de stockage par type d'instance EC2
+
+Lors de la création d'un VM de stockage supplémentaire, il est nécessaire d'allouer des adresses IP privées au port e0a. Le tableau ci-dessous identifie le nombre maximal d'adresses IP privées par interface, ainsi que le nombre d'adresses IP disponibles sur le port e0a après le déploiement de Cloud Volumes ONTAP. Le nombre d'adresses IP disponibles affecte directement le nombre maximal de VM de stockage pour cette configuration.
+
+Les instances répertoriées ci-dessous concernent les familles d'instances c5, m5 et r5.
+
+[cols="6*"]
+|===
+| Configuration | Type d'instance | Nombre max. D'adresses IP privées par interface | IPS restant après le déploiement ^1^ | Max. Machines virtuelles de stockage sans LIF de gestion ^2,3^ | Max. Machines virtuelles de stockage avec une LIF de gestion ^2,3^ 
+
+
+.9+| *Nœud unique* | *.xlarge | 15 | 9 | 10 | 5 
+
+
+| *.2xlarge | 15 | 9 | 10 | 5 
+
+
+| *.4xlarge | 30 | 24 | 24 | 12 
+
+
+| *.sbice | 30 | 24 | 24 | 12 
+
+
+| *.9xlarge | 30 | 24 | 24 | 12 
+
+
+| *.12xlarge | 30 | 24 | 24 | 12 
+
+
+| *.16xlarge | 50 | 44 | 24 | 12 
+
+
+| *.18xlarge | 50 | 44 | 24 | 12 
+
+
+| *.24xlarge | 50 | 44 | 24 | 12 
+
+
+.9+| *Paire HA en AZ unique* | *.xlarge | 15 | 10 | 11 | 5 
+
+
+| *.2xlarge | 15 | 10 | 11 | 5 
+
+
+| *.4xlarge | 30 | 25 | 24 | 12 
+
+
+| *.sbice | 30 | 25 | 24 | 12 
+
+
+| *.9xlarge | 30 | 25 | 24 | 12 
+
+
+| *.12xlarge | 30 | 25 | 24 | 12 
+
+
+| *.16xlarge | 50 | 45 | 24 | 12 
+
+
+| *.18xlarge | 50 | 45 | 24 | 12 
+
+
+| *.24xlarge | 50 | 44 | 24 | 12 
+
+
+.9+| *Paire HA dans multi AZS* | *.xlarge | 15 | 12 | 13 | 13 
+
+
+| *.2xlarge | 15 | 12 | 13 | 13 
+
+
+| *.4xlarge | 30 | 27 | 24 | 24 
+
+
+| *.sbice | 30 | 27 | 24 | 24 
+
+
+| *.9xlarge | 30 | 27 | 24 | 24 
+
+
+| *.12xlarge | 30 | 27 | 24 | 24 
+
+
+| *.16xlarge | 50 | 47 | 24 | 24 
+
+
+| *.18xlarge | 50 | 47 | 24 | 24 
+
+
+| *.24xlarge | 50 | 44 | 24 | 12 
+|===
+. Ce chiffre indique le nombre d'adresses IP restantes_ privées disponibles sur le port e0a après le déploiement et la configuration de Cloud Volumes ONTAP. Par exemple, un système *.2xlarge prend en charge un maximum de 15 adresses IP par interface réseau. Lorsqu'une paire haute disponibilité est déployée dans un seul groupe de disponibilité, 5 adresses IP privées sont allouées au port e0a. Par conséquent, une paire haute disponibilité utilisant un type d'instance *.2 x grande taille dispose de 10 adresses IP privées restantes pour l'ajout de machines virtuelles de stockage supplémentaires.
+. Le nombre indiqué dans ces colonnes inclut la machine virtuelle de stockage initiale que BlueXP crée par défaut. Par exemple, si 24 est répertorié dans cette colonne, cela signifie que vous pouvez créer 23 machines virtuelles de stockage supplémentaires pour un total de 24.
+. Une LIF de gestion pour la machine virtuelle de stockage est facultative. Une LIF de gestion fournit une connexion à des outils de gestion tels que SnapCenter.
++
+Comme elle nécessite une adresse IP privée, elle limite le nombre de VM de stockage supplémentaires que vous pouvez créer. La seule exception est une paire HA dans plusieurs AZS. Dans ce cas, l'adresse IP de la LIF de gestion est une adresse _flottante_ IP qui ne compte pas sur la limite _private_ IP.
+
+
+
+
+
+== Limites au niveau des fichiers et des volumes
+
+[cols="22,22,56"]
+|===
+| Stockage logique | Paramètre | Limite 
+
+
+.2+| *Fichiers* | Taille maximale | 16 To 
+
+
+| Maximum par volume | Selon la taille du volume, jusqu'à 2 milliards 
+
+
+| *Volumes FlexClone* | Profondeur de clone hiérarchique ^1^ | 499 
+
+
+.3+| *Volumes FlexVol* | Maximale par nœud | 500 
+
+
+| Taille minimale | 20 MO 
+
+
+| Taille maximale | 100 To 
+
+
+| *Qtrees* | Maximum par volume FlexVol | 4,995 
+
+
+| *Copies snapshot* | Maximum par volume FlexVol | 1,023 
+|===
+. La profondeur de clone hiérarchique correspond à la profondeur maximale d'une hiérarchie imbriquée de volumes FlexClone qui peut être créée à partir d'un seul volume FlexVol.
+
+
+
+
+== Limites de stockage iSCSI
+
+[cols="3*"]
+|===
+| Stockage iSCSI | Paramètre | Limite 
+
+
+.4+| *LUN* | Maximale par nœud | 1,024 
+
+
+| Nombre maximal de mappages de LUN | 1,024 
+
+
+| Taille maximale | 16 To 
+
+
+| Maximum par volume | 512 
+
+
+| *igroups* | Maximale par nœud | 256 
+
+
+.2+| *Initiateurs* | Maximale par nœud | 512 
+
+
+| Maximum par groupe initiateur | 128 
+
+
+| *Sessions iSCSI* | Maximale par nœud | 1,024 
+
+
+.2+| *Lifs* | Maximum par port | 32 
+
+
+| Maximum par ensemble de ports | 32 
+
+
+| *Porsets* | Maximale par nœud | 256 
+|===
