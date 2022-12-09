@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="dd3a01ec5d4598a3233e196c00eb9493" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.11.1.</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites.</block>
   <block id="fc5c1a5c8028c4da4d0b0de1a9b1df3d" category="doc">Restrictions applicables dans tous les fournisseurs de cloud</block>
   <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">Cloud Volumes ONTAP s'applique à tous les fournisseurs cloud : AWS, Azure et Google Cloud.</block>
@@ -391,8 +390,6 @@
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">Les paires HAUTE DISPONIBILITÉ ne sont pas prises en charge dans certaines régions.</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">Affichez la liste des régions Azure prises en charge</block>
   <block id="1e6996b39daf779b565c50c8411fbc8d" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block>.</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">Le paiement à l'utilisation n'est pas disponible pour les partenaires de FST</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">Si vous êtes un partenaire de fournisseur de solutions cloud Microsoft, vous ne pouvez pas déployer Cloud Volumes ONTAP Explore, Standard ou Premium car les abonnements avec paiement à l'utilisation ne sont pas disponibles pour les partenaires d'un FST. Vous devez acheter une licence et déployer Cloud Volumes ONTAP BYOL.</block>
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP présente des limites de configuration du stockage dans Azure pour des opérations fiables. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales.</block>
   <block id="e622ddac1a96836929babb5b993749ba" category="doc">Limites de stockage dans Azure</block>
   <block id="90f7fe115847c067cf4c52892efe18db" category="paragraph">Cloud Volumes ONTAP utilise le stockage Azure comme disques et les regroupe dans des _agrégats_. Les agrégats fournissent du stockage aux volumes.</block>
@@ -600,10 +597,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Source ouverte</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.</block>
-  <block id="33dae6103de96581cabc3ad35cefb829" category="inline-link-macro">Cloud Volumes ONTAP 9.11.1 médiateur dans AWS</block>
-  <block id="e595c649a367744544e13f68f54580f9" category="list-text"><block ref="e595c649a367744544e13f68f54580f9" category="inline-link-macro-rx"></block></block>
-  <block id="b50289e78d6a423be932389cf178a958" category="inline-link-macro">Cloud Volumes ONTAP 9.11.1 médiateur dans Google Cloud</block>
-  <block id="c35639ede069036a5d63bb08043fd4f9" category="list-text"><block ref="c35639ede069036a5d63bb08043fd4f9" category="inline-link-macro-rx"></block></block>
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">Notification relative à ONTAP</block>
   <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">Accueil des notes de mise à jour</block>
@@ -637,8 +630,6 @@
   <block id="f75e792bf7a4a205f202f29d2fc54c22" category="paragraph">Cloud Volumes ONTAP 9.12.1 comprend de nouvelles améliorations.</block>
   <block id="19eac37ffdb1098ffe690004efa5c07f" category="section-title">9.12.1 RC1 (8 décembre 2022)</block>
   <block id="081d2affd8ad79dfa3ae0457893e56ac" category="paragraph">Cloud Volumes ONTAP 9.12.1 Release candidate 1 est à présent disponible dans AWS, Azure et Google Cloud. Cette version comprend de nouvelles fonctionnalités et améliorations suivantes.</block>
-  <block id="6eaf244a3a1f0dbb7200277cba925418" category="paragraph">Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir de la version 9.12.0 et de la version 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
-  <block id="85cd9c4dadede72a2eada15a80fba289" category="paragraph">Le connecteur BlueXP doit exécuter la version 3.9.23 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.</block>
   <block id="cca494b1b1d22bc8b5c8a8ecd5367bf8" category="section-title">Licence ONTAP S3 dans GCP</block>
   <block id="44f72ae2127b89a470e082ae9f772acf" category="paragraph">Une licence ONTAP S3 est désormais incluse sur les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.12.1 ou une version ultérieure dans Google Cloud Platform.</block>
   <block id="6958464059ef304c59d06fcb948ccafd" category="inline-link">Découvrez comment configurer et gérer les services de stockage objet S3 dans ONTAP</block>
@@ -694,4 +685,11 @@
   <block id="f27b112d1527e5f29f0e8f510d779a5e" category="doc">Notes de version de Cloud Volumes ONTAP 9.12.1</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">Pour un système haute disponibilité dans AWS, est-ce que les données en miroir sont prises en compte avec la limite de capacité ?</block>
   <block id="39b49fbe12f6121fd761513c05ddba97" category="paragraph">Certains types de VM incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Notez les limitations suivantes pour Flash cache :</block>
+  <block id="e096a8fca5da32609fbb1d7798b0348e" category="paragraph">Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir de la version 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
+  <block id="0612637a826e0e5aac35661a09778188" category="paragraph">Le connecteur BlueXP doit exécuter la version 3.9.24 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.</block>
+  <block id="f5aba93322e5fd0767b7e9fa839610f1" category="inline-link-macro">Cloud Volumes ONTAP 9.12.1 médiateur dans AWS</block>
+  <block id="a4a2a5bddea7236f27b0a01d377e37a6" category="list-text"><block ref="a4a2a5bddea7236f27b0a01d377e37a6" category="inline-link-macro-rx"></block></block>
+  <block id="278ce444bf386e0c416c2eb85c339022" category="inline-link-macro">Cloud Volumes ONTAP 9.12.1 médiateur dans Google Cloud</block>
+  <block id="653a50044a773ecda2e2e9ec6736699c" category="list-text"><block ref="653a50044a773ecda2e2e9ec6736699c" category="inline-link-macro-rx"></block></block>
+  <block id="16b3ee4e5301a5f3f5b55816b3906b83" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.12.1.</block>
 </blocks>

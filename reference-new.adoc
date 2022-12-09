@@ -28,13 +28,13 @@ Cloud Volumes ONTAP 9.12.1 Release candidate 1 est à présent disponible dans A
 
 === Chemin de mise à niveau pris en charge
 
-Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir de la version 9.12.0 et de la version 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
+Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir de la version 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
 
 
 
 === Version requise du connecteur
 
-Le connecteur BlueXP doit exécuter la version 3.9.23 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.
+Le connecteur BlueXP doit exécuter la version 3.9.24 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.
 
 
 TIP: Les mises à niveau automatiques du connecteur sont activées par défaut, vous devez donc exécuter la dernière version.
