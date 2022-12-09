@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations-azure.html 
-keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache 
 summary: Ces limitations connues sont spécifiques à Cloud Volumes ONTAP dans Microsoft Azure. 
 ---
 = Restrictions connues dans Azure
@@ -20,7 +20,7 @@ Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans 
 
 == Limites de Flash cache
 
-Le type de machine virtuelle Standard_L8S_v2 inclut le stockage NVMe local, utilisé par Cloud Volumes ONTAP comme _Flash cache_. Notez les limitations suivantes pour Flash cache :
+Certains types de VM incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Notez les limitations suivantes pour Flash cache :
 
 * La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache.
 +

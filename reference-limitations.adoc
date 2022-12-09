@@ -56,7 +56,7 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 
 
 
-== Les solutions automatiques de gestion des ressources applicatives ne doivent pas être utilisées
+== Les solutions de gestion automatique des ressources applicatives ne doivent pas être utilisées
 
 Les solutions automatiques de gestion des ressources applicatives ne doivent pas gérer les systèmes Cloud Volumes ONTAP. Cela peut entraîner une modification de la configuration non prise en charge. Par exemple, la solution peut remplacer Cloud Volumes ONTAP par un type d'instance de machine virtuelle non pris en charge.
 

@@ -48,8 +48,10 @@ Pour certaines configurations, les limites de disque vous empêchent d'atteindre
 
 | Licence basée sur la capacité | 2 Pio 
 |===
+.Pour la haute disponibilité, la capacité de licence est-elle limitée par nœud ou pour la paire HA entière ?
 La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité pouvant atteindre 368 Tio entre les deux nœuds.
 
+.Pour un système haute disponibilité dans AWS, est-ce que les données en miroir sont prises en compte avec la limite de capacité ?
 Non, ce n'est pas le cas. Les données d'une paire HA AWS sont mises en miroir de manière synchrone entre les nœuds, de sorte que les données soient disponibles en cas de panne. Par exemple, si vous achetez un disque de 8 Tio sur le nœud A, BlueXP alloue également un disque de 8 Tio sur le nœud B utilisé pour les données en miroir. Tandis que la capacité de 16 Tio a été provisionnée, seuls 8 Tio compte par rapport à la limite de licence.
 
 

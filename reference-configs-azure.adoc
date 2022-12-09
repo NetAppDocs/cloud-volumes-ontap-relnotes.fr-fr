@@ -44,7 +44,6 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8S_v2 ^2^
 * E4S_v3
 * E8s_v3
 * E32S_v3 ^3^
@@ -55,6 +54,9 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8S_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
  a| 
 * E4S_v3
@@ -65,6 +67,7 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * DS13_v2
 * E8s_v3
 * E8ds_v4 ^3^
+* L8S_v3 ^2^
 
  a| 
 * DS5_v2
@@ -83,7 +86,6 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8S_v2 ^2^
 * E4S_v3
 * E8s_v3
 * E32S_v3 ^3^
@@ -94,6 +96,9 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8S_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
  a| 
 * DS4_v2
@@ -101,7 +106,6 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8S_v2 ^2^
 * E4S_v3
 * E8s_v3
 * E32S_v3 ^3^
@@ -112,6 +116,9 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8S_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 
 
@@ -157,38 +164,29 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
 
  a| 
 * DS4_v2
 * DS13_v2
-* E8ds_v4 ^1^
+* E8s_v3
+* E8ds_v4 ^7^
 
  a| 
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
-* E8s_v3
 * E48s_v3 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
-
- a| 
-* DS4_v2
-* DS5_v2 ^1^
-* DS13_v2
-* DS14_v2 ^1^
-* DS15_v2 ^1^
-* E8s_v3
-* E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
 
  a| 
 * DS4_v2
@@ -198,15 +196,32 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
+
+ a| 
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
 
 
 
 
-| Types de disques pris en charge 5+| Blobs de page Premium 
+| Types de disques pris en charge 5+| Disques gérés 
 |===
 Remarques :
 
@@ -215,6 +230,8 @@ Remarques :
 . PAYGO Explore n'est pas pris en charge avec les paires haute disponibilité dans Azure.
 . Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 . Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
+. Ces machines virtuelles peuvent prendre en charge des opérations sur les disques gérés.
+. Ces types de machines virtuelles ne sont pris en charge que pour les déploiements de disques gérés partagés. Tous les nouveaux déploiements haute disponibilité utilisaient des disques gérés partagés. Auparavant, les blobs de page étaient utilisés.
 
 
 
@@ -269,11 +286,15 @@ Les systèmes à un seul nœud utilisent des disques gérés Azure. Les tailles 
 
 === Paires HA
 
-Les paires HAUTE DISPONIBILITÉ utilisent des objets blob de pages Premium. Les tailles de disque suivantes sont prises en charge :
+Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés. (Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)
+
+Les tailles de disque suivantes sont prises en charge :
 
 * 500 Gio
 * 1 To
 * 2 To
 * 4 To
 * 8 To
+* 16 Tio (disques gérés uniquement)
+* 32 Tio (disques gérés uniquement)
 
