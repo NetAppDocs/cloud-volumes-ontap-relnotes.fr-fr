@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Ces limitations connues sont spécifiques à Cloud Volumes ONTAP dans Microsoft Azure.">
-  <meta name="keywords" content=" limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3"><!-- Icons -->
+  <meta name="keywords" content=" limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache"><!-- Icons -->
   <link rel="icon" href="/fr-fr/cloud-volumes-ontap-relnotes/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/fr-fr/cloud-volumes-ontap-relnotes/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.11.1">
+  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.12.1">
     <label>Version</label>
-    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.11.1</span>
+    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.12.1</span>
     <img src="/fr-fr/cloud-volumes-ontap-relnotes/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/fr-fr/cloud-volumes-ontap-relnotes/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limitations-azure.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-9111-relnotes/reference-limitations-azure.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
                      
@@ -444,7 +451,7 @@
         
         
         
-        <a target="_blank" href="/fr-fr/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Notes_de_version_de_Cloud_Volumes_ONTAP_9_11_1.pdf" >
+        <a target="_blank" href="/fr-fr/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Notes_de_version_de_Cloud_Volumes_ONTAP_9_12_1.pdf" >
           <img src="/fr-fr/cloud-volumes-ontap-relnotes/images/pdf.png" alt="" width="16" height="16"/>PDF de ce site de documentation</a>
 
 
@@ -766,7 +773,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/fr-fr/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.11.1&nbsp;release&nbsp;notes</a>
+          <a href="/fr-fr/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.12.1&nbsp;release&nbsp;notes</a>
         </li>
 
       </ul>
@@ -797,7 +804,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 06:42:26 +0000">11/17/2022</time>
+    <time datetime="2022-12-09 15:55:12 +0000">12/09/2022</time>
     
   
 
@@ -818,7 +825,7 @@
 <h2 id="limites-de-flash-cache">Limites de Flash cache</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Le type de machine virtuelle Standard_L8S_v2 inclut le stockage NVMe local, utilisé par Cloud Volumes ONTAP comme <em>Flash cache</em>. Notez les limitations suivantes pour Flash cache :</p>
+<p>Certains types de VM incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise <em>Flash cache</em>. Notez les limitations suivantes pour Flash cache :</p>
 </div>
 <div class="ulist">
 <ul>

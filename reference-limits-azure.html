@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.11.1">
+  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.12.1">
     <label>Version</label>
-    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.11.1</span>
+    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.12.1</span>
     <img src="/fr-fr/cloud-volumes-ontap-relnotes/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/fr-fr/cloud-volumes-ontap-relnotes/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-azure.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-9111-relnotes/reference-limits-azure.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
                      
@@ -444,7 +451,7 @@
         
         
         
-        <a target="_blank" href="/fr-fr/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Notes_de_version_de_Cloud_Volumes_ONTAP_9_11_1.pdf" >
+        <a target="_blank" href="/fr-fr/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Notes_de_version_de_Cloud_Volumes_ONTAP_9_12_1.pdf" >
           <img src="/fr-fr/cloud-volumes-ontap-relnotes/images/pdf.png" alt="" width="16" height="16"/>PDF de ce site de documentation</a>
 
 
@@ -766,7 +773,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/fr-fr/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.11.1&nbsp;release&nbsp;notes</a>
+          <a href="/fr-fr/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.12.1&nbsp;release&nbsp;notes</a>
         </li>
 
       </ul>
@@ -797,7 +804,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 06:42:26 +0000">11/17/2022</time>
+    <time datetime="2022-12-09 15:55:12 +0000">12/09/2022</time>
     
   
 
@@ -862,6 +869,7 @@
 </tbody>
 </table>
 <div class="paragraph">
+<div class="title">Pour la haute disponibilité, la capacité de licence est-elle limitée par nœud ou pour la paire HA entière ?</div>
 <p>La limite de capacité s&#8217;adresse à l&#8217;ensemble de la paire haute disponibilité. Il n&#8217;est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d&#8217;une capacité pouvant atteindre 368 Tio entre les deux nœuds.</p>
 </div>
 </div>
@@ -890,7 +898,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Taille maximale de l&#8217;agrégat <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">384 Tio de capacité brute pour un nœud <sup>2</sup> 352 Tio de capacité brute pour un nœud unique avec le modèle PAYGO 96 Tio de capacité brute pour les paires haute disponibilité</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 Tio de capacité brute pour un nœud <sup>2</sup> 352 Tio de capacité brute pour un nœud unique avec le PAYGO 96 Tio de capacité brute pour les paires haute disponibilité avec des objets blob page 384 Tio de capacité brute pour les paires haute disponibilité avec des disques gérés</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Disques par agrégat</p></td>
@@ -941,10 +949,10 @@
 <p>Une capacité système maximale est indiquée lors de l&#8217;utilisation de disques seuls et lors de l&#8217;utilisation de disques et du Tiering des données inactives vers le stockage objet.</p>
 </li>
 <li>
-<p>Les systèmes à un seul nœud utilisent des disques gérés, avec jusqu&#8217;à 32 Tio par disque. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.</p>
+<p>Les systèmes à un seul nœud et haute disponibilité qui utilisent des disques gérés ont un maximum de 32 Tio par disque. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.</p>
 </li>
 <li>
-<p>Les paires HAUTE DISPONIBILITÉ utilisent des objets blob de pages Premium en tant que disques, avec jusqu&#8217;à 8 Tio par page. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.</p>
+<p>Les systèmes HAUTE DISPONIBILITÉ qui utilisent des blobs de page ont un maximum de 8 Tio par blob de page. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.</p>
 </li>
 <li>
 <p>La limite de 896 Tio basée sur les disques répertoriée pour les systèmes à un seul nœud avec certaines tailles de VM est la limite <em>testée</em>.</p>
@@ -1005,12 +1013,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">L8S_v2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">416 To</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">E4S_v3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">160 To</p></td>
@@ -1070,11 +1072,29 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L8S_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L16s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L32s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="paires-ha">Paires HA</h4>
+<h4 id="paires-haute-disponibilité-dans-une-seule-zone-de-disponibilité-avec-des-objets-blob-de-pages">Paires HAUTE DISPONIBILITÉ dans une seule zone de disponibilité avec des objets blob de pages</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -1155,6 +1175,108 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">488 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="paires-haute-disponibilité-dans-une-zone-de-disponibilité-unique-avec-disques-gérés-partagés">Paires HAUTE DISPONIBILITÉ dans une zone de disponibilité unique avec disques gérés partagés</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 20.4081%;">
+<col style="width: 31.6326%;">
+<col style="width: 33.6736%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Taille des machines virtuelles</th>
+<th class="tableblock halign-left valign-top">Disques MAX Data pour une paire haute disponibilité</th>
+<th class="tableblock halign-left valign-top">Capacité système maximale avec des disques seuls</th>
+<th class="tableblock halign-left valign-top">Capacité système maximale avec disques et Tiering des données</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E8ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E23ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L16s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L32s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="paires-haute-disponibilité-dans-plusieurs-zones-de-disponibilité-avec-disques-gérés-partagés">Paires HAUTE DISPONIBILITÉ dans plusieurs zones de disponibilité avec disques gérés partagés</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 20.4081%;">
+<col style="width: 31.6326%;">
+<col style="width: 33.6736%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Taille des machines virtuelles</th>
+<th class="tableblock halign-left valign-top">Disques MAX Data pour une paire haute disponibilité</th>
+<th class="tableblock halign-left valign-top">Capacité système maximale avec des disques seuls</th>
+<th class="tableblock halign-left valign-top">Capacité système maximale avec disques et Tiering des données</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E8ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E23ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 To</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 Pio</p></td>
 </tr>
 </tbody>
@@ -1173,7 +1295,13 @@
 <p>Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d&#8217;atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"tiering des données inactives vers le stockage objet"</a>. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">"Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="un-seul-nœud-avec-paygo-premium">Un seul nœud avec PAYGO Premium</h4>
+<h4 id="un-seul-nœud-2">Un seul nœud</h4>
+<div class="paragraph">
+<p>Un seul nœud propose deux options de licence basées sur des nœuds : PAYGO Premium et BYOL.</p>
+</div>
+<details>
+<summary class="title">Un seul nœud avec PAYGO Premium</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -1247,8 +1375,10 @@
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="un-seul-nœud-avec-byol">Un seul nœud avec BYOL</h4>
+</details>
+<details>
+<summary class="title">Un seul nœud avec BYOL</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -1405,8 +1535,16 @@
 </tbody>
 </table>
 </div>
+</details>
+</div>
 <div class="sect3">
-<h4 id="paires-haute-disponibilité-avec-paygo-premium">Paires HAUTE DISPONIBILITÉ avec PAYGO Premium</h4>
+<h4 id="paires-ha">Paires HA</h4>
+<div class="paragraph">
+<p>Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pages et plusieurs zones de disponibilité. Chaque configuration inclut deux options de licence basées sur des nœuds : PAYGO Premium et BYOL.</p>
+</div>
+<details>
+<summary class="title">PAYGO Premium : paires HA dans une seule zone de disponibilité avec des blobs de page</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -1474,8 +1612,51 @@
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="paires-haute-disponibilité-avec-byol">Paires HAUTE DISPONIBILITÉ avec BYOL</h4>
+</details>
+<details>
+<summary class="title">PAYGO Premium : paires HA dans une configuration à plusieurs zones de disponibilité avec des disques gérés partagés</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 20.4081%;">
+<col style="width: 31.6326%;">
+<col style="width: 33.6736%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Taille des machines virtuelles</th>
+<th class="tableblock halign-left valign-top">Disques MAX Data pour une paire haute disponibilité</th>
+<th class="tableblock halign-left valign-top">Capacité système maximale avec des disques seuls</th>
+<th class="tableblock halign-left valign-top">Capacité système maximale avec disques et Tiering des données</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E23ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary class="title">BYOL : paires HAUTE DISPONIBILITÉ dans une zone de disponibilité unique avec objets blob de pages</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -1591,6 +1772,72 @@
 </tr>
 </tbody>
 </table>
+</div>
+</details>
+<details>
+<summary class="title">BYOL : paires HAUTE DISPONIBILITÉ dans une configuration à plusieurs zones de disponibilité avec disques gérés partagés</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Taille des machines virtuelles</th>
+<th class="tableblock halign-left valign-top">Disques MAX Data pour une paire haute disponibilité</th>
+<th class="tableblock halign-left valign-top" colspan="2">Capacité système max. Avec une licence</th>
+<th class="tableblock halign-left valign-top" colspan="2">Capacité système max. Avec plusieurs licences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disques seuls</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disques + hiérarchisation des données</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disques seuls</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disques + hiérarchisation des données</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E8ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 Tio x chaque licence</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E23ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 Tio x chaque licence</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 Tio x chaque licence</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 Tio x chaque licence</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
 </div>
 </div>
 </div>
