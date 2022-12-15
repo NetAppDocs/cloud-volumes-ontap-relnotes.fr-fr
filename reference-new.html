@@ -177,6 +177,13 @@
     </li>
     <li>
       
+      <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-9120-relnotes/reference-new.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
       <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-9111-relnotes/reference-new.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
@@ -804,7 +811,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-09 16:50:11 +0000">12/09/2022</time>
+    <time datetime="2022-12-15 21:18:44 +0000">12/15/2022</time>
     
   
 
@@ -829,30 +836,6 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Cloud Volumes ONTAP 9.12.1 Release candidate 1 est à présent disponible dans AWS, Azure et Google Cloud. Cette version comprend de nouvelles fonctionnalités et améliorations suivantes.</p>
-</div>
-<div class="sect2">
-<h3 id="chemin-de-mise-à-niveau-pris-en-charge">Chemin de mise à niveau pris en charge</h3>
-<div class="paragraph">
-<p>Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir de la version 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="version-requise-du-connecteur">Version requise du connecteur</h3>
-<div class="paragraph">
-<p>Le connecteur BlueXP doit exécuter la version 3.9.24 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-volumes-ontap-relnotes/images/tip.svg" alt="Astuce">
-</td>
-<td class="content">
-Les mises à niveau automatiques du connecteur sont activées par défaut, vous devez donc exécuter la dernière version.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="licence-ontap-s3-dans-gcp">Licence ONTAP S3 dans GCP</h3>
@@ -899,8 +882,59 @@ Les mises à niveau automatiques du connecteur sont activées par défaut, vous 
 </div>
 </div>
 <div class="sect1">
-<h2 id="les-instances-c4-m4-et-r4-ne-sont-plus-prises-en-charge-28-octobre-2022">Les instances c4, m4 et r4 ne sont plus prises en charge (28 octobre 2022)</h2>
+<h2 id="notes-de-mise-à-niveau">Notes de mise à niveau</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.</p>
+</div>
+<div class="sect2">
+<h3 id="comment-mettre-à-niveau">Comment mettre à niveau</h3>
+<div class="paragraph">
+<p>Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées depuis BlueXP. Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l&#8217;aide de System Manager ou de l&#8217;interface de ligne de commandes. Cela peut affecter la stabilité du système.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html" target="_blank" rel="noopener">"Découvrez comment effectuer la mise à niveau lorsque BlueXP vous avertit"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="chemin-de-mise-à-niveau-pris-en-charge">Chemin de mise à niveau pris en charge</h3>
+<div class="paragraph">
+<p>Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir des versions 9.12.0 et 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="version-requise-du-connecteur">Version requise du connecteur</h3>
+<div class="paragraph">
+<p>Le connecteur BlueXP doit exécuter la version 3.9.24 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-volumes-ontap-relnotes/images/tip.svg" alt="Astuce">
+</td>
+<td class="content">
+Les mises à niveau automatiques du connecteur sont activées par défaut, vous devez donc exécuter la dernière version.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ou-non">Ou non</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>La mise à niveau d&#8217;un système à un nœud unique permet de mettre le système hors ligne pendant 25 minutes au cours desquelles les E/S sont interrompues.</p>
+</li>
+<li>
+<p>La mise à niveau d&#8217;une paire haute disponibilité s&#8217;effectue sans interruption et les E/S sont continues. Au cours de ce processus de mise à niveau sans interruption, chaque nœud est mis à niveau en tandem afin de continuer à traiter les E/S aux clients.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="les-instances-c4-m4-et-r4-ne-sont-plus-prises-en-charge">les instances c4, m4 et r4 ne sont plus prises en charge</h3>
 <div class="paragraph">
 <p>Dans AWS, les types d&#8217;instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant fonctionne sur un type d&#8217;instance c4, m4 ou r4, vous devez passer à un type d&#8217;instance dans la famille d&#8217;instances c5, m5 ou r5.</p>
 </div>
@@ -909,6 +943,7 @@ Les mises à niveau automatiques du connecteur sont activées par défaut, vous 
 </div>
 <div class="paragraph">
 <p>Reportez-vous à la section <a href="https://mysupport.netapp.com/info/communications/ECMLP2880231.html" target="_blank" rel="noopener">"Support NetApp"</a> pour en savoir plus sur la fin de disponibilité et la prise en charge de ces types d&#8217;instances.</p>
+</div>
 </div>
 </div>
 </div>
