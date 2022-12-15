@@ -126,7 +126,11 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 | instances c5, m5 et r5 | 21 | 336 To | 2 Pio 
 
 
-| m5dn.24xlarge | 19 ^1^ | 304 To | 2 Pio 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 19 ^1^ | 304 To | 2 Pio 
 |===
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
 
@@ -143,7 +147,11 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 | instances c5, m5 et r5 | 18 | 288 To | 2 Pio 
 
 
-| m5dn.24xlarge | 16 ^1^ | 256 To | 2 Pio 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 16 ^1^ | 256 To | 2 Pio 
 |===
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
 
@@ -172,7 +180,11 @@ Le nombre de licences que vous pouvez acheter pour un système à un seul nœud 
 | instances c5, m5 et r5 | 21 ^1^ | 336 To | 368 To 
 
 
-| m5dn.24xlarge | 19 ^2^ | 304 To | 368 To 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 19 ^2^ | 304 To | 368 To 
 |===
 . La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 21 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 22 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
@@ -193,7 +205,11 @@ Le nombre de licences que vous pouvez acheter pour un système à un seul nœud 
 | instances c5, m5 et r5 | 21 ^1^ | 336 To | 368 To | 336 To | 368 Tio x chaque licence 
 
 
-| m5dn.24xlarge | 19 ^2^ | 304 To | 368 To | 304 To | 368 Tio x chaque licence 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 19 ^2^ | 304 To | 368 To | 304 To | 368 Tio x chaque licence 
 |===
 . La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 21 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 22 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
@@ -211,7 +227,11 @@ Le nombre de licences que vous pouvez acheter pour un système à un seul nœud 
 | instances c5, m5 et r5 | 18 ^1^ | 288 To | 368 To 
 
 
-| m5dn.24xlarge | 16 ^2^ | 256 To | 368 To 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 16 ^2^ | 256 To | 368 To 
 |===
 . La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 18 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 19 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
@@ -232,7 +252,11 @@ Le nombre de licences que vous pouvez acheter pour un système à un seul nœud 
 | instances c5, m5 et r5 | 18 ^1^ | 288 To | 368 To | 288 To | 368 Tio x chaque licence 
 
 
-| m5dn.24xlarge | 16 ^2^ | 256 To | 368 To | 256 To | 368 Tio x chaque licence 
+ a| 
+* m5dn.24xlarge
+* m6id.32xlarge
+
+| 16 ^2^ | 256 To | 368 To | 256 To | 368 Tio x chaque licence 
 |===
 . La limite des _nouveaux_ déploiements de Cloud Volumes ONTAP est de 18 disques de données. Si vous mettez à niveau un système créé avec la version 9.7 ou antérieure, le système continue à prendre en charge 19 disques. Un disque de données moins est pris en charge sur les nouveaux systèmes qui utilisent ces types d'instances en raison de l'ajout d'un disque de base à partir de la version 9.8.
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.

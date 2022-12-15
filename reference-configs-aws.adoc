@@ -127,7 +127,7 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 | m5.2xlarge | 8 | 32 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
 
 
-.21+| *Premium ou toute autre licence* | m5n.2xlarge | 8 | 32 | Non pris en charge | Jusqu'à 25 | Jusqu'à 4,750 | Pris en charge 
+.22+| *Premium ou toute autre licence* | m5n.2xlarge | 8 | 32 | Non pris en charge | Jusqu'à 25 | Jusqu'à 4,750 | Pris en charge 
 
 
 | r5.2xlarge | 8 | 64 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
@@ -188,6 +188,9 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 
 
 | m5dn.24xlarge | 48 ^4^ | 384 | Pris en charge | 100 | 19,000 | Pris en charge 
+
+
+| m6id.32xlarge | 48 ^4^ | 512 | Pris en charge | 50 | 40,000 | Pris en charge 
 |===
 . Certains types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Elle est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus sur Flash cache"^].
 . Cloud Volumes ONTAP prend en charge une vitesse d'écriture élevée avec la plupart des types d'instances lors de l'utilisation d'une paire HA. Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^].
