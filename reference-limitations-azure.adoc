@@ -22,7 +22,7 @@ Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans 
 
 Certains types de VM incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Notez les limitations suivantes pour Flash cache :
 
-* La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache.
+* La compression doit être désactivée sur tous les volumes pour bénéficier des améliorations de performances de Flash cache jusqu'à Cloud Volumes ONTAP 9.12.0. Lorsque vous déployez ou mettez à niveau votre système vers Cloud Volumes ONTAP 9.12.1, vous n'avez pas besoin de désactiver la compression.
 +
 Vous pouvez choisir l'absence d'efficacité du stockage lors de la création d'un volume depuis BlueXP, ou vous pouvez créer un volume puis http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Désactiver la compression des données à l'aide de l'interface de ligne de commande"^].
 

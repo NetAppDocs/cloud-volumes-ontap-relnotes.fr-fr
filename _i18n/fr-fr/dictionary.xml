@@ -61,7 +61,6 @@
   <block id="b73cfe36c7ff7b1b656525a530b23497" category="list-text">Seuls les disques SSD polyvalents (gp2) sont pris en charge à l'heure actuelle</block>
   <block id="a0cf071b9038a23221cd589c25d7e392" category="section-title">Limites de Flash cache</block>
   <block id="032ad17d65f47ce036675718d3986c48" category="paragraph">Les types d'instances C5D et R5D incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise comme _Flash cache_. Notez les limites suivantes :</block>
-  <block id="341cc964e0c52fec40f9705182116dda" category="list-text">La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache.</block>
   <block id="405cb575e50b611a22ec99d1abb3f202" category="inline-link">Désactiver la compression des données à l'aide de l'interface de ligne de commande</block>
   <block id="38575f0fc0d26dc67b2a72ebc7d0e845" category="paragraph">Vous pouvez choisir l'absence d'efficacité du stockage lors de la création d'un volume depuis BlueXP, ou vous pouvez créer un volume puis<block ref="41233aab48d70287f1bbc60d78ce6eab" category="inline-link-rx"></block>.</block>
   <block id="444f10b28a63ab25d9664d0647602d07" category="list-text">La réactivation du cache après un redémarrage n'est pas prise en charge avec Cloud Volumes ONTAP.</block>
@@ -702,4 +701,5 @@
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">La mise à niveau d'une paire haute disponibilité s'effectue sans interruption et les E/S sont continues. Au cours de ce processus de mise à niveau sans interruption, chaque nœud est mis à niveau en tandem afin de continuer à traiter les E/S aux clients.</block>
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">les instances c4, m4 et r4 ne sont plus prises en charge</block>
   <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
+  <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">La compression doit être désactivée sur tous les volumes pour bénéficier des améliorations de performances de Flash cache jusqu'à Cloud Volumes ONTAP 9.12.0. Lorsque vous déployez ou mettez à niveau votre système vers Cloud Volumes ONTAP 9.12.1, vous n'avez pas besoin de désactiver la compression.</block>
 </blocks>
