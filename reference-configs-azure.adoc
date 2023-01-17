@@ -223,7 +223,7 @@ Remarques :
 
 . Avec Cloud Volumes ONTAP, la vitesse d'écriture est élevée pour ces types de VM lors de l'utilisation d'une paire haute disponibilité. Vous pouvez activer la vitesse d'écriture élevée depuis BlueXP pendant le déploiement ou à tout moment après. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^].
 . Cette machine virtuelle est recommandée uniquement lorsque le contrôle de maintenance Azure est nécessaire. Cette utilisation n'est pas recommandée pour les autres cas d'utilisation en raison des tarifs plus élevés.
-. Ces types de machines virtuelles ne sont pris en charge que dans les déploiements de Cloud Volumes ONTAP 9.12.1 ou version antérieure.
+. Ces types de machines virtuelles ne sont pris en charge que dans les déploiements de Cloud Volumes ONTAP 9.11.1 ou version antérieure.
 
 
 
