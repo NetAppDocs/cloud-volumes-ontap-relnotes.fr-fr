@@ -20,6 +20,12 @@ D'autres fonctionnalités et améliorations sont également introduites dans les
 
 
 
+== 9.12.1 GA (9 février 2023)
+
+La version GA d'Cloud Volumes ONTAP 9.12.1 est désormais disponible pour AWS, Azure et Google Cloud. La version GA inclut des correctifs.
+
+
+
 == 9.12.1 RC1 (8 décembre 2022)
 
 Cloud Volumes ONTAP 9.12.1 Release candidate 1 est à présent disponible dans AWS, Azure et Google Cloud. Cette version comprend de nouvelles fonctionnalités et améliorations suivantes.
@@ -54,11 +60,13 @@ Lorsque vous déployez une nouvelle paire haute disponibilité dans Azure dans u
 
 === Azure HA dans plusieurs zones de disponibilité avec disques gérés partagés
 
-Vous pouvez désormais déployer une configuration Cloud Volumes ONTAP HA en utilisant Azure plusieurs zones de disponibilité dans une région. La nouvelle configuration protège les données contre les défaillances de data Center et maintient la disponibilité des applications grâce à l'utilisation de disques gérés partagés ZRS (zone-redondant Storage) Azure.
+Vous pouvez désormais déployer une configuration Cloud Volumes ONTAP HA en utilisant Azure plusieurs zones de disponibilité dans une région. La nouvelle configuration protège les données contre les défaillances de data Center et maintient la disponibilité des applications grâce à l'utilisation de disques gérés partagés ZRS (zone-redondant Storage) Azure. Cette fonction n'est actuellement disponible que dans les régions de l'Ouest des États-Unis 2, de l'Europe de l'Ouest, de l'Europe du Nord et de France centrale.
 
 Pour plus d'informations sur l'architecture de configuration haute disponibilité et ses composants, voir link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Paires haute disponibilité dans Azure"^].
 
 Pour utiliser cette nouvelle configuration, voir link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Lancement d'une paire HA Cloud Volumes ONTAP dans Azure"^].
+
+Pour en savoir plus sur le stockage redondant en zone pour les disques gérés, reportez-vous à link:https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Documentation Microsoft Azure"]
 
 
 
