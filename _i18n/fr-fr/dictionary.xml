@@ -43,7 +43,6 @@
   <block id="1749d12df3df2319d3eee218a277ff83" category="list-text">MetroCluster</block>
   <block id="cb93ad4589e6e6834d2627d2ef8c8456" category="list-text">Vérification multi-administrateurs</block>
   <block id="88e362071d1f2ba61570f62aacd1c1c5" category="paragraph">L'activation de la vérification multi-administration sur Cloud Volumes ONTAP entraîne une configuration non prise en charge.</block>
-  <block id="8e85765bc3ce726509dc354633dff4d1" category="list-text">ONTAP S3 dans Google Cloud (le protocole S3 est pris en charge dans Azure et AWS)</block>
   <block id="951de4e4bdae5ad5598a048ed6a6f1e3" category="list-text">RAID4, RAID-DP, RAID-TEC (RAID0 PRIS EN CHARGE)</block>
   <block id="0ec5130d573357ea4d244f018e39ae85" category="list-text">Le processeur de service</block>
   <block id="9e13198f9131eed7b39e47425df55fdb" category="list-text">Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)</block>
@@ -485,7 +484,6 @@
   <block id="f3b3e9858be5dbfaf6c39891db3263a2" category="paragraph"><block ref="f3b3e9858be5dbfaf6c39891db3263a2" category="inline-link-rx"></block></block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">Notes de mise à jour BlueXP</block>
   <block id="7b266e39bb1d33ceb7866245509e3615" category="paragraph">D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP (anciennement Cloud Manager). Voir la<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> pour plus d'informations.</block>
-  <block id="45468834981b77e3d08a5c6457436141" category="paragraph">Dans AWS, les types d'instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant fonctionne sur un type d'instance c4, m4 ou r4, vous devez passer à un type d'instance dans la famille d'instances c5, m5 ou r5.</block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP</block>
   <block id="f072eddf76dc8c19f3d32a7263fe7931" category="paragraph"><block ref="37cca4b92d12a1904a84ee04c60f6ada" category="inline-link-macro-rx"></block>.</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">Support NetApp</block>
@@ -622,27 +620,6 @@
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">Cloud ONTAP</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">Pour une paire HA, la capacité autorisée est-elle limitée par nœud ou par paire HA entière ?</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">Dans le cas d'une paire haute disponibilité, les données en miroir sont-elles prises en compte par rapport à la limite de capacité sous licence ?</block>
-  <block id="86d186ddbc8834521176140c61bb1ecb" category="summary">Cloud Volumes ONTAP 9.12.1 inclut une nouvelle amélioration.</block>
-  <block id="4a7f350e84f13d9c2289d4e589fe2905" category="doc">Nouveautés de Cloud Volumes ONTAP 9.12.1</block>
-  <block id="f75e792bf7a4a205f202f29d2fc54c22" category="paragraph">Cloud Volumes ONTAP 9.12.1 comprend de nouvelles améliorations.</block>
-  <block id="19eac37ffdb1098ffe690004efa5c07f" category="section-title">9.12.1 RC1 (8 décembre 2022)</block>
-  <block id="081d2affd8ad79dfa3ae0457893e56ac" category="paragraph">Cloud Volumes ONTAP 9.12.1 Release candidate 1 est à présent disponible dans AWS, Azure et Google Cloud. Cette version comprend de nouvelles fonctionnalités et améliorations suivantes.</block>
-  <block id="cca494b1b1d22bc8b5c8a8ecd5367bf8" category="section-title">Licence ONTAP S3 dans GCP</block>
-  <block id="44f72ae2127b89a470e082ae9f772acf" category="paragraph">Une licence ONTAP S3 est désormais incluse sur les systèmes Cloud Volumes ONTAP nouveaux et existants qui exécutent la version 9.12.1 ou une version ultérieure dans Google Cloud Platform.</block>
-  <block id="6958464059ef304c59d06fcb948ccafd" category="inline-link">Découvrez comment configurer et gérer les services de stockage objet S3 dans ONTAP</block>
-  <block id="3fe75f10a35597997861eca633c30fa7" category="paragraph"><block ref="3fe75f10a35597997861eca633c30fa7" category="inline-link-rx"></block></block>
-  <block id="cc29a82f2be96a8b1c7afa60d5276465" category="section-title">Prise en charge NVMe-TCP dans Cloud Volumes ONTAP</block>
-  <block id="23c4b82f7249c5985875e4b099d8089b" category="paragraph">Le protocole NVMe-TCP est pris en charge par les fournisseurs cloud si vous utilisez Cloud Volumes ONTAP version 9.12.1 ou ultérieure. BlueXP ne propose pas de fonctionnalités de gestion pour NVMe-TCP.</block>
-  <block id="a441b4ab4a68e599e4c2acbfa61f336e" category="inline-link-macro">Configuration d'une VM de stockage pour NVMe</block>
-  <block id="ba257423528dac43c614b4b9b2158c01" category="paragraph">Pour plus d'informations sur la configuration de NVMe via ONTAP, reportez-vous à la section <block ref="aa614759af42ba295504d93dd3aa15df" category="inline-link-macro-rx"></block>.</block>
-  <block id="9265bdfbf5fe7a5d98259ecba03ba2b0" category="section-title">Azure HA dans une zone de disponibilité unique avec disques gérés partagés</block>
-  <block id="b6c74e2b13b56b7d9c6843e2a6677b0f" category="paragraph">Vous pouvez désormais déployer une configuration Cloud Volumes ONTAP HA en utilisant le stockage redondant local Microsoft Azure (LRS) exécuté sur des disques gérés partagés. Le stockage redondant local réplique vos données trois fois au sein d'un data Center unique dans la même région.</block>
-  <block id="ca010532511b0575d0c11648404720a6" category="inline-link-macro">Paires haute disponibilité dans Azure</block>
-  <block id="91d82e4d3a44df903303441448069415" category="paragraph">Pour plus d'informations sur l'architecture de configuration haute disponibilité et ses composants, voir <block ref="ffe856f9f46b846e98a5d4cebaf6de2d" category="inline-link-macro-rx"></block>.</block>
-  <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link-macro">Lancement d'une paire HA Cloud Volumes ONTAP dans Azure</block>
-  <block id="bb0d42e6fed6d85c4ddc5b2d8c94e08b" category="paragraph">Lorsque vous déployez une nouvelle paire haute disponibilité dans Azure dans une seule zone de disponibilité, vous utiliserez maintenant des disques gérés partagés LRS plutôt que des blobs de page pour le stockage. Il n'y a pas de changement à l'assistant de l'environnement de travail. Pour utiliser cette nouvelle configuration, il vous suffit de choisir une seule zone de disponibilité. Pour plus de détails, voir <block ref="74ff11371741a9669ba3ff027e13cdfb" category="inline-link-macro-rx"></block>.</block>
-  <block id="adacae0ffd14e727a49e7808c807ce42" category="section-title">Azure HA dans plusieurs zones de disponibilité avec disques gérés partagés</block>
-  <block id="5f04b8451f48f03e36e44aea747e0a8b" category="paragraph">Pour utiliser cette nouvelle configuration, voir <block ref="74ff11371741a9669ba3ff027e13cdfb" category="inline-link-macro-rx"></block>.</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8S_v3 ^2^</block>
   <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3 ^2,4^</block>
   <block id="2b5c34a51aff2e04df61ba2f74efb07e" category="list-text">L32s_v3 ^2,4^</block>
@@ -668,22 +645,17 @@
   <block id="dad17615a876f17a26615a81b9cd721c" category="example-title">PAYGO Premium : paires HA dans une configuration à plusieurs zones de disponibilité avec des disques gérés partagés</block>
   <block id="6367723c5abb9a6de038561ba69ed33f" category="example-title">BYOL : paires HAUTE DISPONIBILITÉ dans une zone de disponibilité unique avec objets blob de pages</block>
   <block id="561a766e0af8bbc565f3cd929c900d16" category="example-title">BYOL : paires HAUTE DISPONIBILITÉ dans une configuration à plusieurs zones de disponibilité avec disques gérés partagés</block>
-  <block id="f27b112d1527e5f29f0e8f510d779a5e" category="doc">Notes de version de Cloud Volumes ONTAP 9.12.1</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">Pour un système haute disponibilité dans AWS, est-ce que les données en miroir sont prises en compte avec la limite de capacité ?</block>
   <block id="39b49fbe12f6121fd761513c05ddba97" category="paragraph">Certains types de VM incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Notez les limitations suivantes pour Flash cache :</block>
-  <block id="0612637a826e0e5aac35661a09778188" category="paragraph">Le connecteur BlueXP doit exécuter la version 3.9.24 ou ultérieure pour déployer de nouveaux systèmes Cloud Volumes ONTAP 9.12.1 et mettre à niveau les systèmes existants vers la version 9.12.1.</block>
   <block id="f5aba93322e5fd0767b7e9fa839610f1" category="inline-link-macro">Cloud Volumes ONTAP 9.12.1 médiateur dans AWS</block>
   <block id="a4a2a5bddea7236f27b0a01d377e37a6" category="list-text"><block ref="a4a2a5bddea7236f27b0a01d377e37a6" category="inline-link-macro-rx"></block></block>
   <block id="278ce444bf386e0c416c2eb85c339022" category="inline-link-macro">Cloud Volumes ONTAP 9.12.1 médiateur dans Google Cloud</block>
   <block id="653a50044a773ecda2e2e9ec6736699c" category="list-text"><block ref="653a50044a773ecda2e2e9ec6736699c" category="inline-link-macro-rx"></block></block>
-  <block id="16b3ee4e5301a5f3f5b55816b3906b83" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.12.1.</block>
   <block id="f59964eb1e1669da7d916b7e136c88bd" category="list-text">m6id.32xlarge</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">Notes de mise à niveau</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.</block>
   <block id="b78b1188c7979365981f7c88049f9366" category="section-title">Comment mettre à niveau</block>
   <block id="c716eebe2519c2ba4a2e109b59dd8b13" category="inline-link">Découvrez comment effectuer la mise à niveau lorsque BlueXP vous avertit</block>
-  <block id="bd4bd858d3e1a85d30586455b3e9daf2" category="paragraph"><block ref="6a49825bad49c3be284ac7a237bc2a26" category="inline-link-rx"></block>.</block>
-  <block id="69166f59e44b2f0714ce3c4f044faf17" category="paragraph">Vous pouvez effectuer la mise à niveau vers Cloud Volumes ONTAP 9.12.1 à partir des versions 9.12.0 et 9.11.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
   <block id="75026846c1403e202a52bdb027762fbb" category="section-title">Ou non</block>
   <block id="9f0f02784feedfa2549a9e3a51cfa315" category="list-text">La mise à niveau d'un système à un nœud unique permet de mettre le système hors ligne pendant 25 minutes au cours desquelles les E/S sont interrompues.</block>
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">La mise à niveau d'une paire haute disponibilité s'effectue sans interruption et les E/S sont continues. Au cours de ce processus de mise à niveau sans interruption, chaque nœud est mis à niveau en tandem afin de continuer à traiter les E/S aux clients.</block>
@@ -705,9 +677,33 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">Ces types de VM ne sont pris en charge que pour les paires haute disponibilité dans une configuration de zone de disponibilité unique qui s'exécute sur des disques gérés partagés.</block>
   <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">Ces types de machine virtuelle sont pris en charge pour les paires haute disponibilité dans une zone de disponibilité unique et plusieurs configurations de zones de disponibilité exécutées sur des disques gérés partagés.</block>
   <block id="6c895f204de5d4dd4a02c2926e76c998" category="list-text">Ces types de machines virtuelles ne sont pris en charge que dans les déploiements de Cloud Volumes ONTAP 9.11.1 ou version antérieure.</block>
-  <block id="b3d2b2f33046bc452ceeba660d878f97" category="section-title">9.12.1 GA (9 février 2023)</block>
-  <block id="d7ad70132837e18b99685763f8db95f2" category="paragraph">La version GA d'Cloud Volumes ONTAP 9.12.1 est désormais disponible pour AWS, Azure et Google Cloud. La version GA inclut des correctifs.</block>
-  <block id="901f48339d9d297cd3f32a0be361c057" category="paragraph">Vous pouvez désormais déployer une configuration Cloud Volumes ONTAP HA en utilisant Azure plusieurs zones de disponibilité dans une région. La nouvelle configuration protège les données contre les défaillances de data Center et maintient la disponibilité des applications grâce à l'utilisation de disques gérés partagés ZRS (zone-redondant Storage) Azure. Cette fonction n'est actuellement disponible que dans les régions de l'Ouest des États-Unis 2, de l'Europe de l'Ouest, de l'Europe du Nord et de France centrale.</block>
-  <block id="967b9ba2107b00338e92f6eb93ca99d8" category="inline-link-macro">Documentation Microsoft Azure</block>
-  <block id="0d66ef11df7c9797df8b9cf7f638438a" category="paragraph">Pour en savoir plus sur le stockage redondant en zone pour les disques gérés, reportez-vous à <block ref="cc9f7b6977bd94adf51c6f83282634a2" category="inline-link-macro-rx"></block></block>
+  <block id="a1998150800fd10b93e35cace9e4373f" category="summary">Cloud Volumes ONTAP 9.13.0 inclut une nouvelle amélioration.</block>
+  <block id="3d17e08f201d7b7be36023f1e5ae0588" category="doc">Nouveautés d'Cloud Volumes ONTAP 9.13.0</block>
+  <block id="6d35656a75b4490b417ac27bea22133b" category="paragraph">Cloud Volumes ONTAP 9.13.0 comprend de nouvelles améliorations.</block>
+  <block id="d0429a37d66735eb8b3cc4e05bfe725a" category="section-title">9.13.0 GA (5 mars 2023)</block>
+  <block id="08a6d92c67ddca491cb942b3dad79c36" category="paragraph">La version GA (General Availability) de Cloud Volumes ONTAP 9.13.0 est désormais disponible dans AWS, Azure et Google Cloud. Cette version comprend de nouvelles fonctionnalités et améliorations suivantes.</block>
+  <block id="98f6dc87e7c206ec16da559a2af45beb" category="section-title">Flash cache et vitesse d'écriture élevée dans Google Cloud</block>
+  <block id="77e5d57bae938bc31208cded57756dc8" category="paragraph">La prise en charge de Flash cache, de la vitesse d'écriture élevée et d'une unité de transmission maximale (MTU) élevée de 8,896 octets est désormais disponible pour certaines instances de la version Cloud Volumes ONTAP 9.13.0.</block>
+  <block id="80d41628bf38145af2326ce3d52d8e91" category="inline-link-macro">Configurations prises en charge par licence pour Google Cloud</block>
+  <block id="0a623de488b37ca75333d521fccaa559" category="paragraph">En savoir plus sur <block ref="cdeafd55498169f22d9d7a55ffee4ff4" category="inline-link-macro-rx"></block>.</block>
+  <block id="a8c4c892aed6484fe804ae459960a806" category="section-title">Vérification d'image dans Google Cloud</block>
+  <block id="ea34816f3c506620775a84c7a17f65bb" category="paragraph">Des fonctions de sécurité améliorées sont désormais disponibles pour vérifier les signatures des fichiers image Cloud Volumes ONTAP exportés via Google Cloud.</block>
+  <block id="af10bd89b3d2714a711373f227970f8d" category="inline-link-macro">En savoir plus sur Google Cloud image Verification</block>
+  <block id="7fd1203256e771eb74f1b349e3dcaea6" category="paragraph"><block ref="cbc507c6f6fef1246987c7525bf37637" category="inline-link-macro-rx"></block>.</block>
+  <block id="1b6ed76b2dfdf777c3f7f69a51b27da8" category="section-title">Nouvelle prise en charge d'instances dans Google Cloud</block>
+  <block id="c7614931957b0270f4ee5806224011a7" category="paragraph">Les licences Freemium, PAYGO Premium, BYOL basé sur les nœuds et basées sur la capacité prennent désormais en charge deux nouveaux types d'instances pour les déploiements Cloud Volumes ONTAP à un seul nœud et haute disponibilité dans Google Cloud.</block>
+  <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
+  <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
+  <block id="a4e7d5c6d93cbdfda5947e8b8356e197" category="inline-link-macro">En savoir plus sur les configurations prises en charge dans Google Cloud</block>
+  <block id="7d79f600f7bce2dc1b1eea8ef36b3477" category="paragraph"><block ref="6581d56e4f9d9829469412aa95295d08" category="inline-link-macro-rx"></block>.</block>
+  <block id="825b72c29694b250600da1a6306f10a9" category="paragraph"><block ref="012ba5bcba73cfdbd01dce1c158d5e6b" category="inline-link-macro-rx"></block>.</block>
+  <block id="3e933a57f8cc8a9465bd8e62bb3ffd3c" category="paragraph">Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.13.0 à partir de la version 9.12.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
+  <block id="7353c6310f3c14fba2d49d2cf95e6f82" category="paragraph">Le connecteur BlueXP doit exécuter la version 3.9.26 ou ultérieure pour déployer les nouveaux systèmes Cloud Volumes ONTAP 9.13.0 et mettre à niveau les systèmes existants vers la version 9.13.0.</block>
+  <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">Dans AWS, les types d'instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant s'exécute sur un type d'instance c4, m4 ou r4, vous devez passer à un type d'instance dans la famille d'instances c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.</block>
+  <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :</block>
+  <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Lancement d'une paire HA dans Google Cloud</block>
+  <block id="7477066216e27af7df839cd63548d9a0" category="paragraph">Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section<block ref="aeb6f5c153b1dc31a05c0c3a25902ee7" category="inline-link-rx"></block>.</block>
+  <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée.</block>
+  <block id="dc0f989b2f6bd3e7bf961fb6ea788d85" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.13.0.</block>
+  <block id="f53ab0fd2ad9b3e113196ed1a6d6792a" category="doc">Notes de mise à jour de Cloud Volumes ONTAP 9.13.0</block>
 </blocks>

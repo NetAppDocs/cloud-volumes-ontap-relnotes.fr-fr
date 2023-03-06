@@ -106,7 +106,6 @@ Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ON
 +
 L'activation de la vérification multi-administration sur Cloud Volumes ONTAP entraîne une configuration non prise en charge.
 
-* ONTAP S3 dans Google Cloud (le protocole S3 est pris en charge dans Azure et AWS)
 * RAID4, RAID-DP, RAID-TEC (RAID0 PRIS EN CHARGE)
 * Le processeur de service
 * Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)
