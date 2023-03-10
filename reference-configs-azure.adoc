@@ -346,4 +346,6 @@ Les tailles de disque suivantes sont prises en charge :
 * 2 To
 * 4 To
 * 8 To
+* 16 Tio (disques gérés uniquement)
+* 32 Tio (disques gérés uniquement)
 
