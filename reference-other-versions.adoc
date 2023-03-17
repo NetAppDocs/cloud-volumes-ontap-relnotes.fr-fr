@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: reference-other-versions.html 
+keywords: Cloud Volumes ONTAP, versions, other versions, latest, other releases, version selector, previous versions 
+summary: 'Si vous n"utilisez pas la dernière version de Cloud Volumes ONTAP, la documentation relative aux autres versions est disponible. Vous pouvez utiliser le sélecteur de version pour naviguer entre la dernière version et trois versions précédentes ou utiliser les liens suivants.' 
+---
+= Autres versions
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si vous n'utilisez pas la dernière version de Cloud Volumes ONTAP, la documentation relative aux autres versions est disponible. Vous pouvez utiliser le sélecteur de version situé dans le coin supérieur droit de la page ou les liens suivants.
+
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Cloud Volumes ONTAP 9.13.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes/index.html["Cloud Volumes ONTAP 9.12.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/index.html["Cloud Volumes ONTAP 9.12.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/index.html["Cloud Volumes ONTAP 9.11.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9110-relnotes/index.html["Cloud Volumes ONTAP 9.11.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9101-relnotes/index.html["Cloud Volumes ONTAP 9.10.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9100-relnotes/index.html["Cloud Volumes ONTAP 9.10.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-991-relnotes/index.html["Cloud Volumes ONTAP 9.9.1"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-990-relnotes/index.html["Cloud Volumes ONTAP 9.9.0"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-98-relnotes/index.html["Cloud Volumes ONTAP 9.8"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-97-relnotes/index.html["Cloud Volumes ONTAP 9.7"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-96-relnotes/index.html["Cloud Volumes ONTAP 9.6"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-95-relnotes/index.html["Cloud Volumes ONTAP 9.5"]
+
