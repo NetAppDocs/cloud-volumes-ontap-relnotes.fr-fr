@@ -37,19 +37,6 @@ NOTE: Les points de cohérence ONTAP dans le système de fichiers WAFL détermin
 
 
 
-== Soutien dans les régions chinoises
-
-Cloud Volumes ONTAP est pris en charge dans les régions chinoises comme suit.
-
-* Cloud Volumes ONTAP 9.6 est pris en charge dans les régions AWS Chine.
-* Les systèmes à un seul nœud sont pris en charge.
-* Les licences achetées directement auprès de NetApp sont prises en charge.
-
-
-Tous les autres emplacements, versions, configurations et licences ne sont pas pris en charge.
-
-
-
 == Cloud Volumes ONTAP prend en charge les instances de machine virtuelle réservées et à la demande
 
 Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les autres types d'instances de VM ne sont pas pris en charge.
