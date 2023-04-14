@@ -10,12 +10,6 @@
   <block id="71674eaa07f12640df0ea0be77ecd9ac" category="inline-link">Découvrez comment utiliser Cloud Backup Service pour sauvegarder et restaurer des données ONTAP</block>
   <block id="e81db3857b1943249df996fe0b3ed679" category="paragraph"><block ref="935fff627382fb455a98804a9e37d559" category="inline-link-rx"></block>.</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">Les points de cohérence ONTAP dans le système de fichiers WAFL déterminent la cohérence des données. Seul ONTAP peut suspendre le système de fichiers WAFL pour assurer une sauvegarde cohérente après panne.</block>
-  <block id="d302a39827e370146d2861389e98e60c" category="section-title">Soutien dans les régions chinoises</block>
-  <block id="da059bd73f7531380888607adbbd03aa" category="paragraph">Cloud Volumes ONTAP est pris en charge dans les régions chinoises comme suit.</block>
-  <block id="cbf02fb0cb394b4b19fb0788f9b62554" category="list-text">Cloud Volumes ONTAP 9.6 est pris en charge dans les régions AWS Chine.</block>
-  <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">Les systèmes à un seul nœud sont pris en charge.</block>
-  <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">Les licences achetées directement auprès de NetApp sont prises en charge.</block>
-  <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">Tous les autres emplacements, versions, configurations et licences ne sont pas pris en charge.</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP prend en charge les instances de machine virtuelle réservées et à la demande</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les autres types d'instances de VM ne sont pas pris en charge.</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">Les solutions automatiques de gestion des ressources applicatives ne doivent pas gérer les systèmes Cloud Volumes ONTAP. Cela peut entraîner une modification de la configuration non prise en charge. Par exemple, la solution peut remplacer Cloud Volumes ONTAP par un type d'instance de machine virtuelle non pris en charge.</block>
@@ -500,7 +494,6 @@
   <block id="b5050f17750ec84285bec219771841c4" category="section-title">Limitations de Google Private Service Connect</block>
   <block id="9fb3c7aadbb59d428d3c01efb5689f4b" category="inline-link">Google Private Service Connect</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">Terminaux API BlueXP</block>
-  <block id="e86e72989c257fb5c6ba8da24c2c7c48" category="paragraph">Si vous tirez parti<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Dans le VPC dans lequel vous déployez Cloud Volumes ONTAP, vous devez implémenter des enregistrements DNS qui transmettent le trafic au trafic requis<block ref="85f106dabc925307c90ceeec8d21a18f" category="inline-link-rx"></block>.</block>
   <block id="406156e49006d700786c581646d94504" category="paragraph">Le Tiering des données d'Cloud Volumes ONTAP dans un compartiment Google Cloud Storage n'est pas pris en charge actuellement avec Private Service Connect.</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP présente des limites de configuration du stockage dans Google Cloud pour assurer la fiabilité des opérations. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales.</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Limites de stockage dans Google Cloud</block>
@@ -710,4 +703,5 @@
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Ces machines virtuelles ne sont prises en charge que dans les déploiements de Cloud Volumes ONTAP 9.11.1 ou version antérieure. Ces types de VM vous permettent de mettre à niveau un déploiement de blob de pages existant de Cloud Volumes ONTAP 9.11.1 vers 9.12.1. Vous ne pouvez pas effectuer de nouveaux déploiements de blob de page avec Cloud Volumes ONTAP 9.12.1 ou version ultérieure.</block>
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">Découvrez le fonctionnement du stockage dans une paire haute disponibilité Cloud Volumes ONTAP exécutée dans Google Cloud</block>
   <block id="e14f9eb0a41dc045a4d5568d18e8170e" category="paragraph"><block ref="50d9731ce0bfc8e3757cc819b5895c1f" category="inline-link-rx"></block>.</block>
+  <block id="1201140e917505446359a76c53a69515" category="paragraph">Si vous tirez parti<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Dans le VPC dans lequel vous déployez Cloud Volumes ONTAP, vous devez implémenter des enregistrements DNS qui transmettent le trafic au trafic requis<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>.</block>
 </blocks>
