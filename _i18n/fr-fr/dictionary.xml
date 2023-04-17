@@ -613,8 +613,6 @@
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">Pour une paire HA, la capacité autorisée est-elle limitée par nœud ou par paire HA entière ?</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">Dans le cas d'une paire haute disponibilité, les données en miroir sont-elles prises en compte par rapport à la limite de capacité sous licence ?</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8S_v3 ^2^</block>
-  <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3 ^2,4^</block>
-  <block id="2b5c34a51aff2e04df61ba2f74efb07e" category="list-text">L32s_v3 ^2,4^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">Disques gérés</block>
   <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés. (Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)</block>
   <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">Les tailles de disque suivantes sont prises en charge :</block>
@@ -704,4 +702,6 @@
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">Découvrez le fonctionnement du stockage dans une paire haute disponibilité Cloud Volumes ONTAP exécutée dans Google Cloud</block>
   <block id="e14f9eb0a41dc045a4d5568d18e8170e" category="paragraph"><block ref="50d9731ce0bfc8e3757cc819b5895c1f" category="inline-link-rx"></block>.</block>
   <block id="1201140e917505446359a76c53a69515" category="paragraph">Si vous tirez parti<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Dans le VPC dans lequel vous déployez Cloud Volumes ONTAP, vous devez implémenter des enregistrements DNS qui transmettent le trafic au trafic requis<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>.</block>
+  <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
+  <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
 </blocks>

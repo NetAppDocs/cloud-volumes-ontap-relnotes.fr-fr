@@ -55,8 +55,8 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
 * L8S_v3 ^2^
-* L16s_v3 ^2,4^
-* L32s_v3 ^2,4^
+* L16s_v3 ^2^
+* L32s_v3 ^2^
 
  a| 
 * E4S_v3
@@ -97,8 +97,8 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
 * L8S_v3 ^2^
-* L16s_v3 ^2,4^
-* L32s_v3 ^2,4^
+* L16s_v3 ^2^
+* L32s_v3 ^2^
 
  a| 
 * DS4_v2
@@ -117,8 +117,8 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que système à un seul nœu
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
 * L8S_v3 ^2^
-* L16s_v3 ^2,4^
-* L32s_v3 ^2,4^
+* L16s_v3 ^2^
+* L32s_v3 ^2^
 
 
 
