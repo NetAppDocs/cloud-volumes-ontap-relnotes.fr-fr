@@ -7,8 +7,6 @@
   <block id="55daffc7827b6ec74240106a8f647473" category="paragraph">Le nombre maximal de transferts SnapMirror ou SnapVault simultanés pour Cloud Volumes ONTAP est de 100 par nœud, indépendamment du type d'instance ou du type d'ordinateur.</block>
   <block id="6678cc30386be959db340cbdd54ecbda" category="section-title">Les snapshots des fournisseurs cloud ne doivent pas être utilisés dans vos plans de sauvegarde et de restauration</block>
   <block id="f6fdc425c22fbe91b4cd43c5702c7923" category="paragraph">Vous ne devez pas utiliser les copies Snapshot de votre fournisseur cloud dans le cadre de votre plan de sauvegarde et de restauration des données Cloud Volumes ONTAP. Utilisez toujours des copies Snapshot ONTAP ou des solutions de sauvegarde tierces pour sauvegarder et restaurer les données hébergées sur Cloud Volumes ONTAP.</block>
-  <block id="71674eaa07f12640df0ea0be77ecd9ac" category="inline-link">Découvrez comment utiliser Cloud Backup Service pour sauvegarder et restaurer des données ONTAP</block>
-  <block id="e81db3857b1943249df996fe0b3ed679" category="paragraph"><block ref="935fff627382fb455a98804a9e37d559" category="inline-link-rx"></block>.</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">Les points de cohérence ONTAP dans le système de fichiers WAFL déterminent la cohérence des données. Seul ONTAP peut suspendre le système de fichiers WAFL pour assurer une sauvegarde cohérente après panne.</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP prend en charge les instances de machine virtuelle réservées et à la demande</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les autres types d'instances de VM ne sont pas pris en charge.</block>
@@ -477,7 +475,6 @@
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">En savoir plus sur ces options de licence</block>
   <block id="f3b3e9858be5dbfaf6c39891db3263a2" category="paragraph"><block ref="f3b3e9858be5dbfaf6c39891db3263a2" category="inline-link-rx"></block></block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">Notes de mise à jour BlueXP</block>
-  <block id="7b266e39bb1d33ceb7866245509e3615" category="paragraph">D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP (anciennement Cloud Manager). Voir la<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> pour plus d'informations.</block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP</block>
   <block id="f072eddf76dc8c19f3d32a7263fe7931" category="paragraph"><block ref="37cca4b92d12a1904a84ee04c60f6ada" category="inline-link-macro-rx"></block>.</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">Support NetApp</block>
@@ -704,4 +701,7 @@
   <block id="1201140e917505446359a76c53a69515" category="paragraph">Si vous tirez parti<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Dans le VPC dans lequel vous déployez Cloud Volumes ONTAP, vous devez implémenter des enregistrements DNS qui transmettent le trafic au trafic requis<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>.</block>
   <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
   <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
+  <block id="468539119bbdc1adf73b917e2900aee4" category="inline-link">Découvrez comment utiliser les fonctionnalités de sauvegarde et de restauration BlueXP pour sauvegarder et restaurer des données ONTAP</block>
+  <block id="97f2669f2be89519b70ab300a23d78bf" category="paragraph"><block ref="dd0e067e6a9ee59d9a054d0786a54cd0" category="inline-link-rx"></block>.</block>
+  <block id="619c180e46c9dec776a0347d35298e14" category="paragraph">D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP. Voir la<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> pour plus d'informations.</block>
 </blocks>

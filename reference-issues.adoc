@@ -18,4 +18,4 @@ Les problèmes connus identifient les problèmes susceptibles de vous empêcher 
 
 Cette version ne contient aucun problème connu spécifique à Cloud Volumes ONTAP.
 
-Vous trouverez les problèmes connus relatifs au logiciel ONTAP dans le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^].
+Vous trouverez les problèmes connus relatifs au logiciel ONTAP dans le https://["Notes de version de ONTAP"^].

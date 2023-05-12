@@ -37,7 +37,7 @@ Les types d'instances C5D et R5D incluent le stockage NVMe local, que Cloud Volu
 
 * La compression doit être désactivée sur tous les volumes pour bénéficier des améliorations de performances de Flash cache jusqu'à Cloud Volumes ONTAP 9.12.0. Lorsque vous déployez ou mettez à niveau votre système vers Cloud Volumes ONTAP 9.12.1, vous n'avez pas besoin de désactiver la compression.
 +
-Vous pouvez choisir l'absence d'efficacité du stockage lors de la création d'un volume depuis BlueXP, ou vous pouvez créer un volume puis http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Désactiver la compression des données à l'aide de l'interface de ligne de commande"^].
+Vous pouvez choisir l'absence d'efficacité du stockage lors de la création d'un volume depuis BlueXP, ou vous pouvez créer un volume puis http://["Désactiver la compression des données à l'aide de l'interface de ligne de commande"^].
 
 * La réactivation du cache après un redémarrage n'est pas prise en charge avec Cloud Volumes ONTAP.
 
@@ -46,7 +46,7 @@ Vous pouvez choisir l'absence d'efficacité du stockage lors de la création d'u
 
 == Fausses alarmes signalées par Amazon CloudWatch
 
-Cloud Volumes ONTAP ne libère pas les processeurs lorsqu'ils sont inactifs https://aws.amazon.com/cloudwatch/["Amazon CloudWatch"^] Peut signaler un avertissement CPU élevé pour l'instance EC2 car celui-ci détecte une utilisation à 100 %. Vous pouvez ignorer cette alarme. La commande ONTAP statistics affiche la véritable utilisation des CPU.
+Cloud Volumes ONTAP ne libère pas les processeurs lorsqu'ils sont inactifs https://["Amazon CloudWatch"^] Peut signaler un avertissement CPU élevé pour l'instance EC2 car celui-ci détecte une utilisation à 100 %. Vous pouvez ignorer cette alarme. La commande ONTAP statistics affiche la véritable utilisation des CPU.
 
 
 
@@ -54,4 +54,4 @@ Cloud Volumes ONTAP ne libère pas les processeurs lorsqu'ils sont inactifs http
 
 Après le redémarrage d'un nœud, le partenaire doit synchroniser les données pour qu'il puisse renvoyer le système de stockage. Le temps nécessaire pour resynchroniser les données dépend de la quantité de données écrites par les clients alors que le nœud était en panne et de la vitesse d'écriture des données pendant le rétablissement.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha.html["Découvrez le fonctionnement du stockage dans une paire haute disponibilité Cloud Volumes ONTAP s'exécutant dans AWS"^].
+https://["Découvrez le fonctionnement du stockage dans une paire haute disponibilité Cloud Volumes ONTAP s'exécutant dans AWS"^].
