@@ -160,13 +160,13 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 | c5n.9xlarge | 36 | 96 | Non pris en charge | 50 | 9,500 | Pris en charge 
 
 
-| c5a.12xlarge | 48 ^4^ | 96 | Non pris en charge | 12 | 4,750 | Pris en charge 
+| c5a.12xlarge | 48 | 96 | Non pris en charge | 12 | 4,750 | Pris en charge 
 
 
-| c5.18xlarge | 48 ^4^ | 144 | Non pris en charge | 25 | 19,000 | Pris en charge 
+| c5.18xlarge | 64 ^4^ | 144 | Non pris en charge | 25 | 19,000 | Pris en charge 
 
 
-| c5d.18xlarge | 48 ^4^ | 144 | Pris en charge | 25 | 19,000 | Pris en charge 
+| c5d.18xlarge | 64 ^4^ | 144 | Pris en charge | 25 | 19,000 | Pris en charge 
 
 
 | m5d.12xlarge | 48 | 192 | Pris en charge | 12 | 9,500 | Pris en charge 
@@ -175,27 +175,27 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 | m5dn.12xlarge | 48 | 192 | Pris en charge | 50 | 9,500 | Pris en charge 
 
 
-| c5n.18xlarge | 48 ^4^ | 192 | Non pris en charge | 100 | 19,000 | Pris en charge 
+| c5n.18xlarge | 64 ^4^ | 192 | Non pris en charge | 100 | 19,000 | Pris en charge 
 
 
-| m5a.16xlarge | 48 ^4^ | 256 | Non pris en charge | 12 | 9,500 | Pris en charge 
+| m5a.16xlarge | 64 | 256 | Non pris en charge | 12 | 9,500 | Pris en charge 
 
 
-| m5.16xlarge | 48 ^4^ | 256 | Non pris en charge | 20 | 13,600 | Pris en charge 
+| m5.16xlarge | 64 | 256 | Non pris en charge | 20 | 13,600 | Pris en charge 
 
 
 | r5.12xlarge ^3^ | 48 | 384 | Non pris en charge | 10 | 9,500 | Pris en charge 
 
 
-| m5dn.24xlarge | 48 ^4^ | 384 | Pris en charge | 100 | 19,000 | Pris en charge 
+| m5dn.24xlarge | 64 ^4^ | 384 | Pris en charge | 100 | 19,000 | Pris en charge 
 
 
-| m6id.32xlarge | 48 ^4^ | 512 | Pris en charge | 50 | 40,000 | Pris en charge 
+| m6id.32xlarge | 64 ^4^ | 512 | Pris en charge | 50 | 40,000 | Pris en charge 
 |===
 . Certains types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Elle est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache. https://["En savoir plus sur Flash cache"^].
 . Cloud Volumes ONTAP prend en charge une vitesse d'écriture élevée avec la plupart des types d'instances lors de l'utilisation d'une paire HA. Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances. https://["En savoir plus sur le choix d'une vitesse d'écriture"^].
 . Le type d'instance r5.12xlarge présente une limitation connue avec la prise en charge. Si un nœud redémarre de manière inattendue en raison d'un problème, le système peut ne pas collecter les fichiers « core » utilisés pour le dépannage et la racine du problème. Le client accepte les risques et les conditions d'assistance limitées et assume toute responsabilité en cas de problème. Cette limitation affecte les paires haute disponibilité nouvellement déployées et les paires haute disponibilité mises à niveau depuis la version 9.8. La limite n'affecte pas les systèmes à nœud unique récemment déployés.
-. Bien que ces types d'instances EC2 prennent en charge plus de 48 CPU virtuels, Cloud Volumes ONTAP prend en charge jusqu'à 48 CPU virtuels.
+. Alors que ces types d'instances EC2 prennent en charge plus de 64 vCPU, Cloud Volumes ONTAP ne prend en charge que 64 vCPU.
 . Lorsque vous choisissez un type d'instance EC2, vous pouvez indiquer s'il s'agit d'une instance partagée ou dédiée.
 . Cloud Volumes ONTAP peut être exécuté sur une instance EC2 réservée ou à la demande. Les solutions utilisant d'autres types d'instances ne sont pas prises en charge.
 
