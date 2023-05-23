@@ -100,7 +100,7 @@ Les limites n'incluent pas le disque racine, le disque principal et VNVRAM.
 
 === Des limites en matière de licences basées sur la capacité
 
-Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://["Découvrez les options des licences Cloud Volumes ONTAP"^]
+Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^]
 
 
 
@@ -259,7 +259,7 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP q
 
 Si vous utilisez une licence basée sur les nœuds, vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL pour allouer plus de 368 Tio de capacité.
 
-Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://["tiering des données inactives vers le stockage objet"^]. https://["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^].
+Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^].
 
 
 
@@ -491,7 +491,7 @@ Certaines configurations vous permettent de créer des machines virtuelles de st
 
 Ce sont les limites testées. Bien qu'il soit théoriquement possible de configurer des machines virtuelles de stockage supplémentaires, elles ne sont pas prises en charge.
 
-https://["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
 
 [cols="2*"]
 |===

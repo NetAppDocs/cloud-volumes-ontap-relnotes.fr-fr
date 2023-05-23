@@ -83,7 +83,7 @@ La mise à niveau d'un système à un seul nœud vers une paire haute disponibil
 |===
 Remarques :
 
-. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://["tiering des données inactives vers le stockage objet"^].
+. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
 +
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
@@ -94,7 +94,7 @@ Si vous disposez d'un système existant fonctionnant sur ce type de machine, vou
 
 . Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
 . L'interface BlueXP affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Toutefois, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons disponible pour un environnement de laboratoire spécifique uniquement.
-. Pour la prise en charge par région Google Cloud Platform, rendez-vous sur https://["Régions Cloud volumes Global"^].
+. Pour la prise en charge par région Google Cloud Platform, rendez-vous sur https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 . Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
 . À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
 +
@@ -103,7 +103,7 @@ Si vous disposez d'un système existant fonctionnant sur ce type de machine, vou
 ** n2-standard-48
 ** n2-standard-64
 +
-Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://["Lancement d'une paire HA dans Google Cloud"].
+Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
 
 +
 

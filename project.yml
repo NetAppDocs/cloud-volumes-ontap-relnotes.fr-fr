@@ -53,7 +53,7 @@ settings:
   - name: Cloud ONTAP
     url: "/cloud-volumes-ontap-93-relnotes"
     version-number: '9.3'
-  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es
+  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,it-it
 sidebar:
   entries:
   - title: Accueil des notes de mise à jour

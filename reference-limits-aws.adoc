@@ -24,7 +24,7 @@ La capacité système maximale d'un système Cloud Volumes ONTAP est déterminé
 
 NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
 
-Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://["tiering des données inactives vers le stockage objet"^]. Reportez-vous aux limites de capacité et de disques ci-dessous pour plus de détails.
+Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Reportez-vous aux limites de capacité et de disques ci-dessous pour plus de détails.
 
 [cols="25,75"]
 |===
@@ -88,7 +88,7 @@ Remarques :
 
 . Il n'est pas possible de créer 18 agrégats sur les deux nœuds d'une paire haute disponibilité, car cela dépasserait la limite sur le disque de données.
 . La taille maximale de l'agrégat dépend des disques qui composent l'agrégat. La limite n'inclut pas le stockage objet utilisé pour le Tiering des données.
-. Si vous disposez d'une configuration prenant en charge la fonctionnalité Amazon EBS Elastic volumes, un agrégat peut contenir jusqu'à 8 disques, ce qui assure une capacité de 128 Tio. La fonctionnalité Amazon EBS Elastic volumes est activée par défaut sur les systèmes _New_ Cloud Volumes ONTAP 9.11.0 ou versions ultérieures lors de l'utilisation de disques gp3 ou io1. https://["En savoir plus sur la prise en charge d'Elastic volumes"^]
+. Si vous disposez d'une configuration prenant en charge la fonctionnalité Amazon EBS Elastic volumes, un agrégat peut contenir jusqu'à 8 disques, ce qui assure une capacité de 128 Tio. La fonctionnalité Amazon EBS Elastic volumes est activée par défaut sur les systèmes _New_ Cloud Volumes ONTAP 9.11.0 ou versions ultérieures lors de l'utilisation de disques gp3 ou io1. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["En savoir plus sur la prise en charge d'Elastic volumes"^]
 . Tous les disques qui composent un agrégat doivent être de la même taille.
 
 
@@ -112,7 +112,7 @@ Les limites n'incluent pas le disque d'amorçage et le disque racine.
 
 === Des limites en matière de licences basées sur la capacité
 
-Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://["Découvrez les options des licences Cloud Volumes ONTAP"^]
+Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^]
 
 
 
@@ -164,7 +164,7 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP q
 
 * Si vous utilisez une licence basée sur les nœuds, vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL pour allouer plus de 368 Tio de capacité.
 +
-Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://["tiering des données inactives vers le stockage objet"^]. https://["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^].
+Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^].
 
 
 
@@ -268,7 +268,7 @@ Le nombre de licences que vous pouvez acheter pour un système à un seul nœud 
 
 Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
 
-https://["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
 
 [cols="40,60"]
 |===
