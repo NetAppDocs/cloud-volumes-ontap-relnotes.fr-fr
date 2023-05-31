@@ -34,4 +34,4 @@ Le chargement est basé sur la taille de la capacité engagée pour une ou plusi
 
 Le modèle de licence par nœud précédent reste disponible pour les clients qui ont déjà acheté une licence ou qui disposent d'un abonnement actif sur le marché.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["En savoir plus sur ces options de licence"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["En savoir plus sur ces options de licence"^]

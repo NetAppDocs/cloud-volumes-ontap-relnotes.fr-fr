@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.13.0 inclut une nouvelle amélioration.
 [role="lead"]
 Cloud Volumes ONTAP 9.13.0 comprend de nouvelles améliorations.
 
-D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP. Voir la https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Notes de mise à jour BlueXP"^] pour plus d'informations.
+D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP. Voir la https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notes de mise à jour BlueXP"^] pour plus d'informations.
 
 
 
@@ -38,7 +38,7 @@ En savoir plus sur link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnot
 
 Des fonctions de sécurité améliorées sont désormais disponibles pour vérifier les signatures des fichiers image Cloud Volumes ONTAP exportés via Google Cloud.
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-gcp-image-verification.html["En savoir plus sur Google Cloud image Verification"^].
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-gcp-image-verification.html["En savoir plus sur Google Cloud image Verification"^].
 
 
 
@@ -64,7 +64,7 @@ Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.
 
 Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées depuis BlueXP. Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l'aide de System Manager ou de l'interface de ligne de commandes. Cela peut affecter la stabilité du système.
 
-link:http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer la mise à niveau lorsque BlueXP vous avertit"^].
+link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer la mise à niveau lorsque BlueXP vous avertit"^].
 
 
 
@@ -95,6 +95,6 @@ TIP: Les mises à niveau automatiques du connecteur sont activées par défaut, 
 
 Dans AWS, les types d'instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant s'exécute sur un type d'instance c4, m4 ou r4, vous devez passer à un type d'instance dans la famille d'instances c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP"^].
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP"^].
 
 Reportez-vous à la section link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["Support NetApp"^] pour en savoir plus sur la fin de disponibilité et la prise en charge de ces types d'instances.

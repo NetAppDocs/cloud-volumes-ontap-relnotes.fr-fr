@@ -54,4 +54,4 @@ Cloud Volumes ONTAP ne libère pas les processeurs lorsqu'ils sont inactifs http
 
 Après le redémarrage d'un nœud, le partenaire doit synchroniser les données pour qu'il puisse renvoyer le système de stockage. Le temps nécessaire pour resynchroniser les données dépend de la quantité de données écrites par les clients alors que le nœud était en panne et de la vitesse d'écriture des données pendant le rétablissement.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha.html["Découvrez le fonctionnement du stockage dans une paire haute disponibilité Cloud Volumes ONTAP s'exécutant dans AWS"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["Découvrez le fonctionnement du stockage dans une paire haute disponibilité Cloud Volumes ONTAP s'exécutant dans AWS"^].

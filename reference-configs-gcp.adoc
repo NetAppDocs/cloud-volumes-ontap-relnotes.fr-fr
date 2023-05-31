@@ -83,7 +83,7 @@ La mise à niveau d'un système à un seul nœud vers une paire haute disponibil
 |===
 Remarques :
 
-. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
+. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
 +
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
@@ -103,7 +103,7 @@ Si vous disposez d'un système existant fonctionnant sur ce type de machine, vou
 ** n2-standard-48
 ** n2-standard-64
 +
-Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
+Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
 
 +
 
