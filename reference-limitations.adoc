@@ -79,7 +79,6 @@ Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ON
 
 * Déduplication à la volée au niveau des agrégats
 * La déduplication en arrière-plan au niveau de l'agrégat
-* Protection contre les ransomwares
 * Centre de maintenance du disque
 * Nettoyage de disque
 * Mise en miroir FabricPool
