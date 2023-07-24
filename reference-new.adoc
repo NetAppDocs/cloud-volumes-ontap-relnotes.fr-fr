@@ -22,7 +22,7 @@ D'autres fonctionnalités et améliorations sont également introduites dans les
 
 == 9.13.1 RC1 (26 juin 2023)
 
-La version Release candidate 1 de Cloud Volumes ONTAP 9.13.1 est désormais disponible dans AWS, Azure et Google Cloud. Cette version inclut la fonction suivante.
+La version Release candidate 1 de Cloud Volumes ONTAP 9.13.1 est désormais disponible dans AWS, Azure et Google Cloud.
 
 
 

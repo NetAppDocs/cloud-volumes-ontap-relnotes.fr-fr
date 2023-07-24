@@ -23,7 +23,6 @@
   <block id="534cab245a3cc0ececa966044bad6ba2" category="paragraph">Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ONTAP :</block>
   <block id="a031ea731cd3c4992b7f33bad9f72a00" category="list-text">Déduplication à la volée au niveau des agrégats</block>
   <block id="98e2e51de88bd2dae78a66fdad91936c" category="list-text">La déduplication en arrière-plan au niveau de l'agrégat</block>
-  <block id="346f7f627d1a93bfbf315865554048c6" category="list-text">Protection contre les ransomwares</block>
   <block id="5873635ff256383dcb0b47a0e49f71b1" category="list-text">Centre de maintenance du disque</block>
   <block id="ddf5f13c3a2f670d7fd623c41af1d112" category="list-text">Nettoyage de disque</block>
   <block id="9a93c60b5ebb05842529444ff4ffe9ab" category="list-text">Mise en miroir FabricPool</block>
@@ -675,7 +674,6 @@
   <block id="59d68d1abaff04001d7f138b569d66a1" category="doc">Nouveautés d'Cloud Volumes ONTAP 9.13.1</block>
   <block id="0775e0f9165c68236ce80a5eeaf622d2" category="paragraph">Cloud Volumes ONTAP 9.13.1 comprend de nouvelles améliorations.</block>
   <block id="9c8c9e4dac5a2be78e81d66cbffd75af" category="section-title">9.13.1 RC1 (26 juin 2023)</block>
-  <block id="73f86a5ebfc8edf0e36c8ad6bb22e282" category="paragraph">La version Release candidate 1 de Cloud Volumes ONTAP 9.13.1 est désormais disponible dans AWS, Azure et Google Cloud. Cette version inclut la fonction suivante.</block>
   <block id="9a8603c7a44b001d1d10919fc28a94cc" category="paragraph">Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.13.1 à partir des versions 9.12.1 et 9.13.0. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
   <block id="15a36f3b57148762c2209c3b7df4f648" category="paragraph">Le connecteur BlueXP doit exécuter la version 3.9.26 ou ultérieure pour déployer les nouveaux systèmes Cloud Volumes ONTAP 9.13.1 et mettre à niveau les systèmes existants vers la version 9.13.1.</block>
   <block id="b07f6144410a8635e8ae505b186322a5" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.13.1.</block>
@@ -684,4 +682,5 @@
   <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3 ^2^</block>
   <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1,4,5^</block>
   <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1,4,5^</block>
+  <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">La version Release candidate 1 de Cloud Volumes ONTAP 9.13.1 est désormais disponible dans AWS, Azure et Google Cloud.</block>
 </blocks>
