@@ -79,7 +79,7 @@ La mise à niveau d'un système à un seul nœud vers une paire haute disponibil
 
 
 
-| Types de disque pris en charge ^4^ 6+| Disques persistants zonés (SSD, équilibré et standard) 
+| Types de disques pris en charge 6+| Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). 
 |===
 Remarques :
 
@@ -92,7 +92,7 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 +
 Si vous disposez d'un système existant fonctionnant sur ce type de machine, vous pouvez continuer à l'utiliser, mais nous vous recommandons de passer au type de machine n2-standard-4.
 
-. Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
+. Les performances d'écriture améliorées sont activées lorsque des disques persistants équilibrés et des disques persistants de performance (SSD) sont utilisés.
 . L'interface BlueXP affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Toutefois, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons disponible pour un environnement de laboratoire spécifique uniquement.
 . Pour la prise en charge par région Google Cloud Platform, rendez-vous sur https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 . Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
