@@ -684,4 +684,6 @@
   <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">La version Release candidate 1 de Cloud Volumes ONTAP 9.13.1 est désormais disponible dans AWS, Azure et Google Cloud.</block>
   <block id="8363a389e0c602867cfdadb32a0bb680" category="cell">Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD).</block>
   <block id="3ef8b2478ab52b4e7c7dd18d32c5bf06" category="list-text">Les performances d'écriture améliorées sont activées lorsque des disques persistants équilibrés et des disques persistants de performance (SSD) sont utilisés.</block>
+  <block id="3265c73fa992103b2a4f8d03470586ac" category="section-title">GA 9.13.1 (26 juillet 2023)</block>
+  <block id="b5d2ebb75a812f3d5c8fc5e62ce5a672" category="paragraph">La version General Availability de Cloud Volumes ONTAP 9.13.1 est désormais disponible dans AWS, Azure et Google Cloud.</block>
 </blocks>
