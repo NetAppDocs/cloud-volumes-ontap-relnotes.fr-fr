@@ -146,6 +146,7 @@ Inversement, si vous avez déployé Cloud Volumes ONTAP à l'aide d'un autre typ
 . Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
 . Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
 . Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
+. SN prend uniquement en charge les disques gérés LRS pour les SSD standard, les disques durs et les SSD premium.
 
 
 
