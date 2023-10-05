@@ -271,9 +271,11 @@ Les systèmes à un seul nœud utilisent des disques gérés Azure. Les tailles 
 
 === Paires HA
 
-Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés. (Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)
+Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés Azure. Les types et tailles de disques suivants sont pris en charge.
 
-Les tailles de disque suivantes sont prises en charge :
+(Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)
+
+*SSD Premium*
 
 * 500 Gio
 * 1 To

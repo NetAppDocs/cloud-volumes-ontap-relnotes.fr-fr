@@ -578,8 +578,6 @@
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">Dans le cas d'une paire haute disponibilité, les données en miroir sont-elles prises en compte par rapport à la limite de capacité sous licence ?</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8S_v3 ^2^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">Disques gérés</block>
-  <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés. (Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)</block>
-  <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">Les tailles de disque suivantes sont prises en charge :</block>
   <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">Les solutions de gestion automatique des ressources applicatives ne doivent pas être utilisées</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">Pour la haute disponibilité, la capacité de licence est-elle limitée par nœud ou pour la paire HA entière ?</block>
   <block id="2d7789be6e6e477491f790d5a3ea60b3" category="cell">384 Tio de capacité brute pour un nœud ^2^ 352 Tio de capacité brute pour un nœud unique avec le PAYGO 96 Tio de capacité brute pour les paires haute disponibilité avec des objets blob page 384 Tio de capacité brute pour les paires haute disponibilité avec des disques gérés</block>
@@ -694,4 +692,7 @@
   <block id="ade4280527084cf81b8c35333fab8226" category="list-text"><block ref="ade4280527084cf81b8c35333fab8226" category="inline-link-macro-rx"></block></block>
   <block id="373d3eec6a8460edd6d29008332349e5" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.14.0.</block>
   <block id="c3264a0692eaa18730a5ddad32b43884" category="doc">Notes de mise à jour de Cloud Volumes ONTAP 9.14.0</block>
+  <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés Azure. Les types et tailles de disques suivants sont pris en charge.</block>
+  <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">(Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)</block>
+  <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*SSD Premium*</block>
 </blocks>
