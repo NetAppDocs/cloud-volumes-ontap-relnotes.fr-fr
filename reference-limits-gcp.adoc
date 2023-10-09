@@ -43,7 +43,7 @@ Pour certaines configurations, les limites de disque vous empêchent d'atteindre
 | PAIEMENT À L'UTILISATION Premium | 368 TO 
 
 
-| Licence basée sur les nœuds | 368 To par licence 
+| Licence basée sur les nœuds | 2 Pio (plusieurs licences requises) 
 
 
 | Licence basée sur la capacité | 2 Pio 

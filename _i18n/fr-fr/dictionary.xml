@@ -131,7 +131,6 @@
   <block id="9f71cb3204a7c80e435b6337aed1e728" category="cell">256 To</block>
   <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">Limites des licences basées sur des nœuds</block>
   <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent une licence basée sur les nœuds. Il s'agit du modèle de licence de génération précédente qui permet d'obtenir une licence Cloud Volumes ONTAP par nœud. Une licence basée sur les nœuds est toujours disponible pour les clients existants.</block>
-  <block id="52960fb5a2829740ddef9c61b6015d59" category="list-text">Si vous utilisez une licence basée sur les nœuds, vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL pour allouer plus de 368 Tio de capacité.</block>
   <block id="275e3ef1a302e67e93bcf0f30d566f74" category="inline-link">Découvrez comment ajouter des licences système à Cloud Volumes ONTAP</block>
   <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">Un seul nœud avec PAYGO Premium</block>
   <block id="40959eff270cd482e3813b16716a7ee3" category="cell">21 ^1^</block>
@@ -142,7 +141,6 @@
   <block id="cabc996760a00c42a2b15b388054d050" category="cell">Capacité système max. Avec plusieurs licences</block>
   <block id="bb49543449782c0f1b87b3ef8f49a6be" category="cell">*Disques seuls*</block>
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">*Disques + hiérarchisation des données*</block>
-  <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">368 Tio x chaque licence</block>
   <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">Paires HAUTE DISPONIBILITÉ avec PAYGO Premium</block>
   <block id="156b98ab4634edb024f99442726e3e8d" category="cell">18 ^1^</block>
   <block id="dee0912fefbe003d7ae380d371a87fad" category="cell">16 ^2^</block>
@@ -638,7 +636,6 @@
   <block id="9df4ca2adcfbf390d35edbeb52928a78" category="list-text">Certains types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Elle est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache.<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>.</block>
   <block id="ce4956d12fe22f1b1243720ce22651e0" category="list-text">Cloud Volumes ONTAP prend en charge une vitesse d'écriture élevée avec la plupart des types d'instances lors de l'utilisation d'une paire HA. Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>.</block>
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité.<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
-  <block id="05c9b06fc32318d0689c553219a9d496" category="paragraph">Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>.</block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>.</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>.</block>
   <block id="efb78221b5926bd89d824f8dec9a7ed2" category="list-text">Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.</block>
@@ -695,4 +692,7 @@
   <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés Azure. Les types et tailles de disques suivants sont pris en charge.</block>
   <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">(Les blobs pages sont pris en charge avec les paires haute disponibilité déployées avant la version 9.12.1.)</block>
   <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*SSD Premium*</block>
+  <block id="fd164e9cb2bc1ac5405cabfe451663f7" category="cell">2 Pio (plusieurs licences requises)</block>
+  <block id="2dbd9a217bce4c7ba4ef467f57d6875c" category="paragraph">Vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL à un seul nœud ou par paire haute disponibilité afin d'allouer plus de 368 Tio de capacité, dans la limite de capacité système maximale testée et prise en charge de 2 Pio. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>. Bien que Cloud Volumes ONTAP prenne en charge une capacité maximale de 2 Pio testée et prise en charge, le dépassement de la limite de 2 Pio entraîne une configuration système non prise en charge.</block>
+  <block id="de9d6749570efc87e63811b5947fc250" category="paragraph">Les régions de cloud secret AWS et de cloud secret prennent en charge l'achat de plusieurs licences basées sur des nœuds à partir de Cloud Volumes ONTAP 9.12.1.</block>
 </blocks>

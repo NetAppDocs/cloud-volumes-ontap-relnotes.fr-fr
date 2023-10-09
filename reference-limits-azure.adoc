@@ -41,7 +41,7 @@ NetApp ne prend pas en charge le dépassement de la limite de capacité système
 | PAIEMENT À L'UTILISATION Premium | 368 To 
 
 
-| Licence basée sur les nœuds | 368 Tio par licence 
+| Licence basée sur les nœuds | 2 Pio (plusieurs licences requises) 
 
 
 | Licence basée sur la capacité | 2 Pio 
@@ -275,9 +275,7 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent une licence basée sur les nœuds. Il s'agit du modèle de licence de génération précédente qui permet d'obtenir une licence Cloud Volumes ONTAP par nœud. Une licence basée sur les nœuds est toujours disponible pour les clients existants.
 
-Si vous utilisez une licence basée sur les nœuds, vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL pour allouer plus de 368 Tio de capacité.
-
-Le nombre de licences que vous pouvez acheter pour un système à un seul nœud ou une paire HA est illimité. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^].
+Vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL à un seul nœud ou par paire haute disponibilité afin d'allouer plus de 368 Tio de capacité, dans la limite de capacité système maximale testée et prise en charge de 2 Pio. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^]. Bien que Cloud Volumes ONTAP prenne en charge une capacité maximale de 2 Pio testée et prise en charge, le dépassement de la limite de 2 Pio entraîne une configuration système non prise en charge.
 
 
 
@@ -331,52 +329,52 @@ Un seul nœud propose deux options de licence basées sur des nœuds : PAYGO Pre
 2+|  | *Disques seuls* | *Disques + hiérarchisation des données* | *Disques seuls* | *Disques + hiérarchisation des données* 
 
 
-| DS4_v2 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| DS4_v2 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| DS5_v2 | 61 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| DS5_v2 | 61 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| DS13_v2 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| DS13_v2 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| DS14_v2 | 61 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| DS14_v2 | 61 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| DS15_v2 | 61 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| DS15_v2 | 61 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| L8S_v2 | 13 | 368 To | 368 To | 416 To | 368 Tio x chaque licence 
+| L8S_v2 | 13 | 368 To | 368 To | 416 To | 2 Pio 
 
 
-| E4S_v3 | 5 | 160 To | 368 To | 160 To | 368 Tio x chaque licence 
+| E4S_v3 | 5 | 160 To | 368 To | 160 To | 2 Pio 
 
 
-| E8s_v3 | 13 | 368 To | 368 To | 416 To | 368 Tio x chaque licence 
+| E8s_v3 | 13 | 368 To | 368 To | 416 To | 2 Pio 
 
 
-| E32S_v3 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| E32S_v3 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| E48s_v3 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| E48s_v3 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| E64is_v3 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| E64is_v3 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| E4ds_v4 | 5 | 160 To | 368 To | 160 To | 368 Tio x chaque licence 
+| E4ds_v4 | 5 | 160 To | 368 To | 160 To | 2 Pio 
 
 
-| E8ds_v4 | 13 | 368 To | 368 To | 416 To | 368 Tio x chaque licence 
+| E8ds_v4 | 13 | 368 To | 368 To | 416 To | 2 Pio 
 
 
-| E23ds_v4 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| E23ds_v4 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| E48ds_v4 | 29 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| E48ds_v4 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 
 
-| E80ids_v4 | 61 | 368 To | 368 To | 896 To | 368 Tio x chaque licence 
+| E80ids_v4 | 61 | 368 To | 368 To | 896 To | 2 Pio 
 |===
 ====
 
@@ -445,37 +443,37 @@ Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pag
 2+|  | *Disques seuls* | *Disques + hiérarchisation des données* | *Disques seuls* | *Disques + hiérarchisation des données* 
 
 
-| DS4_v2 | 29 | 232 To | 368 To | 232 To | 368 Tio x chaque licence 
+| DS4_v2 | 29 | 232 To | 368 To | 232 To | 2 Pio 
 
 
-| DS5_v2 | 61 | 368 To | 368 To | 488 To | 368 Tio x chaque licence 
+| DS5_v2 | 61 | 368 To | 368 To | 488 To | 2 Pio 
 
 
-| DS13_v2 | 29 | 232 To | 368 To | 232 To | 368 Tio x chaque licence 
+| DS13_v2 | 29 | 232 To | 368 To | 232 To | 2 Pio 
 
 
-| DS14_v2 | 61 | 368 To | 368 To | 488 To | 368 Tio x chaque licence 
+| DS14_v2 | 61 | 368 To | 368 To | 488 To | 2 Pio 
 
 
-| DS15_v2 | 61 | 368 To | 368 To | 488 To | 368 Tio x chaque licence 
+| DS15_v2 | 61 | 368 To | 368 To | 488 To | 2 Pio 
 
 
-| E8s_v3 | 13 | 104 To | 368 To | 104 To | 368 Tio x chaque licence 
+| E8s_v3 | 13 | 104 To | 368 To | 104 To | 2 Pio 
 
 
-| E48s_v3 | 29 | 232 To | 368 To | 232 To | 368 Tio x chaque licence 
+| E48s_v3 | 29 | 232 To | 368 To | 232 To | 2 Pio 
 
 
-| E8ds_v4 | 13 | 104 To | 368 To | 104 To | 368 Tio x chaque licence 
+| E8ds_v4 | 13 | 104 To | 368 To | 104 To | 2 Pio 
 
 
-| E23ds_v4 | 29 | 232 To | 368 To | 232 To | 368 Tio x chaque licence 
+| E23ds_v4 | 29 | 232 To | 368 To | 232 To | 2 Pio 
 
 
-| E48ds_v4 | 29 | 232 To | 368 To | 232 To | 368 Tio x chaque licence 
+| E48ds_v4 | 29 | 232 To | 368 To | 232 To | 2 Pio 
 
 
-| E80ids_v4 | 61 | 368 To | 368 To | 488 To | 368 Tio x chaque licence 
+| E80ids_v4 | 61 | 368 To | 368 To | 488 To | 2 Pio 
 |===
 ====
 .BYOL : paires HAUTE DISPONIBILITÉ dans une configuration à plusieurs zones de disponibilité avec disques gérés partagés
@@ -489,16 +487,16 @@ Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pag
 2+|  | *Disques seuls* | *Disques + hiérarchisation des données* | *Disques seuls* | *Disques + hiérarchisation des données* 
 
 
-| E8ds_v4 | 12 | 368 To | 368 To | 368 To | 368 Tio x chaque licence 
+| E8ds_v4 | 12 | 368 To | 368 To | 368 To | 2 Pio 
 
 
-| E23ds_v4 | 28 | 368 To | 368 To | 368 To | 368 Tio x chaque licence 
+| E23ds_v4 | 28 | 368 To | 368 To | 368 To | 2 Pio 
 
 
-| E48ds_v4 | 28 | 368 To | 368 To | 368 To | 368 Tio x chaque licence 
+| E48ds_v4 | 28 | 368 To | 368 To | 368 To | 2 Pio 
 
 
-| E80ids_v4 | 28 | 368 To | 368 To | 368 To | 368 Tio x chaque licence 
+| E80ids_v4 | 28 | 368 To | 368 To | 368 To | 2 Pio 
 |===
 ====
 
