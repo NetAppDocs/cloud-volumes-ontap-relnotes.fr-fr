@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.14.0 inclut une nouvelle amélioration. 
+summary: Cloud Volumes ONTAP 9.14.1 inclut une nouvelle amélioration. 
 ---
-= Nouveautés d'Cloud Volumes ONTAP 9.14.0
+= Nouveautés d'Cloud Volumes ONTAP 9.14.1
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,31 +14,15 @@ summary: Cloud Volumes ONTAP 9.14.0 inclut une nouvelle amélioration.
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.14.0 comprend de nouvelles améliorations.
+Cloud Volumes ONTAP 9.14.1 comprend de nouvelles améliorations.
 
 D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP. Voir la https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notes de mise à jour BlueXP"^] pour plus d'informations.
 
 
 
-== 9.14.0 P1 (10 novembre 2023)
+== 9.14.1 RC1 (6 décembre 2023)
 
-Le correctif 9.14.0 P1 est désormais disponible pour Cloud Volumes ONTAP pour tous les fournisseurs de cloud si vous disposez d'un connecteur exécutant la version 3.9.27 ou ultérieure. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.0P1["Consultez la liste des bugs corrigés dans le correctif P1"^] (Identifiant du site du support NetApp requis).
-
-
-
-== 9.14.0 (29 septembre 2023)
-
-La version GA (General Availability) de Cloud Volumes ONTAP 9.14.0 est désormais disponible dans AWS, Azure et Google Cloud. Cette version comprend de nouvelles fonctionnalités et améliorations suivantes.
-
-
-
-=== Ségrégation du trafic SnapMirror dans Azure
-
-Vous pouvez désormais isoler le trafic de réplication SnapMirror du trafic de données et de gestion. Cette nouvelle fonctionnalité vous permet d'isoler le trafic de réplication SnapMirror en exploitant un sous-réseau supplémentaire qui n'est pas routable vers le sous-réseau existant utilisé pour le trafic de données et de gestion.
-
-En savoir plus link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-segregate-snapmirror-azure.html["Isolez le trafic SnapMirror dans Azure"^].
+La version Release candidate 1 de Cloud Volumes ONTAP 9.14.1 est désormais disponible dans AWS, Azure et Google Cloud.
 
 
 
@@ -58,13 +42,13 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === Chemin de mise à niveau pris en charge
 
-Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.14.0 à partir de la version 9.13.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
+Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.14.1 à partir des versions 9.13.1 et 9.14.0. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
 
 
 
 === Version requise du connecteur
 
-Le connecteur BlueXP doit exécuter la version 3.9.27 ou ultérieure pour déployer les nouveaux systèmes Cloud Volumes ONTAP 9.14.0 et mettre à niveau les systèmes existants vers la version 9.14.0.
+Le connecteur BlueXP doit exécuter la version 3.9.27 ou ultérieure pour déployer les nouveaux systèmes Cloud Volumes ONTAP 9.14.1 et mettre à niveau les systèmes existants vers la version 9.14.1.
 
 
 TIP: Les mises à niveau automatiques du connecteur sont activées par défaut, vous devez donc exécuter la dernière version.
