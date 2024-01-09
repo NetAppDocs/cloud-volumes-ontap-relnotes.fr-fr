@@ -614,7 +614,6 @@
   <block id="6cddc6e542baa2aaad6e58fdc397ce90" category="list-text">E48ds_v4 ^1,4^</block>
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1,2,4^</block>
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">Ces types de VM ne sont pris en charge que pour les paires haute disponibilité dans une configuration de zone de disponibilité unique qui s'exécute sur des disques gérés partagés.</block>
-  <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">Ces types de machine virtuelle sont pris en charge pour les paires haute disponibilité dans une zone de disponibilité unique et plusieurs configurations de zones de disponibilité exécutées sur des disques gérés partagés.</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
   <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">Dans AWS, les types d'instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant s'exécute sur un type d'instance c4, m4 ou r4, vous devez passer à un type d'instance dans la famille d'instances c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.</block>
@@ -689,10 +688,6 @@
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">Blobs de page</block>
   <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">Avec Cloud Volumes ONTAP, la vitesse d'écriture est élevée pour ces types de VM lors de l'utilisation d'une paire haute disponibilité. Vous pouvez activer la vitesse d'écriture élevée depuis BlueXP pendant le déploiement ou à tout moment après.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Ces machines virtuelles ne sont prises en charge que dans les déploiements de Cloud Volumes ONTAP 9.11.1 ou version antérieure. Ces types de VM vous permettent de mettre à niveau un déploiement de blob de pages existant de Cloud Volumes ONTAP 9.11.1 vers 9.12.1. Vous ne pouvez pas effectuer de nouveaux déploiements de blob de page avec Cloud Volumes ONTAP 9.12.1 ou version ultérieure.</block>
-  <block id="573ba387c27d105c1e3fd20266d13123" category="list-text">L16s_v3 ^1,3,5^</block>
-  <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3 ^1,3,5^</block>
-  <block id="6074c6f3226593d830e2700ab7f3f365" category="list-text">L48s_v3 ^1,3,5^</block>
-  <block id="1da7ab1581b8dde8d8bbb3d70c613cd5" category="list-text">L64s_v3 ^1,3,5^</block>
   <block id="fd03e656adaf90d76d9f033d590bdd69" category="summary">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.14.1.</block>
   <block id="3f93d29b3f8dc957c8b9ced853857b76" category="doc">Notes de mise à jour de Cloud Volumes ONTAP 9.14.1</block>
   <block id="ac49adbb868ecf707179d04fceda2832" category="summary">Cloud Volumes ONTAP 9.14.1 inclut une nouvelle amélioration.</block>
@@ -702,4 +697,9 @@
   <block id="08c5c3a5955675754c56665896b714d2" category="paragraph">La version Release candidate 1 de Cloud Volumes ONTAP 9.14.1 est désormais disponible dans AWS, Azure et Google Cloud.</block>
   <block id="0ba3961acf8d8dd9d18bfabbbbc00cc5" category="paragraph">Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.14.1 à partir des versions 9.13.1 et 9.14.0. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
   <block id="c61efd7d56545088713b3c7d2e07cadd" category="paragraph">Le connecteur BlueXP doit exécuter la version 3.9.27 ou ultérieure pour déployer les nouveaux systèmes Cloud Volumes ONTAP 9.14.1 et mettre à niveau les systèmes existants vers la version 9.14.1.</block>
+  <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1,4,5^</block>
+  <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1,4,5^</block>
+  <block id="2bf4a4b22f921c225f089ec2954ee9e8" category="list-text">L48s_v3 ^1,4,5^</block>
+  <block id="c130660d20dd5cec8fbf6045fb61af08" category="list-text">L64s_v3 ^1,4,5^</block>
+  <block id="885a1d815cf042f25bd0893361642b6e" category="list-text">Ces types de machine virtuelle sont pris en charge pour les paires haute disponibilité dans une zone de disponibilité unique et plusieurs configurations de zones de disponibilité exécutées sur des disques gérés partagés. Pour les types de VM LS_v3, la prise en charge de plusieurs zones de disponibilité commence à partir de la version 9.13.1 de ONTAP.</block>
 </blocks>
