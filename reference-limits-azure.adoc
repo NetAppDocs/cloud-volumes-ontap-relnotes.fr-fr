@@ -559,7 +559,7 @@ Les machines virtuelles de stockage que vous configurez pour la reprise après i
 | Stockage logique | Paramètre | Limite 
 
 
-.2+| *Fichiers* | Taille maximale | 16 To 
+.2+| *Fichiers* | Taille maximale ^2^ | 128 TO 
 
 
 | Maximum par volume | Selon la taille du volume, jusqu'à 2 milliards 
@@ -574,7 +574,7 @@ Les machines virtuelles de stockage que vous configurez pour la reprise après i
 | Taille minimale | 20 MO 
 
 
-| Taille maximale | 100 To 
+| Taille maximale ^3^ | 300 Tio 
 
 
 | *Qtrees* | Maximum par volume FlexVol | 4,995 
@@ -583,6 +583,13 @@ Les machines virtuelles de stockage que vous configurez pour la reprise après i
 | *Copies snapshot* | Maximum par volume FlexVol | 1,023 
 |===
 . La profondeur de clone hiérarchique correspond à la profondeur maximale d'une hiérarchie imbriquée de volumes FlexClone qui peut être créée à partir d'un seul volume FlexVol.
+. À partir de ONTAP 9.12.1P2, la limite est de 128 To. Dans ONTAP 9.11.1 et les versions antérieures, la limite est de 16 To.
+. La création de volumes FlexVol d'une taille maximale de 300 Tio est prise en charge à l'aide des outils et des versions minimales suivants :
++
+** System Manager et l'interface de ligne de commande ONTAP à partir de Cloud Volumes ONTAP 9.12.1 P2 et 9.13.0 P2
+** BlueXP depuis Cloud Volumes ONTAP 9.13.1
+
+
 
 
 
