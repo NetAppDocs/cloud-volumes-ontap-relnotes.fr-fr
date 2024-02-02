@@ -156,6 +156,24 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 | E80ids_v4 | 61 | 896 To | 2 Pio 
 
 
+| E4ds_v5 | 5 | 160 To | 2 Pio 
+
+
+| E8ds_v5 | 13 | 416 To | 2 Pio 
+
+
+| E20ds_v5 | 29 | 896 To | 2 Pio 
+
+
+| E32ds_v5 | 29 | 896 To | 2 Pio 
+
+
+| E48ds_v5 | 29 | 896 To | 2 Pio 
+
+
+| E64ds_v5 | 29 | 896 To | 2 Pio 
+
+
 | L8S_v3 | 12 | 384 To | 2 Pio 
 
 
@@ -232,6 +250,21 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 | E80ids_v4 | 28 | 896 To | 2 Pio 
 
 
+| E8ds_v5 | 12 | 384 To | 2 Pio 
+
+
+| E20ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E32ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E48ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E64ds_v5 | 28 | 896 To | 2 Pio 
+
+
 | L16s_v3 | 28 | 896 To | 2 Pio 
 
 
@@ -262,6 +295,21 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 
 
 | E80ids_v4 | 28 | 896 To | 2 Pio 
+
+
+| E8ds_v5 | 12 | 384 To | 2 Pio 
+
+
+| E20ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E32ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E48ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E64ds_v5 | 28 | 896 To | 2 Pio 
 
 
 | L16s_v3 | 28 | 896 To | 2 Pio 
@@ -322,6 +370,18 @@ Un seul nœud propose deux options de licence basées sur des nœuds : PAYGO Pre
 
 
 | E80ids_v4 | 61 | 368 To | 368 To 
+
+
+| E20ds_v5 | 29 | 896 To | 2 Pio 
+
+
+| E32ds_v5 | 29 | 896 To | 2 Pio 
+
+
+| E48ds_v5 | 29 | 896 To | 2 Pio 
+
+
+| E64ds_v5 | 29 | 896 To | 2 Pio 
 |===
 ====
 .Un seul nœud avec BYOL
@@ -381,6 +441,24 @@ Un seul nœud propose deux options de licence basées sur des nœuds : PAYGO Pre
 
 
 | E80ids_v4 | 61 | 368 To | 368 To | 896 To | 2 Pio 
+
+
+| E4ds_v5 | 5 | 160 To | 368 To | 160 To | 2 Pio 
+
+
+| E8ds_v5 | 13 | 368 To | 368 To | 416 To | 2 Pio 
+
+
+| E20ds_v5 | 29 | 368 To | 368 To | 896 To | 2 Pio 
+
+
+| E32ds_v5 | 29 | 368 To | 368 To | 896 To | 2 Pio 
+
+
+| E48ds_v5 | 29 | 368 To | 368 To | 896 To | 2 Pio 
+
+
+| E64ds_v5 | 29 | 368 To | 368 To | 896 To | 2 Pio 
 |===
 ====
 
@@ -436,6 +514,18 @@ Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pag
 
 
 | E80ids_v4 | 28 | 368 To | 368 To 
+
+
+| E20ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E32ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E48ds_v5 | 28 | 896 To | 2 Pio 
+
+
+| E64ds_v5 | 28 | 896 To | 2 Pio 
 |===
 ====
 .BYOL : paires HAUTE DISPONIBILITÉ dans une zone de disponibilité unique avec objets blob de pages
@@ -503,6 +593,21 @@ Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pag
 
 
 | E80ids_v4 | 28 | 368 To | 368 To | 368 To | 2 Pio 
+
+
+| E8ds_v5 | 12 | 368 To | 368 To | 368 To | 2 Pio 
+
+
+| E20ds_v5 | 28 | 368 To | 368 To | 368 To | 2 Pio 
+
+
+| E32ds_v5 | 28 | 368 To | 368 To | 368 To | 2 Pio 
+
+
+| E48ds_v5 | 28 | 368 To | 368 To | 368 To | 2 Pio 
+
+
+| E64ds_v5 | 28 | 368 To | 368 To | 368 To | 2 Pio 
 |===
 ====
 
