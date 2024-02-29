@@ -38,10 +38,10 @@ Chaque licence prend en charge une capacité système maximale différente. La c
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | Fréemium | PAYGO Explore | PAIEMENT À L'UTILISATION Standard | PAIEMENT À L'UTILISATION Premium | BYOL basé sur les nœuds | Licence basée sur la capacité 
+|  | Fréemium | Licence basée sur la capacité | PAYGO Explore | PAIEMENT À L'UTILISATION Standard | PAIEMENT À L'UTILISATION Premium | BYOL basé sur les nœuds 
 
 
-| Capacité système maximale (disques + stockage objet) ^1^ | 500 Gio | 2 To | 10 To | 368 Tio ^2^ | 368 Tio par licence ^2^ | 2 Pio ^2^ 
+| Capacité système maximale (disques + stockage objet) ^1^ | 500 Gio | 2 Pio ^2^ | 2 To | 10 To | 368 Tio ^2^ | 368 Tio par licence ^2^ 
 
 
 | Types de disques pris en charge  a| 

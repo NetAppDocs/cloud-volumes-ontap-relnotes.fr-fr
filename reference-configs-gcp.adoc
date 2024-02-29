@@ -20,16 +20,22 @@ Google Cloud prend en charge plusieurs configurations Cloud Volumes ONTAP.
 
 == Configurations prises en charge par licence
 
-Cloud Volumes ONTAP est disponible dans Google Cloud Platform en tant que système à un seul nœud et en tant que paire haute disponibilité de nœuds pour la tolérance aux pannes et la continuité de l'activité.
+Cloud Volumes ONTAP est disponible dans Google Cloud en tant que système à un seul nœud et en tant que paire haute disponibilité de nœuds pour la tolérance aux pannes et la continuité de l'activité.
 
 La mise à niveau d'un système à un seul nœud vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à un seul nœud à une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau.
 
-[cols="h,d,d,d,d,d,d"]
+Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
+
+[role="tabbed-block"]
+====
+.Licences basées sur la capacité
+--
+[cols="h,d,d,d"]
 |===
-|  | Fréemium | PAYGO Explore | PAIEMENT À L'UTILISATION Standard | PAIEMENT À L'UTILISATION Premium | BYOL basé sur les nœuds | Licence basée sur la capacité 
+|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials, Professional et Edge cache) 
 
 
-| Capacité système maximale (disques + stockage objet) ^1^ | 500 GO | 2 TO ^2^ | 10 TO | 368 TO | 368 To par licence | 2 Pio 
+| Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
 
 
 | Types de machine pris en charge ^3^  a| 
@@ -44,27 +50,7 @@ La mise à niveau d'un système à un seul nœud vers une paire haute disponibil
 
  a| 
 * n2-standard-4
-
- a| 
-* n1-standard-8
 * n2-standard-8
-
- a| 
-* n1-standard-32
-* n2-standard-16
-* n2-standard-32
-* n2-standard-48
-* n2-standard-64
-
- a| 
-* n1-standard-8
-* n1-standard-32
-* n2-standard-4
-* n2-standard-8
-* n2-standard-16
-* n2-standard-32
-* n2-standard-48
-* n2-standard-64
 
  a| 
 * n1-standard-8
@@ -79,7 +65,7 @@ La mise à niveau d'un système à un seul nœud vers une paire haute disponibil
 
 
 
-| Types de disques pris en charge 6+| Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). 
+| Types de disques pris en charge 3+| Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). 
 |===
 Remarques :
 
@@ -94,8 +80,6 @@ Si vous disposez d'un système existant fonctionnant sur ce type de machine, vou
 
 . Les performances d'écriture améliorées sont activées lorsque des disques persistants équilibrés et des disques persistants de performance (SSD) sont utilisés.
 . L'interface BlueXP affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Toutefois, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons disponible pour un environnement de laboratoire spécifique uniquement.
-. Pour la prise en charge par région Google Cloud Platform, rendez-vous sur https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
-. Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
 . À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
 +
 ** n2-standard-16
@@ -113,6 +97,78 @@ NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des
 
 
 
+--
+.Licences basées sur les nœuds
+--
+[cols="h,d,d,d,d"]
+|===
+|  | PAYGO Explore | PAIEMENT À L'UTILISATION Standard | PAIEMENT À L'UTILISATION Premium | BYOL basé sur les nœuds 
+
+
+| Capacité système maximale (disques + stockage objet) | 2 TO ^2^ | 10 To | 368 To | 368 Tio par licence 
+
+
+| Types de machine pris en charge ^3^  a| 
+* n2-standard-4
+
+ a| 
+* n1-standard-8
+* n2-standard-8
+
+ a| 
+* n1-standard-32
+* n2-standard-16
+* n2-standard-32
+* n2-standard-48
+* n2-standard-64
+
+ a| 
+* n1-standard-8
+* n1-standard-32
+* n2-standard-4
+* n2-standard-8
+* n2-standard-16
+* n2-standard-32
+* n2-standard-48
+* n2-standard-64
+
+
+
+
+| Types de disques pris en charge 4+| Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). 
+|===
+Remarques :
+
+. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
++
+link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
+
+. Le Tiering des données vers Google Cloud Storage n'est pas pris en charge avec PAYGO Explore.
+. Le type de machine Custom-4-16384 n'est plus pris en charge par les nouveaux systèmes Cloud Volumes ONTAP.
++
+Si vous disposez d'un système existant fonctionnant sur ce type de machine, vous pouvez continuer à l'utiliser, mais nous vous recommandons de passer au type de machine n2-standard-4.
+
+. Les performances d'écriture améliorées sont activées lorsque des disques persistants équilibrés et des disques persistants de performance (SSD) sont utilisés.
+. L'interface BlueXP affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Toutefois, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons disponible pour un environnement de laboratoire spécifique uniquement.
+. À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
++
+** n2-standard-16
+** n2-standard-32
+** n2-standard-48
+** n2-standard-64
++
+Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
+
++
+
+NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée.
+
+
+
+
+
+--
+====
 
 
 == Tailles de disque prises en charge
@@ -128,3 +184,9 @@ Dans Google Cloud, un agrégat peut contenir jusqu'à 6 disques de même type et
 * 16 TO
 * 64 TO
 
+
+
+
+== Régions prises en charge
+
+Pour connaître la prise en charge des régions Google Cloud, reportez-vous à la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
