@@ -20,6 +20,34 @@ Cloud Volumes ONTAP s'applique à tous les fournisseurs cloud : AWS, Azure et Go
 
 
 
+== Fonctions ONTAP non prises en charge
+
+Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ONTAP :
+
+* Déduplication à la volée au niveau des agrégats
+* La déduplication en arrière-plan au niveau de l'agrégat
+* Centre de maintenance du disque
+* Nettoyage de disque
+* Mise en miroir FabricPool
+* Fibre Channel (FC)
+* Pools Flash
+* Infinite volumes
+* Groupes d'interface
+* Le basculement LIF monomode d'un cluster
+* MetroCluster
+* Vérification multi-administrateurs
++
+L'activation de la vérification multi-administration sur Cloud Volumes ONTAP entraîne une configuration non prise en charge.
+
+* RAID4, RAID-DP, RAID-TEC (RAID0 PRIS EN CHARGE)
+* Le processeur de service
+* Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)
+* SnapMirror synchrone
+* VLAN
+
+
+
+
 == Nombre maximal d'opérations de réplication simultanées
 
 Le nombre maximal de transferts SnapMirror ou SnapVault simultanés pour Cloud Volumes ONTAP est de 100 par nœud, indépendamment du type d'instance ou du type d'ordinateur.
@@ -37,7 +65,7 @@ NOTE: Les points de cohérence ONTAP dans le système de fichiers WAFL détermin
 
 
 
-== Cloud Volumes ONTAP prend en charge les instances de machine virtuelle réservées et à la demande
+== Cloud Volumes ONTAP prend uniquement en charge les instances de VM réservées et à la demande
 
 Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les autres types d'instances de VM ne sont pas pris en charge.
 
@@ -73,28 +101,6 @@ Les licences SnapManager par serveur sont prises en charge par Cloud Volumes ONT
 
 
 
-== Fonctions ONTAP non prises en charge
+== Limitations avec les agents et les extensions tiers
 
-Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ONTAP :
-
-* Déduplication à la volée au niveau des agrégats
-* La déduplication en arrière-plan au niveau de l'agrégat
-* Centre de maintenance du disque
-* Nettoyage de disque
-* Mise en miroir FabricPool
-* Fibre Channel (FC)
-* Pools Flash
-* Infinite volumes
-* Groupes d'interface
-* Le basculement LIF monomode d'un cluster
-* MetroCluster
-* Vérification multi-administrateurs
-+
-L'activation de la vérification multi-administration sur Cloud Volumes ONTAP entraîne une configuration non prise en charge.
-
-* RAID4, RAID-DP, RAID-TEC (RAID0 PRIS EN CHARGE)
-* Le processeur de service
-* Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)
-* SnapMirror synchrone
-* VLAN
-
+Les agents tiers et les extensions de machine virtuelle ne sont pas pris en charge sur les instances de machine virtuelle Cloud Volumes ONTAP.
