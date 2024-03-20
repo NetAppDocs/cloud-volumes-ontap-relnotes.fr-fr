@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/concept-licensing.html</loc>
+        
+      
+      <lastmod>2023-05-31T16:20:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/</loc>
+        
+      
+      <lastmod>2023-12-13T19:16:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/legal-notices.html</loc>
+        
+      
+      <lastmod>2023-10-03T19:50:44+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-configs-aws.html</loc>
+        
+      
+      <lastmod>2024-03-07T02:39:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-configs-azure.html</loc>
+        
+      
+      <lastmod>2024-03-19T19:13:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-configs-gcp.html</loc>
+        
+      
+      <lastmod>2024-03-07T02:39:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-issues.html</loc>
+        
+      
+      <lastmod>2023-05-23T19:09:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limitations-aws.html</loc>
+        
+      
+      <lastmod>2023-05-31T16:20:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limitations-azure.html</loc>
+        
+      
+      <lastmod>2023-05-23T19:09:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limitations-gcp.html</loc>
+        
+      
+      <lastmod>2023-05-31T16:20:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limitations.html</loc>
+        
+      
+      <lastmod>2024-03-20T08:23:29+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-aws.html</loc>
+        
+      
+      <lastmod>2024-01-19T15:09:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-azure.html</loc>
+        
+      
+      <lastmod>2024-02-02T18:08:21+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-gcp.html</loc>
+        
+      
+      <lastmod>2024-01-19T15:09:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-new.html</loc>
+        
+      
+      <lastmod>2024-03-07T05:09:44+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-provider-integrations.html</loc>
+        
+      
+      <lastmod>2022-11-17T06:42:26+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes//search.html</loc>
+        
+      
+      <lastmod>2024-03-20T08:23:42+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
