@@ -20,6 +20,14 @@ D'autres fonctionnalités et améliorations sont également introduites dans les
 
 
 
+== 9.14.1 P1 (1er avril 2024)
+
+Le correctif 9.14.1 P1 est désormais disponible pour Cloud Volumes ONTAP pour tous les fournisseurs cloud. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P1["Consultez la liste des bugs corrigés dans le correctif P1"^] (Identifiant du site du support NetApp requis).
+
+
+
 == 9.14.1 GA (5 mars 2024)
 
 La version Cloud Volumes ONTAP 9.14.1 General Availability est désormais disponible dans AWS, Azure et Google Cloud.
