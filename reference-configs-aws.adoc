@@ -45,7 +45,7 @@ Chaque licence prend en charge une capacité système maximale différente. La c
 
 
 | Types de disques pris en charge  a| 
-* SSD à usage général (gp3 et gp2) ^3^
+* SSD à usage général (gp3 et gp2) ^3^,^5^
 * SSD d'IOPS provisionné (io1) ^3^
 * Disque dur à débit optimisé (st1) ^4^
 
@@ -58,6 +58,7 @@ Chaque licence prend en charge une capacité système maximale différente. La c
 . Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
 . L'amélioration des performances d'écriture est activée lorsque les disques SSD sont utilisés avec toutes les configurations Cloud Volumes ONTAP, à l'exception de PAYGO Explore.
 . Il n'est pas recommandé de faire le Tiering des données dans le stockage objet lors de l'utilisation de disques durs à débit optimisé (st1).
+. Les zones locales AWS prennent uniquement en charge les disques SSD génériques (gp2).
 
 
 
@@ -108,6 +109,8 @@ Dans AWS, un agrégat peut contenir jusqu'à 6 disques de même taille. Cependan
 
 Chaque licence Cloud Volumes ONTAP prend en charge différents types d'instances EC2. Pour vous faciliter la tâche, le tableau ci-dessous présente le CPU virtuel, la RAM et la bande passante pour chaque type d'instance pris en charge. https://aws.amazon.com/ec2/instance-types/["Pour en savoir plus sur les types d'instances EC2, consultez AWS"^].
 
+Cloud Volumes ONTAP peut être exécuté sur une instance EC2 réservée ou à la demande. Les solutions utilisant d'autres types d'instances ne sont pas prises en charge.
+
 Les bandes passantes présentées dans le tableau ci-dessous correspondent aux limites AWS documentées pour chaque type d'instance. Ces limites ne sont pas complètement alignées sur les solutions qu'offre Cloud Volumes ONTAP. Pour les performances attendues, reportez-vous à https://www.netapp.com/us/media/tr-4383.pdf["Rapport technique NetApp 4383 : caractérisation des performances de Cloud Volumes ONTAP dans Amazon Web Services avec des charges de travail applicatives"^].
 
 [cols="8*"]
@@ -115,31 +118,31 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 | Licence | Instance prise en charge | VCPU | RAM | Flash cache ^1^ | Bande passante réseau (Gbit/s) | Bande passante EBS (Mbit/s) | Vitesse d'écriture élevée ^2^ 
 
 
-| *Explorer ou toute autre licence* | m5.xlarge | 4 | 16 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge (un seul nœud uniquement) 
+| *Explorer ou toute autre licence* | m5.xlarge ^6^ | 4 | 16 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge (un seul nœud uniquement) 
 
 
-.3+| *Standard ou toute autre licence* | r5.xlarge | 4 | 32 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge (un seul nœud uniquement) 
+.3+| *Standard ou toute autre licence* | r5.xlarge ^6^ | 4 | 32 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge (un seul nœud uniquement) 
 
 
 | m5a.2xlarge | 8 | 32 | Non pris en charge | Jusqu'à 10 | Jusqu'à 2,880 | Pris en charge 
 
 
-| m5.2xlarge | 8 | 32 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
+| m5.2xlarge ^6^ | 8 | 32 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
 
 
 .22+| *Premium ou toute autre licence* | m5n.2xlarge | 8 | 32 | Non pris en charge | Jusqu'à 25 | Jusqu'à 4,750 | Pris en charge 
 
 
-| r5.2xlarge | 8 | 64 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
+| r5.2xlarge ^6^ | 8 | 64 | Non pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
 
 
 | r5d.2xlarge | 8 | 64 | Pris en charge | Jusqu'à 10 | Jusqu'à 4,750 | Pris en charge 
 
 
-| c5d.4xlarge | 16 | 32 | Pris en charge | Jusqu'à 10 | 4,570 | Pris en charge 
+| c5d.4xlarge ^6^ | 16 | 32 | Pris en charge | Jusqu'à 10 | 4,570 | Pris en charge 
 
 
-| m5.4xlarge | 16 | 64 | Non pris en charge | Jusqu'à 10 | 4,750 | Pris en charge 
+| m5.4xlarge ^6^ | 16 | 64 | Non pris en charge | Jusqu'à 10 | 4,750 | Pris en charge 
 
 
 | m5dn.4xlarge | 16 | 64 | Pris en charge | Jusqu'à 25 | 4,750 | Pris en charge 
@@ -197,7 +200,10 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 . Le type d'instance r5.12xlarge présente une limitation connue avec la prise en charge. Si un nœud redémarre de manière inattendue en raison d'un problème, le système peut ne pas collecter les fichiers « core » utilisés pour le dépannage et la racine du problème. Le client accepte les risques et les conditions d'assistance limitées et assume toute responsabilité en cas de problème. Cette limitation affecte les paires haute disponibilité nouvellement déployées et les paires haute disponibilité mises à niveau depuis la version 9.8. La limite n'affecte pas les systèmes à nœud unique récemment déployés.
 . Alors que ces types d'instances EC2 prennent en charge plus de 64 vCPU, Cloud Volumes ONTAP ne prend en charge que 64 vCPU.
 . Lorsque vous choisissez un type d'instance EC2, vous pouvez indiquer s'il s'agit d'une instance partagée ou dédiée.
-. Cloud Volumes ONTAP peut être exécuté sur une instance EC2 réservée ou à la demande. Les solutions utilisant d'autres types d'instances ne sont pas prises en charge.
+. Les zones locales AWS sont prises en charge dans les familles de types d'instances EC2 suivantes, de tailles XLarge à 4xlarge : M5, C5, C5d, R5 et R5d. link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["Consultez AWS pour obtenir les informations les plus récentes et complètes sur les types d'instances EC2 prises en charge dans les zones locales"^].
++
+La vitesse d'écriture élevée n'est pas prise en charge avec ces types d'instances dans les zones locales AWS.
+
 
 
 
