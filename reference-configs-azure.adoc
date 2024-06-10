@@ -231,6 +231,9 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 
 ==== Paires HA avec un blob de pages
 
+
+NOTE: Vous pouvez utiliser les configurations suivantes avec les déploiements d'objets blob de page haute disponibilité Cloud Volumes ONTAP existants dans Azure. Les blobs de page ne sont pas pris en charge pour les nouveaux déploiements.
+
 [role="tabbed-block"]
 ====
 .Licences basées sur la capacité
