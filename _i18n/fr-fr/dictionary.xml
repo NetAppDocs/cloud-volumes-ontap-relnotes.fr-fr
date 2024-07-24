@@ -278,7 +278,6 @@
   <block id="a1834fbcd2847d469ef79f5526dcee65" category="inline-link">Pour en savoir plus sur les types d'instances EC2, consultez AWS</block>
   <block id="98ade5346ada08656e0c7b517b695d0f" category="paragraph">Chaque licence Cloud Volumes ONTAP prend en charge différents types d'instances EC2. Pour vous faciliter la tâche, le tableau ci-dessous présente le CPU virtuel, la RAM et la bande passante pour chaque type d'instance pris en charge.<block ref="7fe5ce03f92ccda8dcb0aa0fab836a1f" category="inline-link-rx"></block>.</block>
   <block id="c7d741925ef81824617c6a2975104e27" category="inline-link">Rapport technique NetApp 4383 : caractérisation des performances de Cloud Volumes ONTAP dans Amazon Web Services avec des charges de travail applicatives</block>
-  <block id="5070622feb6e4e88eeee7983bad01de6" category="paragraph">Les bandes passantes présentées dans le tableau ci-dessous correspondent aux limites AWS documentées pour chaque type d'instance. Ces limites ne sont pas complètement alignées sur les solutions qu'offre Cloud Volumes ONTAP. Pour les performances attendues, reportez-vous à<block ref="21181a62240b2a52719451cc8d855312" category="inline-link-rx"></block>.</block>
   <block id="4a7243646d30fc1e81eca2df9826cc03" category="cell">Instance prise en charge</block>
   <block id="5d56dbd20d9ee1ab8a722ff12e331953" category="cell">VCPU</block>
   <block id="e53619c1fe611a51eeeb8d148ba6e532" category="cell">RAM</block>
@@ -752,4 +751,5 @@
   <block id="af9688d5cde98d7a041489576710fac7" category="paragraph">Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.15.0 à partir de la version 9.14.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
   <block id="8e47e9575e2300fd877f61160058d7c0" category="sidebar">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.15.0.</block>
   <block id="3aecd779578c661d895e83c1e9e7274c" category="sidebar">Notes de mise à jour de Cloud Volumes ONTAP 9.15.0</block>
+  <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">Les bandes passantes présentées dans le tableau ci-dessous correspondent aux limites AWS documentées pour chaque type d'instance. Ces limites ne sont pas complètement alignées sur les solutions qu'offre Cloud Volumes ONTAP. Pour connaître les performances attendues, reportez-vous<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>à la .</block>
 </blocks>

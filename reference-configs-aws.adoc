@@ -111,7 +111,7 @@ Chaque licence Cloud Volumes ONTAP prend en charge différents types d'instances
 
 Cloud Volumes ONTAP peut être exécuté sur une instance EC2 réservée ou à la demande. Les solutions utilisant d'autres types d'instances ne sont pas prises en charge.
 
-Les bandes passantes présentées dans le tableau ci-dessous correspondent aux limites AWS documentées pour chaque type d'instance. Ces limites ne sont pas complètement alignées sur les solutions qu'offre Cloud Volumes ONTAP. Pour les performances attendues, reportez-vous à https://www.netapp.com/us/media/tr-4383.pdf["Rapport technique NetApp 4383 : caractérisation des performances de Cloud Volumes ONTAP dans Amazon Web Services avec des charges de travail applicatives"^].
+Les bandes passantes présentées dans le tableau ci-dessous correspondent aux limites AWS documentées pour chaque type d'instance. Ces limites ne sont pas complètement alignées sur les solutions qu'offre Cloud Volumes ONTAP. Pour connaître les performances attendues, reportez-vous https://www.netapp.com/pdf.html?item=/media/9088-tr4383pdf.pdf["Rapport technique NetApp 4383 : caractérisation des performances de Cloud Volumes ONTAP dans Amazon Web Services avec des charges de travail applicatives"^]à la .
 
 [cols="8*"]
 |===
