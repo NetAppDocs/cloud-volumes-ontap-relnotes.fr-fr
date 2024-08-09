@@ -40,7 +40,7 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 --
 [cols="h,d,d,d"]
 |===
-|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials, Professional et Edge cache) 
+|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials et Professional) 
 
 
 | Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
@@ -121,6 +121,9 @@ Remarques :
 
 . Le Tiering des données vers le stockage Azure Blob n'est pas pris en charge avec PAYGO Explore.
 . Ce type de serveur virtuel inclut le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Il est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus >>"^].
++
+La version minimale de ONTAP requise pour la configuration de Flash cache sur Azure est la version 9.13.1 GA.
+
 . Ces types de VM utilisent un https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["SSD Ultra"^] Pour VNVRAM, ce qui offre de meilleures performances d'écriture.
 +
 Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas passer à un autre type de VM qui _n'utilise pas_ un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8ds_v4 à E8s_v3, mais vous pouvez passer de E8ds_v4 à E32ds_v4 car ces deux types de VM utilisent des SSD Ultra.
@@ -240,7 +243,7 @@ NOTE: Vous pouvez utiliser les configurations suivantes avec les déploiements d
 --
 [cols="h,d,d,d"]
 |===
-|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials, Professional et Edge cache) 
+|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials et Professional) 
 
 
 | Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
@@ -377,7 +380,7 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 --
 [cols="h,d,d,d"]
 |===
-|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials, Professional et Edge cache) 
+|  | Fréemium | Optimisé | Licence basée sur la capacité (Essentials et Professional) 
 
 
 | Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
