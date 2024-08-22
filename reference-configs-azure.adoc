@@ -115,7 +115,7 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 
 
 
-| Types de disque pris en charge ^4^ 3+| Disques gérés HDD standard, disques gérés SSD standard et disques gérés SSD premium 
+| Types de disque pris en charge ^4^ 3+| Disques gérés HDD standard, disques gérés SSD standard, disques gérés SSD premium et disques gérés SSD v2 Premium. 
 |===
 Remarques :
 
@@ -126,7 +126,7 @@ La version minimale de ONTAP requise pour la configuration de Flash cache sur Az
 
 . Ces types de VM utilisent un https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["SSD Ultra"^] Pour VNVRAM, ce qui offre de meilleures performances d'écriture.
 +
-Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas passer à un autre type de VM qui _n'utilise pas_ un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8ds_v4 à E8s_v3, mais vous pouvez passer de E8ds_v4 à E32ds_v4 car ces deux types de VM utilisent des SSD Ultra.
+Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas passer à un autre type de VM qui _n'utilise pas_ un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8ds_v4 à E8s_v3, mais vous pouvez passer de E8ds_v4 à E32ds_v4 car ces deux types de VM utilisent des SSD Ultra. De même, lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas modifier le type de machine virtuelle en un type qui ne prend pas en charge les disques gérés SSD v2 Premium.
 
 +
 Inversement, si vous avez déployé Cloud Volumes ONTAP à l'aide d'un autre type de VM, vous ne pourrez pas passer à un type de VM utilisant un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8s_v3 à E8ds_v4.
@@ -421,6 +421,9 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 * L64s_v3 ^1,3,5^
 
 
+
+
+| Types de disques pris en charge 3+| Disques gérés HDD standard, disques gérés SSD standard, disques gérés SSD premium et disques gérés SSD v2 Premium. 
 |===
 Remarques :
 
