@@ -59,7 +59,7 @@ Si l'un de ces critères n'est pas rempli, le mode de déploiement non zonal pr�
 
 === Prise en charge des machines virtuelles Jeux à l'échelle pour unifier tous les types Azure HA
 
-Cloud Volumes ONTAP 9.15.1 exploite les ensembles d'échelles des machines virtuelles en mode d'orchestration flexible sur Azure pour déployer des instances de machines virtuelles dans des zones de disponibilité uniques pour les paires haute disponibilité. Il couvre toutes les versions du mode HA, Pageblob, LRS, zone de stockage redondante (ZRS) ou multizone et zone LRS (AZ unique).
+Cloud Volumes ONTAP 9.15.1 exploite les ensembles d'échelles des machines virtuelles en mode d'orchestration flexible sur Azure pour déployer des instances de machines virtuelles dans des zones de disponibilité uniques pour les paires haute disponibilité. Il couvre toutes les versions du mode HA, du blob de page, du LRS, du stockage redondant de zone (ZRS) ou du stockage multizone et du zonal LRS (AZ unique).
 
 * https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentation Microsoft Azure : Virtual machine Scale Sets"^]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Découvrez les paires haute disponibilité dans Azure"^].
