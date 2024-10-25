@@ -52,7 +52,7 @@ Chaque licence prend en charge une capacité système maximale différente. La c
 
 
 
-| Tiering des données inactives vers S3 6+| Pris en charge 
+| Tiering des données inactives vers S3 2+| Pris en charge | Non pris en charge 3+| Pris en charge 
 |===
 . Dans le cas d'une paire HA, la limite de capacité s'effectue sur l'ensemble de la paire HA. Ce n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité pouvant atteindre 368 Tio entre les deux nœuds.
 . Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
