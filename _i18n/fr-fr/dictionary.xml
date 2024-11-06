@@ -250,7 +250,6 @@
   <block id="e17c7f98af970809162c4395474988ad" category="section-title">Stockage pris en charge par licence</block>
   <block id="c5a27c05ad608efda7a7a192ee480209" category="paragraph">Chaque licence prend en charge une capacité système maximale différente. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données. NetApp ne prend pas en charge le dépassement de cette limite.</block>
   <block id="dc2065e297a9790d182a555ba250dbda" category="cell">BYOL basé sur les nœuds</block>
-  <block id="2a3273b13e4da5a861913a955ede7809" category="cell">Capacité système maximale (disques + stockage objet) ^1^</block>
   <block id="7916f32f06eaabdf61df576419c0c138" category="cell">2 To</block>
   <block id="705c8901d15869a7116491b156af6fbe" category="cell">368 Tio ^2^</block>
   <block id="6e9a8a2df40afea5890a6ea81b2df2b2" category="cell">368 Tio par licence ^2^</block>
@@ -743,9 +742,7 @@
   <block id="6326d313b843fff1d57ed50ec7c000f1" category="list-text">La version de Cloud Volumes ONTAP est 9.15.1 ou ultérieure.</block>
   <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Site Web Microsoft Azure : produits disponibles par région</block>
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link">Lancement d'une paire HA Cloud Volumes ONTAP dans Azure</block>
-  <block id="8587098b07c4e4a23dccafd754dbc676" category="section-title">Notes de mise à niveau.</block>
   <block id="a30c58b20b60e5ffb9d932cee170af9a" category="paragraph">Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.15.1 à partir des versions 9.15.0 et 9.14.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
-  <block id="8679be60a45e6f155a93161b9a8c5d43" category="sidebar">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 1.</block>
   <block id="c32d4655f35315d6cd7ab368b1f0a6de" category="sidebar">Notes de mise à jour de Cloud Volumes ONTAP 9.15.1</block>
   <block id="9b74e463f9eba3d7b2490736bd408da0" category="sidebar">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.15.1.</block>
   <block id="28440751cbe2a16368822f02f298a2f4" category="inline-link">Configuration à zone de disponibilité unique HAUTE DISPONIBILITÉ avec disques gérés partagés</block>
@@ -784,4 +781,9 @@
   <block id="c3e5d9aa8817ef74e74e8cd55f39570f" category="paragraph">Le correctif 9.15.1 P3 est désormais disponible pour Cloud Volumes ONTAP pour tous les fournisseurs cloud. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">Afficher la liste des bogues corrigés dans le correctif P3</block>
   <block id="fae48ca93c7d21429a4d9efb8dbde929" category="paragraph"><block ref="03a97087fa51b558b394583b2ec67707" category="inline-link-macro-rx"></block> (Identifiant du site du support NetApp requis).</block>
+  <block id="29aaeb333a41db01888c537148053c70" category="paragraph">*Capacité système maximale* (disques + stockage objet) ^1^</block>
+  <block id="06cf24f6f7b06cb3d2778a1a70e9ff2f" category="paragraph">*Types de disque pris en charge*</block>
+  <block id="17943cfde2a5e23c7925dc95a8dde6a4" category="paragraph">*Tiering des données inactives vers S3*</block>
+  <block id="640897782baa10cc7d259d38d703b275" category="list-text">Les performances améliorées en écriture sont activées lorsque les disques SSD sont utilisés avec toutes les configurations Cloud Volumes ONTAP.</block>
+  <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">Notes de mise à niveau</block>
 </blocks>

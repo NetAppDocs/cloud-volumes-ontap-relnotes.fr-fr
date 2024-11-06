@@ -83,7 +83,7 @@ Cloud Volumes ONTAP 9.15.1 exploite les ensembles d'échelles des machines virtu
 
 
 
-== Notes de mise à niveau.
+== Notes de mise à niveau
 
 Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.
 
