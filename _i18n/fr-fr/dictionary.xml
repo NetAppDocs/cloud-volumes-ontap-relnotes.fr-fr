@@ -428,7 +428,6 @@
   <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="list-text">64 TO</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Plusieurs options de licence sont disponibles pour Cloud Volumes ONTAP. Chacune d'elles vous permet de choisir une configuration qui répond à vos besoins.</block>
   <block id="be02aeef4770b69cefbe40935aba2797" category="doc">Licences pour Cloud Volumes ONTAP</block>
-  <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP propose différentes options de licence qui vous permettent de choisir le modèle de consommation le mieux adapté à vos besoins.</block>
   <block id="f008ecd5469e24eee31eb4e2e4a1e23f" category="paragraph">Des options de licence sont disponibles pour les nouveaux clients :</block>
   <block id="19bcaffbe8361f9d452beabc8065f223" category="list-text">Packs de licences basés sur la capacité</block>
   <block id="e7cf94fb6f7d5441689859c52b410a98" category="list-text">La licence basée sur la capacité vous permet de payer pour le Cloud Volumes ONTAP par Tio de capacité. La licence est associée à votre compte NetApp et vous permet de facturer plusieurs systèmes par rapport à la licence, tant que la capacité disponible par le biais de la licence est suffisante.</block>
@@ -528,7 +527,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.</block>
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">Notification relative à ONTAP</block>
   <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
-  <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">Accueil des notes de mise à jour</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Quoi de neuf</block>
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="sidebar">Présentation des licences</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="sidebar">Configurations compatibles</block>
@@ -743,7 +741,6 @@
   <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Site Web Microsoft Azure : produits disponibles par région</block>
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link">Lancement d'une paire HA Cloud Volumes ONTAP dans Azure</block>
   <block id="a30c58b20b60e5ffb9d932cee170af9a" category="paragraph">Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.15.1 à partir des versions 9.15.0 et 9.14.1. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
-  <block id="c32d4655f35315d6cd7ab368b1f0a6de" category="sidebar">Notes de mise à jour de Cloud Volumes ONTAP 9.15.1</block>
   <block id="9b74e463f9eba3d7b2490736bd408da0" category="sidebar">Ces notes de version décrivent les nouvelles fonctionnalités, les limites et les problèmes connus de Cloud Volumes ONTAP 9.15.1.</block>
   <block id="28440751cbe2a16368822f02f298a2f4" category="inline-link">Configuration à zone de disponibilité unique HAUTE DISPONIBILITÉ avec disques gérés partagés</block>
   <block id="e2a0553d4c47017042ca1689993f9c8b" category="paragraph">Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas passer à un autre type de VM qui _n'utilise pas_ un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8ds_v4 à E8s_v3, mais vous pouvez passer de E8ds_v4 à E32ds_v4 car ces deux types de VM utilisent des SSD Ultra. De même, lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas modifier le type de machine virtuelle en un type qui ne prend pas en charge les disques gérés SSD v2 Premium. Pour en savoir plus sur les configurations prises en charge pour les disques gérés SSD v2 Premium, reportez-vous à<block ref="6fd1548aedf3667cd5a4b1b43bc16181" category="inline-link-rx"></block>la section.</block>
@@ -786,4 +783,19 @@
   <block id="17943cfde2a5e23c7925dc95a8dde6a4" category="paragraph">*Tiering des données inactives vers S3*</block>
   <block id="640897782baa10cc7d259d38d703b275" category="list-text">Les performances améliorées en écriture sont activées lorsque les disques SSD sont utilisés avec toutes les configurations Cloud Volumes ONTAP.</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">Notes de mise à niveau</block>
+  <block id="6b32e99bddf60938239aabe092cb4c16" category="paragraph">Plusieurs options de licence sont disponibles pour Cloud Volumes ONTAP. Chacune d'elles vous permet de choisir un modèle de consommation adapté à vos besoins.</block>
+  <block id="27fe4eb3edbaff8f250e2d51f7462681" category="inline-link">Packs</block>
+  <block id="13dba612a4f942a80cbc82c5f678d57c" category="inline-link">En savoir plus sur les licences basées sur la capacité</block>
+  <block id="d994821c78c4538d3406d1baa52bc470" category="paragraph"><block ref="55cb08b70ffaa99b7ec18860c0180e14" category="inline-link-rx"></block> <block ref="7c9574dfed81dad53ed1c2acf3a874b5" category="inline-link-rx"></block></block>
+  <block id="c3cf4ee6dc24f388844547c270dcc62a" category="section-title">9.15.1 P4 (25 novembre 2024)</block>
+  <block id="70801cc1e406ee3c5d3829c09f39d8cc" category="paragraph">Le correctif 9.15.1 P4 est désormais disponible pour Cloud Volumes ONTAP pour tous les fournisseurs cloud. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.</block>
+  <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link-macro">Afficher la liste des bogues corrigés dans le correctif P4</block>
+  <block id="427f5af74d1c3371844f5ceb79ac74ea" category="paragraph"><block ref="d5d8d8f3e8dad9e51774bb89e5c4d87f" category="inline-link-macro-rx"></block> (Identifiant du site du support NetApp requis).</block>
+  <block id="349b79620c55ff0a99622dc458417341" category="section-title">Prise en charge de l'écriture différée FlexCache</block>
+  <block id="7bab27e59a8093f7f1f9f208560906b5" category="paragraph">À partir de Cloud Volumes ONTAP 9.15.1, l'écriture différée FlexCache est prise en charge comme autre mode d'opération pour l'écriture au niveau d'un cache.</block>
+  <block id="145c5d02a1872aab28d9aee2ee7b1adb" category="inline-link">Présentation de la réécriture de FlexCache</block>
+  <block id="e9847573f516d487b3b41696529ea9ac" category="paragraph">Pour plus d'informations sur cette fonctionnalité, reportez-vous à la documentation ONTAP<block ref="f66b7fc45c4e32762d53ba0f27132a8b" category="inline-link-rx"></block> .</block>
+  <block id="34756beb20b44cc3e732425639fae228" category="inline-link">Documents de mise en cache des volumes BlueXP </block>
+  <block id="fadeb5a0a5453e49f671ad12a304756a" category="paragraph">Pour plus d'informations sur la façon dont BlueXP  gère les volumes FlexCache, reportez-vous au<block ref="4df7bdb090af4efb3896a25128ffcee3" category="inline-link-rx"></block>.</block>
+  <block id="9136e486881930be99a49d333eddb2ba" category="sidebar">Notes de version de Cloud Volumes ONTAP 9.15.1</block>
 </blocks>
