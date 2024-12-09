@@ -39,8 +39,8 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 
 
 | Types de machine pris en charge ^1^  a| 
-* n1-standard-8
-* n1-standard-32
+* n1-standard-8 ^1^
+* n1-standard-32 ^1^
 * n2-standard-4
 * n2-standard-8
 * n2-standard-16
@@ -53,8 +53,8 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 * n2-standard-8
 
  a| 
-* n1-standard-8
-* n1-standard-32
+* n1-standard-8 ^1^
+* n1-standard-32 ^1^
 * n2-standard-4
 * n2-standard-8
 * n2-standard-16
@@ -65,22 +65,28 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 
 
 
-| Types de disque pris en charge^2^ 3+| Disques persistants équilibrés ^3^, disques persistants hautes performances (SSD) ^3^ et disques persistants standard (HDD). 
+| Types de disque pris en charge ^2^ 3+| Disques persistants équilibrés ^3^, disques persistants hautes performances (SSD) ^3^ et disques persistants standard (HDD). 
 |===
 Remarques :
 
-. Les machines de la série n1 ne sont plus disponibles en sélection sur BlueXP  lors du déploiement de nouvelles instances de Cloud Volumes ONTAP dans Google Cloud. Les machines de la série n1 seront conservées et prises en charge uniquement sur les systèmes existants plus anciens. Les nouveaux déploiements de Cloud Volumes ONTAP sont pris en charge dans Google Cloud uniquement à partir de la version 9.8. Nous vous recommandons de passer aux types de machines de la série n2 compatibles avec Cloud Volumes ONTAP 9.8 et versions ultérieures. Les machines de la série n1, cependant, seront disponibles pour les nouveaux déploiements effectués via l'API.
+. ^1^ les machines de la série n1 ne peuvent plus être sélectionnées sur BlueXP  lors du déploiement de nouvelles instances de Cloud Volumes ONTAP dans Google Cloud. Les machines de la série n1 seront conservées et prises en charge uniquement sur les systèmes existants plus anciens. Les nouveaux déploiements de Cloud Volumes ONTAP sont pris en charge dans Google Cloud uniquement à partir de la version 9.8. Nous vous recommandons de passer aux machines de la série n2 compatibles avec Cloud Volumes ONTAP 9.8 et versions ultérieures. Les machines de la série n1, cependant, seront disponibles pour les nouveaux déploiements effectués via l'API.
 +
 Le type de machine Custom-4-16384 n'est plus pris en charge par les nouveaux systèmes Cloud Volumes ONTAP. Si vous disposez d'un système existant fonctionnant sur ce type de machine, vous pouvez continuer à l'utiliser, mais nous vous recommandons de passer au type de machine n2-standard-4.
 
-. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
+. ^2^ les limites de disque peuvent vous empêcher d'atteindre la limite de capacité système maximale en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité en https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
 +
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
-. Les performances d'écriture améliorées sont activées lorsque des disques persistants équilibrés et des disques persistants de performance (SSD) sont utilisés.
+. ^3^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
 
 
-À partir de Cloud Volumes ONTAP 9.13.0, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes : * n2-standard-16 * n2-standard-32 * n2-standard-48 * n2-standard-64
+À partir de Cloud Volumes ONTAP 9.13.0, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
+
+* n2-standard-16
+* n2-standard-32
+* n2-standard-48
+* n2-standard-64
+
 
 Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
 
@@ -102,19 +108,19 @@ NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des
 * n2-standard-4
 
  a| 
-* n1-standard-8
+* n1-standard-8 ^3^
 * n2-standard-8
 
  a| 
-* n1-standard-32
+* n1-standard-32 ^3^
 * n2-standard-16
 * n2-standard-32
 * n2-standard-48
 * n2-standard-64
 
  a| 
-* n1-standard-8
-* n1-standard-32
+* n1-standard-8 ^3^
+* n1-standard-32 ^3^
 * n2-standard-4
 * n2-standard-8
 * n2-standard-16
@@ -129,33 +135,32 @@ NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des
 |===
 Remarques :
 
-. Les limites de disques peuvent vous empêcher d'atteindre la limite de capacité maximale du système en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
+. ^1^ les limites de disque peuvent vous empêcher d'atteindre la limite de capacité système maximale en utilisant des disques seuls. Vous pouvez atteindre la limite de capacité en https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^].
 +
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
-. Le Tiering des données vers Google Cloud Storage n'est pas pris en charge avec PAYGO Explore.
-. Les machines de la série n1 ne sont plus disponibles en sélection sur BlueXP  lors du déploiement de nouvelles instances de Cloud Volumes ONTAP dans Google Cloud. Les machines de la série n1 seront conservées et prises en charge uniquement sur les systèmes existants plus anciens. Les nouveaux déploiements de Cloud Volumes ONTAP sont pris en charge dans Google Cloud uniquement à partir de la version 9.8. Nous vous recommandons de passer aux types de machines de la série n2 compatibles avec Cloud Volumes ONTAP 9.8 et versions ultérieures. Les machines de la série n1, cependant, seront disponibles pour les nouveaux déploiements effectués via l'API.
+. ^2^ le Tiering des données vers Google Cloud Storage n'est pas pris en charge avec PAYGO Explore.
+. ^3^ les machines de la série n1 ne peuvent plus être sélectionnées sur BlueXP  lors du déploiement de nouvelles instances de Cloud Volumes ONTAP dans Google Cloud. Les machines de la série n1 seront conservées et prises en charge uniquement sur les systèmes existants plus anciens. Les nouveaux déploiements de Cloud Volumes ONTAP sont pris en charge dans Google Cloud uniquement à partir de la version 9.8. Nous vous recommandons de passer aux machines de la série n2 compatibles avec Cloud Volumes ONTAP 9.8 et versions ultérieures. Les machines de la série n1, cependant, seront disponibles pour les nouveaux déploiements effectués via l'API.
 +
 Le type de machine Custom-4-16384 n'est plus pris en charge par les nouveaux systèmes Cloud Volumes ONTAP. Si vous disposez d'un système existant fonctionnant sur ce type de machine, vous pouvez continuer à l'utiliser, mais nous vous recommandons de passer au type de machine n2-standard-4.
 
-. Les performances d'écriture améliorées sont activées lorsque des disques persistants équilibrés et des disques persistants de performance (SSD) sont utilisés.
-. L'interface BlueXP affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Toutefois, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons disponible pour un environnement de laboratoire spécifique uniquement.
-. À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
-+
-** n2-standard-16
-** n2-standard-32
-** n2-standard-48
-** n2-standard-64
-+
+. ^4^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
+
+
+L'interface BlueXP affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Toutefois, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons disponible pour un environnement de laboratoire spécifique uniquement.
+
+À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
+
+* n2-standard-16
+* n2-standard-32
+* n2-standard-48
+* n2-standard-64
+
+
 Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
 
-+
 
 NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée.
-
-
-
-
 
 --
 ====
