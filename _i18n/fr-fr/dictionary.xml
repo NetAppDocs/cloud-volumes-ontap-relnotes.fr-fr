@@ -336,7 +336,6 @@
   <block id="afea36f2c9999a231c58b7e9dcf3b16e" category="list-text">Cloud Volumes ONTAP peut être exécuté sur une instance EC2 réservée ou à la demande. Les solutions utilisant d'autres types d'instances ne sont pas prises en charge.</block>
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">Régions prises en charge</block>
   <block id="a3f8304ab1695053d71855c60f8abf63" category="inline-link">Régions Cloud volumes Global</block>
-  <block id="4375839c669e051e5f2a8de11ba0c5d0" category="paragraph">Pour la prise en charge de chaque région AWS, consultez la section<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="56ca786dd848302142c428b36f1c8b30" category="summary">Cette page décrit comment NetApp travaille avec les fournisseurs cloud pour résoudre les problèmes potentiels.</block>
   <block id="b67ce24b0ef9db5e8910cc39a69b1ef6" category="doc">Les intégrations avec les fournisseurs cloud</block>
   <block id="3ecb2b72be9054cc88589bb0cf193ca9" category="section-title">Bonnes pratiques de support collaboratif</block>
@@ -353,7 +352,6 @@
   <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">Limitations de LA HAUTE DISPONIBILITÉ</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">Les paires HAUTE DISPONIBILITÉ ne sont pas prises en charge dans certaines régions.</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">Affichez la liste des régions Azure prises en charge</block>
-  <block id="1e6996b39daf779b565c50c8411fbc8d" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block>.</block>
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP présente des limites de configuration du stockage dans Azure pour des opérations fiables. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales.</block>
   <block id="e622ddac1a96836929babb5b993749ba" category="doc">Limites de stockage dans Azure</block>
   <block id="90f7fe115847c067cf4c52892efe18db" category="paragraph">Cloud Volumes ONTAP utilise le stockage Azure comme disques et les regroupe dans des _agrégats_. Les agrégats fournissent du stockage aux volumes.</block>
@@ -492,7 +490,6 @@
   <block id="19482872b5fad6ff5e1e34947a759a98" category="cell">Disques gérés HDD standard, disques gérés SSD standard et disques gérés SSD premium</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">En savoir plus &gt;&gt;</block>
   <block id="11509498a3f1573cdde878f927dc10bd" category="inline-link">SSD Ultra</block>
-  <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">Pour la prise en charge par région Azure, consultez la section<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="2eacfdd792ca3ab121472c95654b43ec" category="paragraph">Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vous pouvez choisir l'une des configurations suivantes.</block>
   <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">Cette machine virtuelle est recommandée uniquement lorsque le contrôle de maintenance Azure est nécessaire. Cette utilisation n'est pas recommandée pour les autres cas d'utilisation en raison des tarifs plus élevés.</block>
   <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">Dans Azure, un agrégat peut contenir jusqu'à 12 disques de même type et de même taille.</block>
@@ -666,7 +663,6 @@
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">Licences basées sur la capacité</block>
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="cell">Optimisé</block>
   <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">Licences basées sur les nœuds</block>
-  <block id="b338d2a3e5b2fa0602cf93fe49c51138" category="paragraph">Pour connaître la prise en charge des régions Google Cloud, reportez-vous à la section<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">Lorsque vous déployez Cloud Volumes ONTAP en tant que système à un seul nœud dans Azure, vous avez le choix entre plusieurs configurations de licence basées sur la capacité ou sur les nœuds.</block>
   <block id="d2f103c82b43ca5f2da33f93d94bde64" category="paragraph">Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau système Cloud Volumes ONTAP, vous ne pouvez pas passer à un autre type de VM qui _n'utilise pas_ un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8ds_v4 à E8s_v3, mais vous pouvez passer de E8ds_v4 à E32ds_v4 car ces deux types de VM utilisent des SSD Ultra.</block>
   <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">Inversement, si vous avez déployé Cloud Volumes ONTAP à l'aide d'un autre type de VM, vous ne pourrez pas passer à un type de VM utilisant un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8s_v3 à E8ds_v4.</block>
@@ -818,4 +814,8 @@
   <block id="294d0a8af93eae96d1bba19b5a5f69c4" category="paragraph"><block ref="df0857167980a53ee1e89853022218d5" category="inline-link-macro-rx"></block> (Identifiant du site du support NetApp requis).</block>
   <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">Limites de l'utilisation des extensions de machines virtuelles Azure</block>
   <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Dans un déploiement, Cloud Volumes ONTAP ne prend pas en charge les extensions de machines virtuelles et les applications de machines virtuelles Azure. L'utilisation d'Cloud Volumes ONTAP dans Azure avec des extensions de machine virtuelle entraîne des retards dans les opérations, et NetApp recommande de les éviter.</block>
+  <block id="0890aa708cef7529c2bd35cb7d2895df" category="paragraph">Pour la prise en charge des régions AWS, voir<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>.</block>
+  <block id="f0de068c81c765820aca0fa8fe017396" category="paragraph">Pour la prise en charge des régions Azure, voir<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>.</block>
+  <block id="9b986795dc6a434c7339bfecbd5e5c8b" category="paragraph">Pour obtenir une prise en charge par région<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block> de Google Cloud, consultezla section.</block>
+  <block id="d798d4963d0ac509a1bda5483d9b9a52" category="paragraph"><block ref="5a94f18247116693735ff13d8eeaa964" category="inline-link-rx"></block>.</block>
 </blocks>

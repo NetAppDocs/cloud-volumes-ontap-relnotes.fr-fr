@@ -566,4 +566,4 @@ Les paires HAUTE DISPONIBILITÉ utilisent des disques gérés Azure. Les types e
 
 == Régions prises en charge
 
-Pour la prise en charge par région Azure, consultez la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+Pour la prise en charge des régions Azure, voir https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].

@@ -184,4 +184,4 @@ Dans Google Cloud, un agrégat peut contenir jusqu'à 6 disques de même type et
 
 == Régions prises en charge
 
-Pour connaître la prise en charge des régions Google Cloud, reportez-vous à la section https://cloud.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^].
+Pour obtenir une prise en charge par région https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^] de Google Cloud, consultezla section.
