@@ -4,7 +4,7 @@ permalink: reference-limits-gcp.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM 
 summary: Cloud Volumes ONTAP présente des limites de configuration du stockage dans Google Cloud pour assurer la fiabilité des opérations. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales. 
 ---
-= Limites de stockage dans Google Cloud
+= Limites de stockage pour Cloud Volumes ONTAP dans Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference-limits-azure.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks 
 summary: Cloud Volumes ONTAP présente des limites de configuration du stockage dans Azure pour des opérations fiables. Pour des performances optimales, ne configurez pas votre système aux valeurs maximales. 
 ---
-= Limites de stockage dans Azure
+= Limites de stockage pour Cloud Volumes ONTAP dans Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

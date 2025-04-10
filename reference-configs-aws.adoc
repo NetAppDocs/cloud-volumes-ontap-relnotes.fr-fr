@@ -4,7 +4,7 @@ permalink: reference-configs-aws.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth, professional package 
 summary: Plusieurs configurations Cloud Volumes ONTAP sont prises en charge dans AWS. 
 ---
-= Configurations prises en charge dans AWS
+= Configurations prises en charge pour Cloud Volumes ONTAP dans AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -72,7 +72,7 @@ Remarques :
 . Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
 . Les performances améliorées en écriture sont activées lorsque les disques SSD sont utilisés avec toutes les configurations Cloud Volumes ONTAP.
 . Il n'est pas recommandé de faire le Tiering des données dans le stockage objet lors de l'utilisation de disques durs à débit optimisé (st1).
-. Les zones locales AWS prennent uniquement en charge les disques SSD génériques (gp2).
+. Les configurations Cloud Volumes ONTAP dans les zones locales AWS prennent uniquement en charge les disques SSD à usage générique (gp2).
 
 
 --
@@ -102,7 +102,7 @@ Remarques :
 . Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
 . L'amélioration des performances d'écriture est activée lorsque les disques SSD sont utilisés avec toutes les configurations Cloud Volumes ONTAP, à l'exception de PAYGO Explore.
 . Il n'est pas recommandé de faire le Tiering des données dans le stockage objet lors de l'utilisation de disques durs à débit optimisé (st1).
-. Les zones locales AWS prennent uniquement en charge les disques SSD génériques (gp2).
+. Les configurations Cloud Volumes ONTAP dans les zones locales AWS prennent uniquement en charge les disques SSD à usage générique (gp2).
 
 
 --

@@ -4,7 +4,7 @@ permalink: reference-limitations-aws.html
 keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s, aws outpost, outposts 
 summary: Ces limitations connues sont spécifiques à Cloud Volumes ONTAP dans Amazon Web Services. 
 ---
-= Restrictions connues dans AWS
+= Limitations connues de Cloud Volumes ONTAP dans AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
