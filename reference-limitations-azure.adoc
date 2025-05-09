@@ -33,8 +33,16 @@ Cloud Volumes ONTAP utilise le stockage NVMe local dans certains types de machin
 
 
 
-== Limitations de LA HAUTE DISPONIBILITÉ
+== Limites des déploiements haute disponibilité
 
-Les paires HAUTE DISPONIBILITÉ ne sont pas prises en charge dans certaines régions.
+Les paires haute disponibilité ne sont pas prises en charge dans certaines régions.
 
 https://bluexp.netapp.com/cloud-volumes-global-regions["Affichez la liste des régions Azure prises en charge"^].
+
+
+
+== Limitations liées aux déploiements haute disponibilité dans les zones de disponibilité uniques
+
+À partir de la version Cloud Volumes ONTAP 9.15.1, vous pouvez déployer des instances de machine virtuelle (VM) en mode HA dans des zones de disponibilité uniques (AZ) dans Azure. Pour plus d'informations sur les critères prenant en charge cette fonction, reportez-vous à la section https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-on-azure["Déployez des paires haute disponibilité dans des zones de disponibilité uniques dans Azure"^].
+
+Si la version Cloud Volumes ONTAP est antérieure à la version 9.15.1 ou si l'une de ces conditions n'est pas remplie, le modèle de déploiement précédent utilisant les jeux de disponibilité prend effet. Cela s'applique uniquement aux configurations haute disponibilité.
