@@ -424,8 +424,6 @@
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">En savoir plus sur ces options de licence</block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">Notes de mise à jour BlueXP</block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">Support NetApp</block>
-  <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">Reportez-vous à la section <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> pour en savoir plus sur la fin de disponibilité et la prise en charge de ces types d'instances.</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">Chemin de mise à niveau pris en charge</block>
   <block id="5caaf889f6f108c7753c8110e25e46bc" category="paragraph">Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans Google Cloud Platform. N'oubliez pas de consulter également <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="aa55d70088944a0bae64dd34633165af" category="section-title">Limitation avec la mise en miroir des paquets</block>
@@ -555,7 +553,6 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">Ces types de VM ne sont pris en charge que pour les paires haute disponibilité dans une configuration de zone de disponibilité unique qui s'exécute sur des disques gérés partagés.</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
-  <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">Dans AWS, les types d'instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant s'exécute sur un type d'instance c4, m4 ou r4, vous devez passer à un type d'instance dans la famille d'instances c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Lancement d'une paire HA dans Google Cloud</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée.</block>
@@ -789,4 +786,25 @@
   <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">Le correctif 9.16.1 P3 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">Afficher la liste des bogues corrigés dans le correctif P3</block>
   <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> (Identifiant du site du support NetApp requis).</block>
+  <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">Les configurations Cloud Volumes ONTAP dans les zones locales AWS prennent uniquement en charge les disques SSD à usage générique (gp2). Aucun autre type de disque n'est pris en charge dans Cloud Volumes ONTAP dans les zones locales AWS.</block>
+  <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAP ne prend plus en charge les types d'instances EC2 c4, m4 et r4 dans AWS. Si votre système s'exécute sur une instance c4, m4 ou r4, optez pour une instance c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.</block>
+  <block id="2f8299f876158db323c08455b12b585a" category="paragraph">Pour plus d'informations, se reporter à :</block>
+  <block id="304f5226697d03123fa4611d02bf8546" category="inline-link">Article de la base de connaissances (KB) : Conversion d'une instance AWS Xen CVO en Nitro KVM</block>
+  <block id="0dc3c417fc362585e0e7b3798f00b8bb" category="list-text"><block ref="0dc3c417fc362585e0e7b3798f00b8bb" category="inline-link-rx"></block></block>
+  <block id="b5dc3ce37b75c52be2427ecee207d24f" category="inline-link">Article de la base de connaissances : Impossible de modifier le type d'instance de r4 à r5 avec une erreur de nombre de disques</block>
+  <block id="9ed042e52baa279a92fcf5c7a432ecf5" category="list-text"><block ref="9ed042e52baa279a92fcf5c7a432ecf5" category="inline-link-rx"></block></block>
+  <block id="ee47ffaac80894c9307ca443c334cf79" category="inline-link-macro">En savoir plus sur la fin de disponibilité et de support pour ces types d'instances</block>
+  <block id="c0857a6c0ade184c3afe7f293fc01755" category="list-text"><block ref="c0857a6c0ade184c3afe7f293fc01755" category="inline-link-macro-rx"></block></block>
+  <block id="f9f7c1c9687f8f087477f0ae4cac6b45" category="inline-link">Documentation Microsoft Azure</block>
+  <block id="e2f4ab859b01d65da06c213f94a69131" category="paragraph">Pour les spécifications des instances prises en charge, reportez-vous au <block ref="84495d3a9882d3bd6b6590d973db25e5" category="inline-link-rx"></block> .</block>
+  <block id="5639612d2f12168c8a83a7d9f034340d" category="inline-link">Azure (un seul nœud)</block>
+  <block id="88e2312354057a90322664c2df9708ae" category="list-text">^4^ Pour plus d'informations sur les types de disques pris en charge dans les déploiements à nœud unique, reportez-vous à <block ref="5d976ccca41daf11d6b5e395edda488a" category="inline-link-rx"></block> . Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances. Vous pouvez augmenter la vitesse d'écriture à partir de BlueXP  pendant le déploiement ou à tout moment après.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>. Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.</block>
+  <block id="9116d248ecfb6241ae0ac82e933291a7" category="cell">Types de disque pris en charge ^6^</block>
+  <block id="70ed196a226ad517ee4fecdca325036d" category="inline-link">Azure (paire HA)</block>
+  <block id="129a14de9bbb8e2dc343a37a19f5ea3d" category="list-text">Pour plus d'informations sur les types de disques pris en charge pour les déploiements HA dans des zones de disponibilité uniques et multiples, reportez-vous à <block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block> .</block>
+  <block id="7ec816bcf3858e037c57a46bfa8643ba" category="paragraph">Pour plus d'informations sur des types de machines spécifiques, reportez-vous à la documentation de Google Cloud :</block>
+  <block id="7f53645b2b3a6e77999ceeea01208792" category="inline-link">types de machines à usage général de la série n1</block>
+  <block id="b10cf18ba66c2ae046931259e614fe81" category="list-text"><block ref="b10cf18ba66c2ae046931259e614fe81" category="inline-link-rx"></block></block>
+  <block id="d59a55e5a766d0a45a73ef03504c6b5b" category="inline-link">Types de machines à usage général de la série N2</block>
+  <block id="0ab6f9218085a410dabf81dbe7da1b1a" category="list-text"><block ref="0ab6f9218085a410dabf81dbe7da1b1a" category="inline-link-rx"></block></block>
 </blocks>

@@ -78,13 +78,3 @@ NOTE: Pour AWS, cette mise à niveau ne vous sera pas demandée. La mise à nive
 * La mise à niveau d'un système à un nœud unique permet de mettre le système hors ligne pendant 25 minutes au cours desquelles les E/S sont interrompues.
 * La mise à niveau d'une paire haute disponibilité ne perturbe pas les opérations et les E/S sont interrompues. Lors de cette mise à niveau sans interruption, chaque nœud est mis à niveau en tandem pour continuer à assurer le service d'E/S aux clients.
 
-
-
-
-=== les instances c4, m4 et r4 ne sont plus prises en charge
-
-Dans AWS, les types d'instances EC2 c4, m4 et r4 ne sont plus pris en charge par Cloud Volumes ONTAP. Si un système existant s'exécute sur un type d'instance c4, m4 ou r4, vous devez passer à un type d'instance dans la famille d'instances c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.
-
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP"^].
-
-Reportez-vous à la section link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["Support NetApp"^] pour en savoir plus sur la fin de disponibilité et la prise en charge de ces types d'instances.

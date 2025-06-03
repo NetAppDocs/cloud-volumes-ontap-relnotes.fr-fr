@@ -26,6 +26,8 @@ La mise à niveau d'un système à un seul nœud vers une paire haute disponibil
 
 Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
 
+Pour les spécifications des instances prises en charge, reportez-vous au  https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview["Documentation Microsoft Azure"^] .
+
 
 
 === Systèmes à un seul nœud
@@ -131,7 +133,7 @@ Si vous choisissez l'un de ces types de VM lorsque vous déployez un nouveau sys
 +
 Inversement, si vous avez déployé Cloud Volumes ONTAP à l'aide d'un autre type de VM, vous ne pourrez pas passer à un type de VM utilisant un SSD Ultra pour VNVRAM. Par exemple, vous ne pouvez pas passer de E8s_v3 à E8ds_v4.
 
-. ^4^ la vitesse d'écriture élevée est prise en charge avec tous les types d'instances lors de l'utilisation d'un système à nœud unique. Vous pouvez augmenter la vitesse d'écriture à partir de BlueXP  pendant le déploiement ou à tout moment après. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^]. Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
+. ^4^ Pour plus d'informations sur les types de disques pris en charge dans les déploiements à nœud unique, reportez-vous à  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure (un seul nœud)"^] . Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances. Vous pouvez augmenter la vitesse d'écriture à partir de BlueXP  pendant le déploiement ou à tout moment après. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^]. Les performances d'écriture améliorées sont activées lorsque l'utilisation de disques SSD est utilisée.
 
 
 --
@@ -424,7 +426,7 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 
 
 
-| Types de disques pris en charge 3+| Disques gérés HDD standard, disques gérés SSD standard, disques gérés SSD premium et disques gérés SSD v2 Premium. 
+| Types de disque pris en charge ^6^ 3+| Disques gérés HDD standard, disques gérés SSD standard, disques gérés SSD premium et disques gérés SSD v2 Premium. 
 |===
 Remarques :
 
@@ -433,6 +435,7 @@ Remarques :
 . La prise en charge de plusieurs zones de disponibilité commence à partir de ONTAP version 9.13.1.
 . La prise en charge de plusieurs zones de disponibilité commence à partir de la version 9.14.1 RC1 de ONTAP.
 . Ce type de serveur virtuel inclut le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Il est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus >>"^].
+. Pour plus d'informations sur les types de disques pris en charge pour les déploiements HA dans des zones de disponibilité uniques et multiples, reportez-vous à  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure (paire HA)"^] .
 
 
 --

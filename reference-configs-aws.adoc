@@ -72,7 +72,7 @@ Remarques :
 . Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus d'informations sur les limites de disques, reportez-vous à la section link:reference-limits-aws.html["limites de stockage"].
 . Les performances améliorées en écriture sont activées lorsque les disques SSD sont utilisés avec toutes les configurations Cloud Volumes ONTAP.
 . Il n'est pas recommandé de faire le Tiering des données dans le stockage objet lors de l'utilisation de disques durs à débit optimisé (st1).
-. Les configurations Cloud Volumes ONTAP dans les zones locales AWS prennent uniquement en charge les disques SSD à usage générique (gp2).
+. Les configurations Cloud Volumes ONTAP dans les zones locales AWS prennent uniquement en charge les disques SSD à usage générique (gp2). Aucun autre type de disque n'est pris en charge dans Cloud Volumes ONTAP dans les zones locales AWS.
 
 
 --
@@ -250,6 +250,21 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 +
 La vitesse d'écriture élevée n'est pas prise en charge avec ces types d'instances dans les zones locales AWS.
 
+
+
+
+
+=== les instances c4, m4 et r4 ne sont plus prises en charge
+
+Cloud Volumes ONTAP ne prend plus en charge les types d'instances EC2 c4, m4 et r4 dans AWS. Si votre système s'exécute sur une instance c4, m4 ou r4, optez pour une instance c5, m5 ou r5. Vous ne pouvez pas mettre à niveau vers cette version tant que vous n'avez pas modifié le type d'instance.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Découvrez comment modifier le type d'instance EC2 pour Cloud Volumes ONTAP"^].
+
+Pour plus d'informations, se reporter à :
+
+* https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_KVM["Article de la base de connaissances (KB) : Conversion d'une instance AWS Xen CVO en Nitro KVM"^]
+* https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Unable_to_change_the_instance_type_from_r4_to_r5_with_disk_count_error["Article de la base de connaissances : Impossible de modifier le type d'instance de r4 à r5 avec une erreur de nombre de disques"^]
+* link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["En savoir plus sur la fin de disponibilité et de support pour ces types d'instances"^]
 
 
 
