@@ -20,7 +20,7 @@ Les limitations connues suivantes sont spécifiques à Cloud Volumes ONTAP dans 
 
 == Limites de l'utilisation des extensions de machines virtuelles Azure
 
-Dans un déploiement, Cloud Volumes ONTAP ne prend pas en charge les extensions de machines virtuelles et les applications de machines virtuelles Azure. L'utilisation d'Cloud Volumes ONTAP dans Azure avec des extensions de machine virtuelle entraîne des retards dans les opérations, et NetApp recommande de les éviter.
+Cloud Volumes ONTAP ne prend pas en charge les extensions de machine virtuelle Azure, car elles retardent les opérations. Après le déploiement de Cloud Volumes ONTAP, BlueXP désactive régulièrement les extensions de machine virtuelle. Si vous avez installé ces extensions dans votre environnement de travail, contactez le support Microsoft Azure pour les désactiver ou les supprimer.
 
 
 
