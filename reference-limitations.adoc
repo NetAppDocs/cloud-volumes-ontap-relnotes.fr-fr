@@ -44,6 +44,10 @@ L'activation de la vérification multi-administration sur Cloud Volumes ONTAP en
 * Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)
 * SnapMirror synchrone
 * VLAN
+* Disponibilité continue des PME (CA)
++
+https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["Actions PME disponibles en continu"^] pour les opérations non perturbatrices ne sont pas prises en charge.
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-provider-integrations.html 
-keywords: maintenance event, azure maintenance event, cloud provider, issues, support 
+keywords: maintenance event, azure maintenance event, cloud provider, issues, support, SMB CA in CVO 
 summary: Cette page décrit comment NetApp travaille avec les fournisseurs cloud pour résoudre les problèmes potentiels. 
 ---
 = Collaboration avec des fournisseurs de cloud pour Cloud Volumes ONTAP
@@ -34,4 +34,7 @@ La gestion spéciale des événements de maintenance est prise en charge pour le
 
 Lorsque la fenêtre de maintenance est annoncée, le nœud partenaire du nœud ciblé effectue un basculement. Une fois la maintenance terminée, un rétablissement est lancé. Après le retour, la paire HA est censée revenir à un état sain. Le cas échéant, contactez le support NetApp pour obtenir de l'aide. Notez que les événements de maintenance sont ciblés sur l'une des machines virtuelles d'une paire haute disponibilité à la fois, et en général, les deux nœuds sont ciblés dans un délai relativement court.
 
-Les clients CIFS/SMB qui utilisent des partages CIFS disponibles en continu sur Cloud Volumes ONTAP subissent une perte de session lorsqu'un basculement a lieu. Lorsque l'agrégat utilisé par la session est renvoyé au nœud de rattachement de l'agrégat. Il s'agit d'une limitation imposée par le protocole CIFS/SMB lui-même. Les clients peuvent utiliser des produits tiers pour éviter tout problème de basculement ou de rétablissement. Pour obtenir de l'aide, contactez le support NetApp.
+Les clients CIFS/SMB utilisant des partages CIFS Cloud Volumes ONTAP non disponibles en continu subiront une perte de session lors d'une prise de contrôle et lors du retour de l'agrégat utilisé par la session à son nœud d'origine. Il s'agit d'une limitation imposée par le protocole CIFS/SMB lui-même. Vous pouvez utiliser des produits tiers approuvés pour éviter les problèmes liés à la prise de contrôle et à la restitution. Pour obtenir de l'aide, contactez le support NetApp .
+
+
+NOTE: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["Actions PME disponibles en continu"^] pour les opérations non perturbatrices ne sont pas prises en charge dans Cloud Volumes ONTAP.
