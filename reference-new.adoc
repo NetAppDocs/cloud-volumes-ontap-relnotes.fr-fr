@@ -20,6 +20,14 @@ D'autres fonctionnalités et améliorations sont également introduites dans les
 
 
 
+== 9.16.1 P5 (28 juillet 2025)
+
+Le correctif 9.16.1 P5 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers ce correctif.
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P5["Voir la liste des bugs corrigés dans le patch P5"^] (Connexion au site de support NetApp requise).
+
+
+
 == 9.16.1 P4 (8 juillet 2025)
 
 Le correctif 9.16.1 P4 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
