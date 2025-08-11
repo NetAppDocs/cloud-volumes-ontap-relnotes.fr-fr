@@ -78,20 +78,25 @@ Le type de machine Custom-4-16384 n'est plus pris en charge par les nouveaux sys
 link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans Google Cloud"].
 
 . ^3^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
-
-
++
 À partir de Cloud Volumes ONTAP 9.13.0, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
 
-* n2-standard-16
-* n2-standard-32
-* n2-standard-48
-* n2-standard-64
-
-
++
+** n2-standard-16
+** n2-standard-32
+** n2-standard-48
+** n2-standard-64
++
 Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Lancement d'une paire HA dans Google Cloud"].
 
++
 
-NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée. . ^4^ À compter du 1er juillet 2025, la licence Cloud Volumes ONTAP Optimized est obsolète et ne sera plus disponible à l'achat ou au renouvellement sur la place de marché Google Cloud pour les abonnements à la carte (PAYGO). Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Nouveautés de Cloud Volumes ONTAP"^]la .
+NOTE: _Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée.
+
+
+
+. ^4^ À compter du 11 août 2025, la licence Cloud Volumes ONTAP Optimized est obsolète et ne sera plus disponible à l'achat ou au renouvellement sur la place de marché Google Cloud pour les abonnements à la carte (PAYGO).  Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Nouveautés de Cloud Volumes ONTAP"^] .
+
 
 --
 .Licences basées sur les nœuds
