@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation.

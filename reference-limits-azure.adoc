@@ -22,7 +22,13 @@ Cloud Volumes ONTAP présente des limites de configuration du stockage pour assu
 
 La capacité système maximale d'un système Cloud Volumes ONTAP est déterminée par sa licence. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données.
 
-NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
+NetApp ne prend pas en charge le dépassement de la limite de capacité du système.  Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message indiquant qu'une action est requise et vous empêche d'ajouter d'autres disques.
+
+.Limite de capacité pour les licences basées sur la capacité
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation.  Se référer à la https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Documentation Azure pour les disques gérés"^] et https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Documentation Azure pour le stockage d'objets blob"^] .
+
+Limites de capacité pour les autres types de licences::
+
 
 [cols="25,75"]
 |===
@@ -42,9 +48,6 @@ NetApp ne prend pas en charge le dépassement de la limite de capacité système
 
 
 | Licence basée sur les nœuds | 2 Pio (plusieurs licences requises) 
-
-
-| Licence basée sur la capacité | 2 Pio 
 |===
 .Pour la haute disponibilité, la capacité de licence est-elle limitée par nœud ou pour la paire HA entière ?
 La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité pouvant atteindre 368 Tio entre les deux nœuds.
@@ -82,15 +85,15 @@ Remarques :
 
 == Limite des disques et du Tiering en fonction de la taille des machines virtuelles
 
-Les limites de capacité varient en fonction de la taille des machines virtuelles que vous utilisez et si vous utilisez un système à un seul nœud ou une paire haute disponibilité.
+Les limites de capacité varient en fonction de la taille de la machine virtuelle et du type de système (nœud unique ou paire HA).
 
-Les remarques suivantes fournissent des détails sur les chiffres que vous verrez dans les tableaux ci-dessous :
+Les notes ci-dessous expliquent les chiffres dans les tableaux :
 
 * Les limites de disque sont spécifiques aux disques qui contiennent des données utilisateur.
 +
 Les limites n'incluent pas le disque racine, le disque principal et VNVRAM.
 
-* Une capacité système maximale est indiquée lors de l'utilisation de disques seuls et lors de l'utilisation de disques et du Tiering des données inactives vers le stockage objet.
+* Vous pouvez voir la capacité maximale du système lorsque vous utilisez des disques seuls et lorsque vous utilisez des disques et une hiérarchisation des données froides pour le stockage d'objets.
 * Les systèmes à un seul nœud et haute disponibilité qui utilisent des disques gérés ont un maximum de 32 Tio par disque. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.
 * Les systèmes HAUTE DISPONIBILITÉ qui utilisent des blobs de page ont un maximum de 8 Tio par blob de page. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.
 * La limite de 896 Tio basée sur les disques répertoriée pour les systèmes à un seul nœud avec certaines tailles de VM est la limite _testée_.
@@ -98,238 +101,241 @@ Les limites n'incluent pas le disque racine, le disque principal et VNVRAM.
 
 
 
-=== Des limites en matière de licences basées sur la capacité
+=== Limites pour les différents modes de déploiement des licences basées sur la capacité
 
-Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^]
+Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un package de licence basé sur la capacité. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^] .
+
+
+NOTE: Pour connaître la capacité maximale du système et les limites de capacité de hiérarchisation des données pour un nœud unique, des paires HA dans une zone de disponibilité unique avec des blobs de pages et des paires HA dans une zone de disponibilité unique et multiple avec des disques gérés partagés, reportez-vous à<<cap-license-azure>> .
 
 
 
 ==== Un seul nœud
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Taille des machines virtuelles | Disques MAX Data par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+| Taille des machines virtuelles | Disques MAX Data par nœud | Capacité système maximale avec des disques seuls 
 
 
-| DS4_v2 | 29 | 896 To | 2 Pio 
+| DS4_v2 | 29 | 896 To 
 
 
-| DS5_v2 | 61 | 896 To | 2 Pio 
+| DS5_v2 | 61 | 896 To 
 
 
-| DS13_v2 | 29 | 896 To | 2 Pio 
+| DS13_v2 | 29 | 896 To 
 
 
-| DS14_v2 | 61 | 896 To | 2 Pio 
+| DS14_v2 | 61 | 896 To 
 
 
-| DS15_v2 | 61 | 896 To | 2 Pio 
+| DS15_v2 | 61 | 896 To 
 
 
-| E4S_v3 | 5 | 160 To | 2 Pio 
+| E4S_v3 | 5 | 160 To 
 
 
-| E8s_v3 | 13 | 416 To | 2 Pio 
+| E8s_v3 | 13 | 416 To 
 
 
-| E32S_v3 | 29 | 896 To | 2 Pio 
+| E32S_v3 | 29 | 896 To 
 
 
-| E48s_v3 | 29 | 896 To | 2 Pio 
+| E48s_v3 | 29 | 896 To 
 
 
-| E64is_v3 | 29 | 896 To | 2 Pio 
+| E64is_v3 | 29 | 896 To 
 
 
-| E4ds_v4 | 5 | 160 To | 2 Pio 
+| E4ds_v4 | 5 | 160 To 
 
 
-| E8ds_v4 | 13 | 416 To | 2 Pio 
+| E8ds_v4 | 13 | 416 To 
 
 
-| E23ds_v4 | 29 | 896 To | 2 Pio 
+| E23ds_v4 | 29 | 896 To 
 
 
-| E48ds_v4 | 29 | 896 To | 2 Pio 
+| E48ds_v4 | 29 | 896 To 
 
 
-| E80ids_v4 | 61 | 896 To | 2 Pio 
+| E80ids_v4 | 61 | 896 To 
 
 
-| E4ds_v5 | 5 | 160 To | 2 Pio 
+| E4ds_v5 | 5 | 160 To 
 
 
-| E8ds_v5 | 13 | 416 To | 2 Pio 
+| E8ds_v5 | 13 | 416 To 
 
 
-| E20ds_v5 | 29 | 896 To | 2 Pio 
+| E20ds_v5 | 29 | 896 To 
 
 
-| E32ds_v5 | 29 | 896 To | 2 Pio 
+| E32ds_v5 | 29 | 896 To 
 
 
-| E48ds_v5 | 29 | 896 To | 2 Pio 
+| E48ds_v5 | 29 | 896 To 
 
 
-| E64ds_v5 | 29 | 896 To | 2 Pio 
+| E64ds_v5 | 29 | 896 To 
 
 
-| L8S_v3 | 12 | 384 To | 2 Pio 
+| L8S_v3 | 12 | 384 To 
 
 
-| L16s_v3 | 28 | 896 To | 2 Pio 
+| L16s_v3 | 28 | 896 To 
 
 
-| L32s_v3 | 28 | 896 To | 2 Pio 
+| L32s_v3 | 28 | 896 To 
 
 
-| L48s_v3 | 28 | 896 To | 2 Pio 
+| L48s_v3 | 28 | 896 To 
 
 
-| L64s_v3 | 28 | 896 To | 2 Pio 
+| L64s_v3 | 28 | 896 To 
 |===
 
 
 ==== Paires HAUTE DISPONIBILITÉ dans une seule zone de disponibilité avec des objets blob de pages
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Taille des machines virtuelles | Disques MAX Data pour une paire haute disponibilité | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+| Taille des machines virtuelles | Disques MAX Data pour une paire haute disponibilité | Capacité système maximale avec des disques seuls 
 
 
-| DS4_v2 | 29 | 232 To | 2 Pio 
+| DS4_v2 | 29 | 232 To 
 
 
-| DS5_v2 | 61 | 488 To | 2 Pio 
+| DS5_v2 | 61 | 488 To 
 
 
-| DS13_v2 | 29 | 232 To | 2 Pio 
+| DS13_v2 | 29 | 232 To 
 
 
-| DS14_v2 | 61 | 488 To | 2 Pio 
+| DS14_v2 | 61 | 488 To 
 
 
-| DS15_v2 | 61 | 488 To | 2 Pio 
+| DS15_v2 | 61 | 488 To 
 
 
-| E8s_v3 | 13 | 104 To | 2 Pio 
+| E8s_v3 | 13 | 104 To 
 
 
-| E48s_v3 | 29 | 232 To | 2 Pio 
+| E48s_v3 | 29 | 232 To 
 
 
-| E8ds_v4 | 13 | 104 To | 2 Pio 
+| E8ds_v4 | 13 | 104 To 
 
 
-| E23ds_v4 | 29 | 232 To | 2 Pio 
+| E23ds_v4 | 29 | 232 To 
 
 
-| E48ds_v4 | 29 | 232 To | 2 Pio 
+| E48ds_v4 | 29 | 232 To 
 
 
-| E80ids_v4 | 61 | 488 To | 2 Pio 
+| E80ids_v4 | 61 | 488 To 
 |===
 
 
 ==== Paires HAUTE DISPONIBILITÉ dans une zone de disponibilité unique avec disques gérés partagés
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Taille des machines virtuelles | Disques MAX Data pour une paire haute disponibilité | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+| Taille des machines virtuelles | Disques MAX Data pour une paire haute disponibilité | Capacité système maximale avec des disques seuls 
 
 
-| E8ds_v4 | 12 | 384 To | 2 Pio 
+| E8ds_v4 | 12 | 384 To 
 
 
-| E23ds_v4 | 28 | 896 To | 2 Pio 
+| E23ds_v4 | 28 | 896 To 
 
 
-| E48ds_v4 | 28 | 896 To | 2 Pio 
+| E48ds_v4 | 28 | 896 To 
 
 
-| E80ids_v4 | 28 | 896 To | 2 Pio 
+| E80ids_v4 | 28 | 896 To 
 
 
-| E8ds_v5 | 12 | 384 To | 2 Pio 
+| E8ds_v5 | 12 | 384 To 
 
 
-| E20ds_v5 | 28 | 896 To | 2 Pio 
+| E20ds_v5 | 28 | 896 To 
 
 
-| E32ds_v5 | 28 | 896 To | 2 Pio 
+| E32ds_v5 | 28 | 896 To 
 
 
-| E48ds_v5 | 28 | 896 To | 2 Pio 
+| E48ds_v5 | 28 | 896 To 
 
 
-| E64ds_v5 | 28 | 896 To | 2 Pio 
+| E64ds_v5 | 28 | 896 To 
 
 
-| L16s_v3 | 28 | 896 To | 2 Pio 
+| L16s_v3 | 28 | 896 To 
 
 
-| L32s_v3 | 28 | 896 To | 2 Pio 
+| L32s_v3 | 28 | 896 To 
 
 
-| L48s_v3 | 28 | 896 To | 2 Pio 
+| L48s_v3 | 28 | 896 To 
 
 
-| L64s_v3 | 28 | 896 To | 2 Pio 
+| L64s_v3 | 28 | 896 To 
 |===
 
 
 ==== Paires HAUTE DISPONIBILITÉ dans plusieurs zones de disponibilité avec disques gérés partagés
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Taille des machines virtuelles | Disques MAX Data pour une paire haute disponibilité | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
+| Taille des machines virtuelles | Disques MAX Data pour une paire haute disponibilité | Capacité système maximale avec des disques seuls 
 
 
-| E8ds_v4 | 12 | 384 To | 2 Pio 
+| E8ds_v4 | 12 | 384 To 
 
 
-| E23ds_v4 | 28 | 896 To | 2 Pio 
+| E23ds_v4 | 28 | 896 To 
 
 
-| E48ds_v4 | 28 | 896 To | 2 Pio 
+| E48ds_v4 | 28 | 896 To 
 
 
-| E80ids_v4 | 28 | 896 To | 2 Pio 
+| E80ids_v4 | 28 | 896 To 
 
 
-| E8ds_v5 | 12 | 384 To | 2 Pio 
+| E8ds_v5 | 12 | 384 To 
 
 
-| E20ds_v5 | 28 | 896 To | 2 Pio 
+| E20ds_v5 | 28 | 896 To 
 
 
-| E32ds_v5 | 28 | 896 To | 2 Pio 
+| E32ds_v5 | 28 | 896 To 
 
 
-| E48ds_v5 | 28 | 896 To | 2 Pio 
+| E48ds_v5 | 28 | 896 To 
 
 
-| E64ds_v5 | 28 | 896 To | 2 Pio 
+| E64ds_v5 | 28 | 896 To 
 
 
-| L16s_v3 | 28 | 896 To | 2 Pio 
+| L16s_v3 | 28 | 896 To 
 
 
-| L32s_v3 | 28 | 896 To | 2 Pio 
+| L32s_v3 | 28 | 896 To 
 
 
-| L48s_v3 | 28 | 896 To | 2 Pio 
+| L48s_v3 | 28 | 896 To 
 
 
-| L64s_v3 | 28 | 896 To | 2 Pio 
+| L64s_v3 | 28 | 896 To 
 |===
 
 
-=== Limites des licences basées sur des nœuds
+=== Limites des différents modes de déploiement des licences basées sur les nœuds
 
-Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent une licence basée sur les nœuds. Il s'agit du modèle de licence de génération précédente qui permet d'obtenir une licence Cloud Volumes ONTAP par nœud. Une licence basée sur les nœuds est toujours disponible pour les clients existants.
+Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent des licences basées sur des nœuds.  La licence basée sur les nœuds est le modèle de génération précédente qui vous permet d'octroyer une licence Cloud Volumes ONTAP par nœud.  Les licences basées sur les nœuds sont toujours disponibles pour les clients existants.
 
-Vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL à un seul nœud ou par paire haute disponibilité afin d'allouer plus de 368 Tio de capacité, dans la limite de capacité système maximale testée et prise en charge de 2 Pio. Notez que les limites de disques peuvent vous empêcher d'atteindre la limite de capacité en utilisant des disques seuls. Vous pouvez aller au-delà de la limite des disques de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^]. Bien que Cloud Volumes ONTAP prenne en charge une capacité maximale de 2 Pio testée et prise en charge, le dépassement de la limite de 2 Pio entraîne une configuration système non prise en charge.
+Vous pouvez acheter plusieurs licences basées sur des nœuds pour un système Cloud Volumes ONTAP BYOL à nœud unique ou à paire HA afin d'allouer plus de 368 Tio de capacité, jusqu'à la limite de capacité système maximale testée et prise en charge de 2 PiB.  Sachez que les limites de disque peuvent vous empêcher d’atteindre la limite de capacité en utilisant uniquement les disques.  Vous pouvez dépasser la limite du disque en https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^] . https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Découvrez comment ajouter des licences système à Cloud Volumes ONTAP"^] .  Cloud Volumes ONTAP prend en charge jusqu'à la capacité système maximale testée et prise en charge de 2 PiB, et le dépassement de la limite de 2 PiB entraîne une configuration système non prise en charge.
 
 
 
@@ -616,7 +622,7 @@ Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pag
 
 Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
 
-Ce sont les limites testées. Bien qu'il soit théoriquement possible de configurer des machines virtuelles de stockage supplémentaires, elles ne sont pas prises en charge.
+Ce sont les limites testées.  La configuration de machines virtuelles de stockage supplémentaires n'est pas prise en charge.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
 
@@ -651,7 +657,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 . Pour les licences basées sur la capacité, aucun coût de licence supplémentaire n'est requis pour les machines virtuelles de stockage supplémentaires, mais une charge de capacité minimale de 4 Tio par machine virtuelle de stockage. Par exemple, si vous créez deux machines virtuelles de stockage et que chacune possède une capacité provisionnée de 2 To, vous serez facturé au total de 8 Tio.
 . Le modèle BYOL basé sur les nœuds requiert une licence d'extension pour chaque machine virtuelle de stockage _service_ de _données au-delà de la première machine virtuelle de stockage fournie par défaut avec Cloud Volumes ONTAP. Contactez l'équipe en charge de votre compte pour obtenir une licence d'extension de machine virtuelle de stockage.
 +
-Les machines virtuelles de stockage que vous configurez pour la reprise après incident ne nécessitent pas de licence supplémentaire (elles sont gratuites), mais elles ne tiennent pas compte de la limite des machines virtuelles de stockage. Par exemple, si vous disposez de 12 machines virtuelles de stockage servant les données et de 12 machines virtuelles de stockage configurées pour la reprise sur incident, vous avez atteint ces limites et ne pouvez pas créer de machines virtuelles de stockage supplémentaires.
+Les machines virtuelles de stockage pour la reprise après sinistre (DR) n'ont pas besoin de licence complémentaire, mais elles sont prises en compte dans la limite des machines virtuelles de stockage.  Par exemple, si vous disposez de 12 machines virtuelles de service de données et de 12 machines virtuelles de stockage DR, vous avez atteint la limite et ne pouvez pas en créer davantage.
 
 
 

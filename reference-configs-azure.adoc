@@ -45,7 +45,9 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 |  | Fréemium | Optimisé ^5^ | Licence basée sur la capacité (Essentials et Professional) 
 
 
-| Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
+| Capacité système maximale (disques + stockage objet) | 500 Gio  a| 
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation.
+
 
 
 | Types de machines virtuelles pris en charge  a| 
@@ -250,7 +252,9 @@ NOTE: Les blobs de page Azure ne sont pris en charge par aucun nouveau déploiem
 |  | Fréemium | Optimisé ^4^ | Licence basée sur la capacité (Essentials et Professional) 
 
 
-| Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
+| Capacité système maximale (disques + stockage objet) | 500 Gio  a| 
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation.
+
 
 
 | Types de machines virtuelles pris en charge  a| 
@@ -388,7 +392,9 @@ Lors du déploiement de Cloud Volumes ONTAP en tant que paire HA dans Azure, vou
 |  | Fréemium | Optimisé ^7^ | Licence basée sur la capacité (Essentials et Professional) 
 
 
-| Capacité système maximale (disques + stockage objet) | 500 Gio | 2 Pio | 2 Pio 
+| Capacité système maximale (disques + stockage objet) | 500 Gio  a| 
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation.
+
 
 
 | Types de machines virtuelles pris en charge  a| 

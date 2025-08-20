@@ -20,11 +20,17 @@ Cloud Volumes ONTAP présente des limites de configuration du stockage pour assu
 
 == Capacité système maximale par licence
 
-La capacité système maximale d'un système Cloud Volumes ONTAP est déterminée par sa licence. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données.
+La capacité maximale du système comprend le stockage sur disque ainsi que le stockage d'objets utilisé pour la hiérarchisation des données.
 
 NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
 
 Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Reportez-vous aux limites de capacité et de disques ci-dessous pour plus de détails.
+
+.Limite de capacité pour les licences basées sur la capacité
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation. Se référer à la  https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["Documentation AWS"^] pour plus d'informations.
+
+Limites de capacité pour les autres types de licences::
+
 
 [cols="25,75"]
 |===
@@ -44,12 +50,9 @@ Pour certaines configurations, les limites de disque vous empêchent d'atteindre
 
 
 | Licence basée sur les nœuds | 2 Pio (plusieurs licences requises) 
-
-
-| Licence basée sur la capacité | 2 Pio 
 |===
 .Pour la haute disponibilité, la capacité de licence est-elle limitée par nœud ou pour la paire HA entière ?
-La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité pouvant atteindre 368 Tio entre les deux nœuds.
+La limite de capacité s'applique à l'ensemble de la paire HA.  Ce n'est pas par nœud.  Par exemple, la licence Premium autorise jusqu'à 368 Tio sur les deux nœuds.
 
 .Pour un système haute disponibilité dans AWS, est-ce que les données en miroir sont prises en compte avec la limite de capacité ?
 Non, ce n'est pas le cas. Les données d'une paire HA AWS sont mises en miroir de manière synchrone entre les nœuds, de sorte que les données soient disponibles en cas de panne. Par exemple, si vous achetez un disque de 8 Tio sur le nœud A, BlueXP alloue également un disque de 8 Tio sur le nœud B utilisé pour les données en miroir. Tandis que la capacité de 16 Tio a été provisionnée, seuls 8 Tio compte par rapport à la limite de licence.
@@ -86,9 +89,9 @@ Cloud Volumes ONTAP utilise les volumes EBS comme disques et les regroupe dans _
 |===
 Remarques :
 
-. Il n'est pas possible de créer 18 agrégats sur les deux nœuds d'une paire haute disponibilité, car cela dépasserait la limite sur le disque de données.
-. La taille maximale de l'agrégat dépend des disques qui composent l'agrégat. La limite n'inclut pas le stockage objet utilisé pour le Tiering des données.
-. Si vous disposez d'une configuration prenant en charge la fonctionnalité Amazon EBS Elastic volumes, un agrégat peut contenir jusqu'à 8 disques, ce qui assure une capacité de 128 Tio. La fonctionnalité Amazon EBS Elastic volumes est activée par défaut sur les systèmes _New_ Cloud Volumes ONTAP 9.11.0 ou versions ultérieures lors de l'utilisation de disques gp3 ou io1. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["En savoir plus sur la prise en charge d'Elastic volumes"^]
+. Vous ne pouvez pas créer 18 agrégats sur les deux nœuds d'une paire HA, car cela dépasserait la limite du disque de données.
+. La taille maximale de l'agrégat dépend de ses disques et n'inclut pas le stockage d'objets que vous utilisez pour la hiérarchisation des données.
+. Si vous disposez d'une configuration qui prend en charge la fonctionnalité Amazon EBS Elastic Volumes, un agrégat peut contenir jusqu'à 8 disques, ce qui fournit jusqu'à 128 Tio de capacité.  Par défaut, les systèmes Cloud Volumes ONTAP 9.11.0 et versions ultérieures ont Amazon EBS Elastic Volumes activé lorsque vous utilisez des disques gp3 ou io1. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["En savoir plus sur la prise en charge d'Elastic volumes"^]
 . Tous les disques qui composent un agrégat doivent être de la même taille.
 
 
@@ -110,27 +113,32 @@ Les limites n'incluent pas le disque d'amorçage et le disque racine.
 
 
 
-=== Des limites en matière de licences basées sur la capacité
+=== Limites pour les différents modes de déploiement des licences basées sur la capacité
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^]
+
+
+NOTE: Pour connaître la capacité maximale du système et les limites de capacité de hiérarchisation des données pour les configurations à nœud unique et HA, reportez-vous à<<cap-license-aws>> .
 
 
 
 ==== Un seul nœud
 
-[cols="18,18,32,32"]
+[cols="18,18,32,width=100%,options="]
 |===
-| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
 
 
-| instances c5, m5 et r5 | 21 | 336 To | 2 Pio 
+| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls 
+
+
+| instances c5, m5 et r5 | 21 | 336 To 
 
 
  a| 
 * m5dn.24xlarge
 * m6id.32xlarge
 
-| 19 ^1^ | 304 To | 2 Pio 
+| 19 ^1^ | 304 To 
 |===
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
 
@@ -139,26 +147,28 @@ Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP u
 
 ==== Paires HA
 
-[cols="18,18,32,32"]
+[cols="18,18,32,width=100%,options="]
 |===
-| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls | Capacité système maximale avec disques et Tiering des données 
 
 
-| instances c5, m5 et r5 | 18 | 288 To | 2 Pio 
+| Fréquence | Nombre maximal de disques par nœud | Capacité système maximale avec des disques seuls 
+
+
+| instances c5, m5 et r5 | 18 | 288 To 
 
 
  a| 
 * m5dn.24xlarge
 * m6id.32xlarge
 
-| 16 ^1^ | 256 To | 2 Pio 
+| 16 ^1^ | 256 To 
 |===
 . Ce type d'instance comporte plus de disques NVMe locaux que les autres types d'instances, ce qui signifie qu'un nombre moins important de disques de données sont pris en charge.
 
 
 
 
-=== Limites des licences basées sur des nœuds
+=== Limites des différents modes de déploiement des licences basées sur les nœuds
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent une licence basée sur les nœuds. Il s'agit du modèle de licence de génération précédente qui permet d'obtenir une licence Cloud Volumes ONTAP par nœud. Une licence basée sur les nœuds est toujours disponible pour les clients existants.
 

@@ -26,6 +26,12 @@ NetApp ne prend pas en charge le dépassement de la limite de capacité système
 
 Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus de détails, reportez-vous aux limites de disques ci-dessous.
 
+.Limite de capacité pour les licences basées sur la capacité
+Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation. Se référer à la  https://cloud.google.com/storage/docs/buckets["Documentation Google Cloud"^] pour plus d'informations.
+
+Limites de capacité pour les autres types de licences::
+
+
 [cols="25,75"]
 |===
 | Licence | Capacité système maximale (disques + stockage objet) 
@@ -44,15 +50,12 @@ Pour certaines configurations, les limites de disque vous empêchent d'atteindre
 
 
 | Licence basée sur les nœuds | 2 Pio (plusieurs licences requises) 
-
-
-| Licence basée sur la capacité | 2 Pio 
 |===
 .Pour une paire HA, la capacité autorisée est-elle limitée par nœud ou par paire HA entière ?
 La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité maximale de 368 To entre les deux nœuds.
 
 .Dans le cas d'une paire haute disponibilité, les données en miroir sont-elles prises en compte par rapport à la limite de capacité sous licence ?
-Non, ce n'est pas le cas. Les données d'une paire HA sont mises en miroir de manière synchrone entre les nœuds, de sorte que les données soient disponibles en cas de défaillance dans Google Cloud. Par exemple, si vous achetez un disque de 8 To sur le nœud A, BlueXP alloue également un disque de 8 To sur le nœud B utilisé pour les données en miroir. Bien que 16 To de capacité aient été provisionnés, seulement 8 To comptent par rapport à la limite de licence.
+Non, ce n'est pas le cas.  Les données d'une paire HA sont mises en miroir de manière synchrone entre les nœuds afin que les données soient disponibles en cas de panne dans Google Cloud.  Par exemple, si vous achetez un disque de 8 To sur le nœud A, BlueXP alloue également un disque de 8 To sur le nœud B qui est utilisé pour les données en miroir.  Bien que 16 To de capacité soient configurés, seuls 8 To sont comptabilisés dans la limite de licence.
 
 
 
@@ -83,7 +86,7 @@ Cloud Volumes ONTAP regroupe les disques Google Cloud Platform dans des _aggrég
 Remarques :
 
 . Le nombre maximal d'agrégats de données n'inclut pas l'agrégat racine.
-. La limite de capacité de l'agrégat dépend des disques qui composent l'agrégat. La limite n'inclut pas le stockage objet utilisé pour le Tiering des données.
+. Les disques qui composent l’agrégat déterminent la limite de capacité globale.  Cette limite n’inclut pas le stockage d’objets utilisé pour la hiérarchisation des données.
 . Tous les disques qui composent un agrégat doivent être de la même taille.
 
 
@@ -121,7 +124,7 @@ Le tableau ci-dessous présente la capacité maximale du système avec des disqu
 
 Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
 
-Ce sont les limites testées. Bien qu'il soit théoriquement possible de configurer des machines virtuelles de stockage supplémentaires, elles ne sont pas prises en charge.
+Ce sont les limites testées.  La configuration de machines virtuelles de stockage supplémentaires n'est pas prise en charge.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["Découvrez comment créer des machines virtuelles de stockage supplémentaires"^].
 
@@ -153,7 +156,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 |===
 . Ces 24 machines virtuelles de stockage peuvent servir de données ou être configurées pour la reprise après incident.
 . Pour les licences basées sur la capacité, aucun coût de licence supplémentaire n'est requis pour les machines virtuelles de stockage supplémentaires, mais une charge de capacité minimale de 4 Tio par machine virtuelle de stockage. Par exemple, si vous créez deux machines virtuelles de stockage et que chacune possède une capacité provisionnée de 2 To, vous serez facturé au total de 8 Tio.
-. Le modèle BYOL basé sur les nœuds requiert une licence d'extension pour chaque machine virtuelle de stockage _service_ de _données au-delà de la première machine virtuelle de stockage fournie par défaut avec Cloud Volumes ONTAP. Contactez l'équipe en charge de votre compte pour obtenir une licence d'extension de machine virtuelle de stockage.
+. Pour le BYOL basé sur les nœuds, une licence complémentaire est requise pour chaque machine virtuelle de stockage de _serveur de données_ supplémentaire au-delà de la première machine virtuelle de stockage fournie avec Cloud Volumes ONTAP par défaut.  Contactez votre équipe de compte pour obtenir une licence complémentaire de machine virtuelle de stockage.
 +
 Les machines virtuelles de stockage que vous configurez pour la reprise après incident ne nécessitent pas de licence supplémentaire (elles sont gratuites), mais elles ne tiennent pas compte de la limite des machines virtuelles de stockage. Par exemple, si vous disposez de 12 machines virtuelles de stockage servant les données et de 12 machines virtuelles de stockage configurées pour la reprise sur incident, vous avez atteint ces limites et ne pouvez pas créer de machines virtuelles de stockage supplémentaires.
 
