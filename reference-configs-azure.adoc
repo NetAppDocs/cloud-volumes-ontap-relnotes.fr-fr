@@ -366,7 +366,7 @@ Remarques :
 
 
 
-| Types de disques pris en charge 3+| Blobs de page 
+| Types de disques de données pris en charge 3+| Blobs de page 
 |===
 Remarques :
 
@@ -436,7 +436,7 @@ Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP 
 
 
 
-| Types de disque pris en charge ^6^ 3+| Disques gérés HDD standard, disques gérés SSD standard, disques gérés SSD premium et disques gérés SSD v2 Premium. 
+| Types de disque pris en charge ^6^ 3+| Disques gérés SSD Premium ou disques gérés SSD Premium v2. 
 |===
 Remarques :
 
@@ -445,8 +445,8 @@ Remarques :
 . ^3^ La prise en charge de plusieurs zones de disponibilité démarre à partir de la version 9.13.1 ONTAP .
 . ^4^ La prise en charge de plusieurs zones de disponibilité démarre à partir de la version ONTAP 9.14.1 RC1.
 . ^5^ Ce type de machine virtuelle inclut un stockage NVMe local, que Cloud Volumes ONTAP utilise comme _Flash Cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Elle est efficace pour les charges de travail aléatoires exigeantes en lecture, notamment les bases de données, la messagerie et les services de fichiers. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus >>"^].
-. ^6^ Pour plus d'informations sur les types de disques pris en charge pour les déploiements HA dans des zones de disponibilité uniques et multiples, reportez-vous à  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure (paire HA)"^] .
-. ^7^ À compter du 11 août 2025, la licence Cloud Volumes ONTAP Optimized est obsolète et ne sera plus disponible à l'achat ou au renouvellement sur la place de marché Azure pour les abonnements à la carte (PAYGO). Pour plus d'informations, consultez  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Nouveautés de Cloud Volumes ONTAP"^] .
+. ^6^ Pour plus d'informations sur les disques internes pour les données système pour les déploiements HA dans des zones de disponibilité simples et multiples, reportez-vous à https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure (paire HA)"^] .
+. ^7^ À compter du 11 août 2025, la licence Cloud Volumes ONTAP Optimized est obsolète et ne sera plus disponible à l'achat ou au renouvellement sur la place de marché Azure pour les abonnements à la carte (PAYGO). https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["Fin de disponibilité des licences optimisées"^] .
 
 
 --
