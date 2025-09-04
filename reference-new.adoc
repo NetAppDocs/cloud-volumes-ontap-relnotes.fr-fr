@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.16.1 inclut une nouvelle amélioration. 
+summary: Cloud Volumes ONTAP 9.17.1 inclut une nouvelle amélioration. 
 ---
-= Nouveautés d'Cloud Volumes ONTAP 9.16.1
+= Nouveautés de Cloud Volumes ONTAP 9.17.1
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,55 +14,13 @@ summary: Cloud Volumes ONTAP 9.16.1 inclut une nouvelle amélioration.
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.16.1 comprend de nouvelles améliorations.
-
-D'autres fonctionnalités et améliorations sont également introduites dans les dernières versions de BlueXP. Voir la https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Notes de mise à jour BlueXP"^] pour plus d'informations.
+Cloud Volumes ONTAP 9.17.1 est disponible pour le déploiement et la mise à niveau dans Azure et Google Cloud.
 
 
 
-== 9.16.1 P5 (28 juillet 2025)
+== 9.17.1 RC1 (4 septembre 2025)
 
-Le correctif 9.16.1 P5 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers ce correctif.
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P5["Voir la liste des bugs corrigés dans le patch P5"^] (Connexion au site de support NetApp requise).
-
-
-
-== 9.16.1 P4 (8 juillet 2025)
-
-Le correctif 9.16.1 P4 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P4["Afficher la liste des bogues corrigés dans le correctif P4"^] (Identifiant du site du support NetApp requis).
-
-
-
-== 9.16.1 P3 (29 mai 2025)
-
-Le correctif 9.16.1 P3 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P3["Afficher la liste des bogues corrigés dans le correctif P3"^] (Identifiant du site du support NetApp requis).
-
-
-
-== 9.16.1 P2 (17 avril 2025)
-
-Le correctif 9.16.1 P2 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P2["Afficher la liste des bogues corrigés dans le correctif P2"^] (Identifiant du site du support NetApp requis).
-
-
-
-== 9.16.1 P1 (17 avril 2025)
-
-Le correctif 9.16.1 P1 peut désormais être déployé et mis à niveau pour Cloud Volumes ONTAP dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. BlueXP vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P1["Afficher la liste des bogues corrigés dans le correctif P1"^] (Identifiant du site du support NetApp requis).
-
-
-
-== 9.16.1 GA (6 mars 2025)
-
-Vous pouvez désormais utiliser la version Cloud Volumes ONTAP 9.16.1 General Availability pour le déploiement et la mise à niveau dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS.
+Vous pouvez désormais utiliser la version Release Candidate 1 de Cloud Volumes ONTAP 9.17.1 pour le déploiement et la mise à niveau dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS.
 
 
 
@@ -82,10 +40,10 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === Chemin de mise à niveau pris en charge
 
-Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.16.1 GA à partir de la version 9.15.1 dans Azure et Google Cloud. BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
+Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 à partir de la version 9.16.1 dans Azure et Google Cloud.  BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
 
 
-NOTE: Pour AWS, cette mise à niveau ne vous sera pas demandée. La mise à niveau vers Cloud Volumes ONTAP 9.16.1 GA n'est pas prise en charge dans AWS.
+NOTE: Pour AWS, vous ne serez pas invité à effectuer cette mise à niveau.  La mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 n'est pas prise en charge dans AWS.
 
 
 
