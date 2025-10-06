@@ -22,7 +22,7 @@ Cloud Volumes ONTAP présente des limites de configuration du stockage pour assu
 
 La capacité système maximale d'un système Cloud Volumes ONTAP est déterminée par sa licence. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données.
 
-NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
+NetApp ne prend pas en charge le dépassement de la limite de capacité du système. Si vous atteignez la limite de capacité sous licence, la console NetApp affiche un message indiquant qu'une action est requise et ne vous permet plus d'ajouter des disques supplémentaires.
 
 Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Pour plus de détails, reportez-vous aux limites de disques ci-dessous.
 
@@ -55,7 +55,7 @@ Limites de capacité pour les autres types de licences::
 La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité. Il n'est pas par nœud. Par exemple, si vous utilisez la licence Premium, vous pouvez disposer d'une capacité maximale de 368 To entre les deux nœuds.
 
 .Dans le cas d'une paire haute disponibilité, les données en miroir sont-elles prises en compte par rapport à la limite de capacité sous licence ?
-Non, ce n'est pas le cas.  Les données d'une paire HA sont mises en miroir de manière synchrone entre les nœuds afin que les données soient disponibles en cas de panne dans Google Cloud.  Par exemple, si vous achetez un disque de 8 To sur le nœud A, BlueXP alloue également un disque de 8 To sur le nœud B qui est utilisé pour les données en miroir.  Bien que 16 To de capacité soient configurés, seuls 8 To sont comptabilisés dans la limite de licence.
+Non, ce n'est pas le cas. Les données d'une paire HA sont mises en miroir de manière synchrone entre les nœuds afin que les données soient disponibles en cas de panne dans Google Cloud. Par exemple, si vous achetez un disque de 8 To sur le nœud A, la console alloue également un disque de 8 To sur le nœud B qui est utilisé pour les données en miroir. Bien que 16 To de capacité soient configurés, seuls 8 To sont comptabilisés dans la limite de licence.
 
 
 
@@ -198,8 +198,8 @@ Les machines virtuelles de stockage que vous configurez pour la reprise après i
 . À partir de ONTAP 9.12.1P2, la limite est de 128 To. Dans ONTAP 9.11.1 et les versions antérieures, la limite est de 16 To.
 . La création de volumes FlexVol d'une taille maximale de 300 Tio est prise en charge à l'aide des outils et des versions minimales suivants :
 +
-** System Manager et l'interface de ligne de commande ONTAP à partir de Cloud Volumes ONTAP 9.12.1 P2 et 9.13.0 P2
-** BlueXP depuis Cloud Volumes ONTAP 9.13.1
+** Gestionnaire système et CLI ONTAP à partir de Cloud Volumes ONTAP 9.12.1 P2 et 9.13.0 P2
+** À partir de Cloud Volumes ONTAP 9.13.1
 
 
 

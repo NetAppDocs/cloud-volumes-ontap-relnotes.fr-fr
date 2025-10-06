@@ -22,7 +22,7 @@ Cloud Volumes ONTAP présente des limites de configuration du stockage pour assu
 
 La capacité maximale du système comprend le stockage sur disque ainsi que le stockage d'objets utilisé pour la hiérarchisation des données.
 
-NetApp ne prend pas en charge le dépassement de la limite de capacité système. Si vous atteignez la limite de capacité sous licence, BlueXP affiche un message d'action requise et ne vous permet plus d'ajouter des disques supplémentaires.
+NetApp ne prend pas en charge le dépassement de la limite de capacité du système. Si vous atteignez la limite de capacité sous licence, la console NetApp affiche un message indiquant qu'une action est requise et ne vous permet plus d'ajouter des disques supplémentaires.
 
 Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Reportez-vous aux limites de capacité et de disques ci-dessous pour plus de détails.
 
@@ -55,7 +55,7 @@ Limites de capacité pour les autres types de licences::
 La limite de capacité s'applique à l'ensemble de la paire HA.  Ce n'est pas par nœud.  Par exemple, la licence Premium autorise jusqu'à 368 Tio sur les deux nœuds.
 
 .Pour un système haute disponibilité dans AWS, est-ce que les données en miroir sont prises en compte avec la limite de capacité ?
-Non, ce n'est pas le cas. Les données d'une paire HA AWS sont mises en miroir de manière synchrone entre les nœuds, de sorte que les données soient disponibles en cas de panne. Par exemple, si vous achetez un disque de 8 Tio sur le nœud A, BlueXP alloue également un disque de 8 Tio sur le nœud B utilisé pour les données en miroir. Tandis que la capacité de 16 Tio a été provisionnée, seuls 8 Tio compte par rapport à la limite de licence.
+Non, ce n'est pas le cas. Les données d'une paire AWS HA sont mises en miroir de manière synchrone entre les nœuds afin que les données soient disponibles en cas de panne. Par exemple, si vous achetez un disque de 8 Tio sur le nœud A, la console alloue également un disque de 8 Tio sur le nœud B qui est utilisé pour les données en miroir. Alors que 16 Tio de capacité ont été provisionnés, seuls 8 Tio sont comptabilisés dans la limite de licence.
 
 
 
@@ -408,7 +408,7 @@ Les instances répertoriées ci-dessous concernent les familles d'instances c5, 
 | *.24xlarge | 50 | 44 | 24 | 12 
 |===
 . Ce chiffre indique le nombre d'adresses IP restantes_ privées disponibles sur le port e0a après le déploiement et la configuration de Cloud Volumes ONTAP. Par exemple, un système *.2xlarge prend en charge un maximum de 15 adresses IP par interface réseau. Lorsqu'une paire haute disponibilité est déployée dans un seul groupe de disponibilité, 5 adresses IP privées sont allouées au port e0a. Par conséquent, une paire haute disponibilité utilisant un type d'instance *.2 x grande taille dispose de 10 adresses IP privées restantes pour l'ajout de machines virtuelles de stockage supplémentaires.
-. Le nombre indiqué dans ces colonnes inclut la machine virtuelle de stockage initiale que BlueXP crée par défaut. Par exemple, si 24 est répertorié dans cette colonne, cela signifie que vous pouvez créer 23 machines virtuelles de stockage supplémentaires pour un total de 24.
+. Le numéro répertorié dans ces colonnes inclut la machine virtuelle de stockage initiale que la console crée par défaut. Par exemple, si 24 est répertorié dans cette colonne, cela signifie que vous pouvez créer 23 machines virtuelles de stockage supplémentaires pour un total de 24.
 . Une LIF de gestion pour la machine virtuelle de stockage est facultative. Une LIF de gestion fournit une connexion à des outils de gestion tels que SnapCenter.
 +
 Comme elle nécessite une adresse IP privée, elle limite le nombre de VM de stockage supplémentaires que vous pouvez créer. La seule exception est une paire HA dans plusieurs AZS. Dans ce cas, l'adresse IP de la LIF de gestion est une adresse _flottante_ IP qui ne compte pas sur la limite _private_ IP.
@@ -452,7 +452,7 @@ Comme elle nécessite une adresse IP privée, elle limite le nombre de VM de sto
 . La création de volumes FlexVol d'une taille maximale de 300 Tio est prise en charge à l'aide des outils et des versions minimales suivants :
 +
 ** System Manager et l'interface de ligne de commande ONTAP à partir de Cloud Volumes ONTAP 9.12.1 P2 et 9.13.0 P2
-** BlueXP depuis Cloud Volumes ONTAP 9.13.1
+** À partir de Cloud Volumes ONTAP 9.13.1
 
 
 

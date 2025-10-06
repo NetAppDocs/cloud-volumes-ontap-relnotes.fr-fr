@@ -32,15 +32,15 @@ Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.
 
 === Comment mettre à niveau
 
-Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées depuis BlueXP. Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l'aide de System Manager ou de l'interface de ligne de commandes. Cela peut affecter la stabilité du système.
+Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées à partir de la console NetApp . Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l’aide de System Manager ou de l’interface de ligne de commande. Cela peut avoir un impact sur la stabilité du système.
 
-link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer la mise à niveau lorsque BlueXP vous avertit"^].
+link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer une mise à niveau lorsque la console vous avertit"^] .
 
 
 
 === Chemin de mise à niveau pris en charge
 
-Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 à partir de la version 9.16.1 dans Azure et Google Cloud.  BlueXP vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
+Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 à partir de la version 9.16.1 dans Azure et Google Cloud. La console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
 
 
 NOTE: Pour AWS, vous ne serez pas invité à effectuer cette mise à niveau.  La mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 n'est pas prise en charge dans AWS.
