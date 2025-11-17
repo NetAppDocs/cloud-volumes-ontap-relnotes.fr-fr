@@ -14,15 +14,15 @@ summary: Cloud Volumes ONTAP 9.17.1 inclut une nouvelle amélioration.
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.17.1 est disponible pour le déploiement et la mise à niveau dans Azure et Google Cloud.
+Cloud Volumes ONTAP 9.17.1 inclut de nouvelles améliorations.
 
-Des fonctionnalités et améliorations supplémentaires sont également introduites dans la dernière version de la NetApp Console. Pour plus d'informations, consultez les nouveautés de https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP"^] géré dans la console.
+De nouvelles fonctionnalités Cloud Volumes ONTAP sont également introduites dans les dernières versions de la NetApp Console. Pour plus d'informations, consultez les nouveautés de https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP"^] géré dans la console.
 
 
 
 == 9.17.1 P1 (04 novembre 2025)
 
-Le correctif Cloud Volumes ONTAP 9.17.1 P1 est désormais disponible pour le déploiement et la mise à niveau sur Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
+Le correctif Cloud Volumes ONTAP 9.17.1 P1 est désormais disponible pour le déploiement et la mise à niveau sur AWS, Azure et Google Cloud. La console vous invitera à mettre à niveau vos systèmes existants vers cette version de correctif.
 
 link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.17.1P1["Voir la liste des bugs corrigés dans le patch P1"^](Connexion au site de support NetApp requise).
 
@@ -30,7 +30,10 @@ link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/
 
 == 9.17.1 RC1 (4 septembre 2025)
 
-Vous pouvez désormais utiliser la version Release Candidate 1 de Cloud Volumes ONTAP 9.17.1 pour le déploiement et la mise à niveau dans Azure et Google Cloud. Cependant, cette version n'est pas disponible pour le déploiement et la mise à niveau dans AWS.
+Vous pouvez désormais utiliser la version Release Candidate 1 de Cloud Volumes ONTAP 9.17.1 pour le déploiement et la mise à niveau dans Azure et Google Cloud.
+
+
+NOTE: Cette version n'est pas disponible pour le déploiement et la mise à niveau sur AWS.
 
 
 
@@ -42,7 +45,7 @@ Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.
 
 === Comment mettre à niveau
 
-Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées à partir de la console NetApp . Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l’aide de System Manager ou de l’interface de ligne de commande. Cela peut avoir un impact sur la stabilité du système.
+Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées depuis la console. Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l’aide de System Manager ou de l’interface de ligne de commande. Cela peut avoir un impact sur la stabilité du système.
 
 link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer une mise à niveau lorsque la console vous avertit"^] .
 
@@ -50,10 +53,7 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === Chemin de mise à niveau pris en charge
 
-Vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 à partir de la version 9.16.1 dans Azure et Google Cloud. La console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
-
-
-NOTE: Pour AWS, vous ne serez pas invité à effectuer cette mise à niveau.  La mise à niveau vers Cloud Volumes ONTAP 9.17.1 RC1 n'est pas prise en charge dans AWS.
+Vous pouvez mettre à niveau Cloud Volumes ONTAP vers la version 9.17.1 à partir de la version 9.16.1 sur AWS, Azure et Google Cloud.  Pour AWS, vous pouvez effectuer une mise à niveau vers Cloud Volumes ONTAP 9.17.1 P1 et versions ultérieures.  La console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
 
 
 
