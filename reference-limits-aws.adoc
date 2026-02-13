@@ -99,7 +99,7 @@ Remarques :
 
 == Limites de disque et de Tiering par instance EC2
 
-Les limites de capacité varient en fonction de la famille de types d'instances EC2 que vous utilisez et si vous utilisez un système à un seul nœud ou une paire haute disponibilité.
+Les limites de capacité varient selon la famille de types d'instances EC2 que vous utilisez et selon que vous utilisez un système à nœud unique ou une paire haute disponibilité.
 
 Les remarques suivantes fournissent des détails sur les numéros que vous verrez dans les tableaux ci-dessous :
 

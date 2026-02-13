@@ -30,7 +30,7 @@ NetApp a mis en place des outils visant à établir des relations avec les fourn
 
 Microsoft planifie et annonce par programmation les événements de maintenance sur son infrastructure Azure VM (Virtual machine) qui peuvent affecter les machines virtuelles Cloud Volumes ONTAP. Ces événements sont annoncés 15 minutes avant la fenêtre de maintenance.
 
-La gestion spéciale des événements de maintenance est prise en charge pour les paires haute disponibilité Cloud Volumes ONTAP. Afin de préserver l'intégrité des applications, nous procédons à un basculement préventif qui donne la priorité à la stabilité, car toute perte de connectivité de plus de 15 secondes désactive les fonctionnalités de basculement.
+La gestion spéciale des événements de maintenance est prise en charge pour les paires haute disponibilité (HA) de Cloud Volumes ONTAP. Pour maintenir la santé des applications, nous effectuons une reprise en charge préventive pour privilégier la stabilité, car toute perte de connectivité de plus de 15 secondes désactivera les capacités de basculement.
 
 Lorsque la fenêtre de maintenance est annoncée, le nœud partenaire du nœud ciblé effectue un basculement. Une fois la maintenance terminée, un rétablissement est lancé. Après le retour, la paire HA est censée revenir à un état sain. Le cas échéant, contactez le support NetApp pour obtenir de l'aide. Notez que les événements de maintenance sont ciblés sur l'une des machines virtuelles d'une paire haute disponibilité à la fois, et en général, les deux nœuds sont ciblés dans un délai relativement court.
 

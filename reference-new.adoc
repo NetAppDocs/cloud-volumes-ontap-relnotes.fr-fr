@@ -51,6 +51,6 @@ NOTE: Cloud Volumes ONTAP 9.18.1 n'est pas disponible pour la mise à niveau dan
 
 === Ou non
 
-* La mise à niveau d'un système à un nœud unique permet de mettre le système hors ligne pendant 25 minutes au cours desquelles les E/S sont interrompues.
+* La mise à niveau d'un système à nœud unique met le système hors ligne pendant une durée maximale de 25 minutes, durant laquelle les E/S sont interrompues.
 * La mise à niveau d'une paire haute disponibilité ne perturbe pas les opérations et les E/S sont interrompues. Lors de cette mise à niveau sans interruption, chaque nœud est mis à niveau en tandem pour continuer à assurer le service d'E/S aux clients.
 

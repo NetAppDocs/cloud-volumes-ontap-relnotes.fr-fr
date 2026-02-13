@@ -96,7 +96,7 @@ Les limites n'incluent pas le disque racine, le disque principal et VNVRAM.
 * Vous pouvez voir la capacité maximale du système lorsque vous utilisez des disques seuls et lorsque vous utilisez des disques et une hiérarchisation des données froides pour le stockage d'objets.
 * Les systèmes à un seul nœud et haute disponibilité qui utilisent des disques gérés ont un maximum de 32 Tio par disque. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.
 * Les systèmes HAUTE DISPONIBILITÉ qui utilisent des blobs de page ont un maximum de 8 Tio par blob de page. Le nombre de disques pris en charge varie en fonction de la taille des machines virtuelles.
-* La limite de 896 Tio basée sur les disques répertoriée pour les systèmes à un seul nœud avec certaines tailles de VM est la limite _testée_.
+* La limite de 896 TiB basée sur le disque indiquée pour les systèmes à nœud unique avec certaines tailles de VM est la limite _testée_.
 
 
 

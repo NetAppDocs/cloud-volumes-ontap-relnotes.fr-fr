@@ -102,7 +102,7 @@ Le tableau ci-dessous présente la capacité maximale du système avec des disqu
 
 
 | Nombre maximal de disques de données  a| 
-* 124 pour les systèmes à un seul nœud
+* 124 pour les systèmes à nœud unique
 * 123 par nœud pour les paires haute disponibilité
 
 

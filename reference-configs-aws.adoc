@@ -20,9 +20,9 @@ Plusieurs configurations Cloud Volumes ONTAP sont prises en charge dans AWS.
 
 == Nombre de nœuds pris en charge
 
-Cloud Volumes ONTAP est disponible dans AWS en tant que système à un seul nœud et en tant que paire de nœuds haute disponibilité pour la tolérance aux pannes et la continuité de l'activité.
+Cloud Volumes ONTAP est disponible sur AWS en tant que système à nœud unique et en tant que paire haute disponibilité (HA) pour tolérance aux pannes et opérations non perturbatrices.
 
-La mise à niveau d'un système à un seul nœud vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à un seul nœud à une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau.
+La mise à niveau d'un système à nœud unique vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez basculer entre un système à nœud unique et une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau système.
 
 
 
@@ -79,7 +79,7 @@ Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP 
 
 
 --
-.Licences basées sur les nœuds
+.Autres licences
 --
 [cols="h,d,d,d,d"]
 |===
@@ -245,8 +245,8 @@ Les bandes passantes présentées dans le tableau ci-dessous correspondent aux l
 | m6id.32xlarge | 64 ^4^ | 512 | Pris en charge | 50 | 40,000 | Pris en charge 
 |===
 . Certains types d'instances incluent le stockage NVMe local, que Cloud Volumes ONTAP utilise _Flash cache_. Flash cache accélère l'accès aux données grâce à la mise en cache intelligente en temps réel des données utilisateur et des métadonnées NetApp lues récemment. Elle est efficace pour les charges de travail exigeant une capacité de lecture aléatoire maximale, dont les bases de données, la messagerie et les services de fichiers. La compression doit être désactivée sur tous les volumes pour tirer parti des améliorations des performances de Flash cache. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["En savoir plus sur Flash cache"^].
-. Cloud Volumes ONTAP prend en charge une vitesse d'écriture élevée avec la plupart des types d'instances lors de l'utilisation d'une paire HA. Lors de l'utilisation d'un système à un seul nœud, la vitesse d'écriture élevée est prise en charge avec tous les types d'instances. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^].
-. Le type d'instance r5.12xlarge présente une limitation connue avec la prise en charge. Si un nœud redémarre de manière inattendue en raison d'un problème, le système peut ne pas collecter les fichiers « core » utilisés pour le dépannage et la racine du problème. Le client accepte les risques et les conditions d'assistance limitées et assume toute responsabilité en cas de problème. Cette limitation affecte les paires haute disponibilité nouvellement déployées et les paires haute disponibilité mises à niveau depuis la version 9.8. La limite n'affecte pas les systèmes à nœud unique récemment déployés.
+. Cloud Volumes ONTAP prend en charge une vitesse d'écriture élevée avec la plupart des types d'instances lors de l'utilisation d'une paire haute disponibilité. Une vitesse d'écriture élevée est prise en charge avec tous les types d'instances lors de l'utilisation d'un système à nœud unique https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["En savoir plus sur le choix d'une vitesse d'écriture"^].
+. Le type d'instance r5.12xlarge présente une limitation connue en matière de supportabilité. Si un nœud redémarre de manière inattendue à cause d'un panic, le système pourrait ne pas collecter les fichiers core utilisés pour le dépannage et l'identification de la cause première du problème. Le client accepte les risques et les conditions de support limitées et assume l'entière responsabilité du support si cette condition se produit. Cette limitation affecte les paires haute disponibilité nouvellement déployées et les paires haute disponibilité mises à niveau depuis 9.8. Cette limitation n'affecte pas les systèmes à nœud unique nouvellement déployés.
 . Alors que ces types d'instances EC2 prennent en charge plus de 64 vCPU, Cloud Volumes ONTAP ne prend en charge que 64 vCPU.
 . Lorsque vous choisissez un type d'instance EC2, vous pouvez indiquer s'il s'agit d'une instance partagée ou dédiée.
 . Les zones locales AWS sont prises en charge dans les familles de types d'instances EC2 suivantes, de tailles XLarge à 4xlarge : M5, C5, C5d, R5 et R5d. link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["Consultez AWS pour obtenir les informations les plus récentes et complètes sur les types d'instances EC2 prises en charge dans les zones locales"^].

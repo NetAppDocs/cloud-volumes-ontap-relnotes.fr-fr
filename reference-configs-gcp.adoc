@@ -20,9 +20,9 @@ Google Cloud prend en charge plusieurs configurations Cloud Volumes ONTAP.
 
 == Configurations prises en charge par licence
 
-Cloud Volumes ONTAP est disponible dans Google Cloud en tant que système à un seul nœud et en tant que paire haute disponibilité de nœuds pour la tolérance aux pannes et la continuité de l'activité.
+Cloud Volumes ONTAP est disponible dans Google Cloud en tant que système à nœud unique et en tant que paire haute disponibilité (HA) de nœuds pour la tolérance aux pannes et des opérations non perturbatrices.
 
-La mise à niveau d'un système à un seul nœud vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à un seul nœud à une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau.
+La mise à niveau d'un système à nœud unique vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à nœud unique à une paire haute disponibilité, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau système.
 
 Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle réservée ou à la demande auprès de votre fournisseur cloud. Les solutions qui utilisent d'autres types d'instances VM ne sont pas prises en charge.
 
