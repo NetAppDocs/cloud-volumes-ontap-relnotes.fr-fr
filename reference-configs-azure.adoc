@@ -166,7 +166,7 @@ De même, si vous choisissez des disques SSD gérés Premium pour un environneme
 
 
 --
-.Licences basées sur les nœuds
+.Autres licences
 --
 [cols="h,d,d,d,d"]
 |===
@@ -381,7 +381,7 @@ Remarques :
 
 
 --
-.Licences basées sur les nœuds
+.Autres licences
 --
 [cols="h,d,d,d"]
 |===
@@ -543,7 +543,7 @@ Remarques :
 
 
 --
-.Licences basées sur les nœuds
+.Autres licences
 --
 [cols="h,d,d,d"]
 |===

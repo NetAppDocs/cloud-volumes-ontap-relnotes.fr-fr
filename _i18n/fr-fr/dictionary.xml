@@ -513,8 +513,6 @@
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1,2,4^</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
-  <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">À partir de la version 9.13.0 du logiciel Cloud Volumes ONTAP, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :</block>
-  <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Lancement d'une paire HA dans Google Cloud</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash cache_, mode d'écriture élevée et MTU 8,896 sont dépendants des fonctions et ne peuvent pas être désactivés individuellement dans une instance configurée.</block>
   <block id="0bd47e4dae550ba8bfd133248f3efde6" category="list-text">16 Tio (disques gérés uniquement)</block>
   <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32 Tio (disques gérés uniquement)</block>
@@ -530,7 +528,6 @@
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité.<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>.</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>.</block>
-  <block id="df25654d93147d2e6dc5b5b1fd1a4b82" category="paragraph">Vous pouvez activer _Flash cache_ et bénéficier d'une vitesse d'écriture élevée lors du déploiement d'un type d'instance éligible. Pour activer l'unité de transmission maximale supérieure de 8,896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau plus élevé. Pour plus d'informations sur le lancement de l'un de ces déploiements, reportez-vous à la section<block ref="663913c4edf07faddf2fc43cb75f2fe2" category="inline-link-rx"></block>.</block>
   <block id="396e70da46ca6b8f2dd7d352ab5d7f16" category="paragraph">Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Vous pouvez atteindre la limite de capacité de<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>. Pour plus de détails, reportez-vous aux limites de disques ci-dessous.</block>
   <block id="769a653e8483d7efc5ec7ad2044e739c" category="paragraph"><block ref="b8246ed4559cd25bd4b019aae2787f00" category="inline-link-rx"></block>.</block>
   <block id="81a074db33c6f62838933c92142f16d6" category="paragraph"><block ref="f969ecf664fae2f86e88c525c7dd7acf" category="inline-link-rx"></block>.</block>
@@ -590,7 +587,6 @@
   <block id="d071b0d9481cad34966de3c7caf72b29" category="list-text">E64ds_v5 ^1^</block>
   <block id="6c390ecab52e3e5345764abdf66b4a13" category="list-text">E20ds_v5 ^1^</block>
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">Licences basées sur la capacité</block>
-  <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">Licences basées sur les nœuds</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">Lorsque vous déployez Cloud Volumes ONTAP en tant que système à un seul nœud dans Azure, vous avez le choix entre plusieurs configurations de licence basées sur la capacité ou sur les nœuds.</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_v5 ^3^</block>
   <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAP prend uniquement en charge les instances de VM réservées et à la demande</block>
@@ -840,9 +836,6 @@
   <block id="c9cd8b532a08b529a0ff7a2fffea627b" category="paragraph">Vous pouvez désormais déployer et mettre à niveau vers Cloud Volumes ONTAP 9.18.1. Vous pouvez voir la version de base de cette version et les dernières versions de correctifs disponibles pour le déploiement et la mise à niveau dans la Console.</block>
   <block id="08a0be2ea6fee1009726a83673928a21" category="paragraph">Pour en savoir plus sur les fonctionnalités de Cloud Volumes ONTAP introduites dans les dernières versions de la NetApp Console, consultez les nouveautés dans<block ref="56e5ce972271b4b4616ecc1db39a9778" category="inline-link-rx"></block>.</block>
   <block id="5374a9a52531aed841e032cdf44811c1" category="section-title">9.18.1 GA (10 février 2026)</block>
-  <block id="ab70c277ac78079e46a1214dd294b323" category="paragraph">La version 9.18.1 de Cloud Volumes ONTAP est désormais disponible pour le déploiement et la mise à niveau sur Amazon Web Services (AWS) et Microsoft Azure. Cette version n'est pas disponible pour le déploiement et la mise à niveau sur Google Cloud.</block>
-  <block id="a5fe82604076d645f09893cad1967294" category="paragraph">Vous pouvez mettre à niveau vers Cloud Volumes ONTAP 9.18.1 à partir de 9.17.1 P1 et des correctifs ultérieurs sur AWS et Azure. La Console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
-  <block id="2e03bd3de874b4ffe3a85b7507d0a69e" category="admonition">Cloud Volumes ONTAP 9.18.1 n'est pas disponible pour la mise à niveau dans Google Cloud.</block>
   <block id="7ee7c49a2608d3d31956026fdc3bf833" category="sidebar">Ces notes de version décrivent les nouvelles fonctionnalités, les limitations et les problèmes connus pour Cloud Volumes ONTAP 9.18.1.</block>
   <block id="001b20e35d2188363ca847fd669007f8" category="sidebar">Cloud Volumes ONTAP 9.18.1 Notes de version</block>
   <block id="e0b3d5810800c1af83b5753f4a2a2f7e" category="sidebar">Notes de version de Cloud Volumes ONTAP 9.18.1</block>
@@ -880,4 +873,39 @@
   <block id="7996776cc07408b62e3e588c6e576723" category="list-text">124 pour les systèmes à nœud unique</block>
   <block id="777aa7f6fc6d119be846af0333b88f27" category="list-text">La mise à niveau d'un système à nœud unique met le système hors ligne pendant une durée maximale de 25 minutes, durant laquelle les E/S sont interrompues.</block>
   <block id="8cfc1cd76589ea7ff4c1934750bae7e9" category="paragraph">La gestion spéciale des événements de maintenance est prise en charge pour les paires haute disponibilité (HA) de Cloud Volumes ONTAP. Pour maintenir la santé des applications, nous effectuons une reprise en charge préventive pour privilégier la stabilité, car toute perte de connectivité de plus de 15 secondes désactivera les capacités de basculement.</block>
+  <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">Systèmes à nœud unique</block>
+  <block id="b403fd06a9e67dac043a46c81f61b1d4" category="list-text">c3-standard-4, c3-standard-4-lssd ^5^</block>
+  <block id="62de73d8bad98dc6f3b2cf4c7f46de7e" category="list-text">c3-standard-8, c3-standard-8-lssd ^5^</block>
+  <block id="67e9e5ee963e483b54b24b9086423c04" category="list-text">c3-standard-22, c3-standard-22-lssd ^5^</block>
+  <block id="9920e588f0220960f4c06a722fcb4ff1" category="list-text">c3-standard-44, c3-standard-44-lssd ^5^</block>
+  <block id="71fb3d90d5bc2f0c21c4b59bfd197d67" category="list-text">c3-standard-88, c3-standard-88-lssd ^5^</block>
+  <block id="440594064d57a904b2c7fce0bdfa4a39" category="cell">Disques persistants équilibrés ^3^, disques persistants hautes performances (SSD) ^3^ et disques persistants standard (HDD). Les VM C3 prennent uniquement en charge les disques Hyperdisk Balanced.</block>
+  <block id="d60c6adcad1706add7c779a42393ec88" category="inline-link-macro">Prise en charge de Flash Cache</block>
+  <block id="60c0844205cf1310833606006fa8b6fa" category="list-text">^5^ Vous pouvez déployer les machines virtuelles de la famille C3 nouvelle génération sur Cloud Volumes ONTAP 9.18.1 et versions ultérieures. Les machines c3-standard-44 et c3-standard-88 et leurs variantes LSSD prennent en charge par défaut la bande passante Tier-1 dans Google Cloud Console. Avec les types de machines virtuelles C3, vous ne pouvez pas ajouter un disque à un agrégat existant ou passer à une autre variante au sein de la famille C3. Consultez <block ref="a3ca704cc55629e0cfb930ef958889bb" category="inline-link-macro-rx"></block> pour plus d'informations sur les variantes LSSD.</block>
+  <block id="c24cb0b82dac3c2a02963bf23b1d0650" category="cell">Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). Les machines virtuelles C3 prennent uniquement en charge les disques Hyperdisk Balanced.</block>
+  <block id="10c35d6a4a80bde624a9ba13f97ce24a" category="section-title">Paires à haute disponibilité (HA)</block>
+  <block id="fab4c4cf338a8dd4c15c662d65f36827" category="cell">Capacité maximale du système en fonction de la licence (disques + stockage objet)</block>
+  <block id="254d5c87d5ab437395f866390ea49cd0" category="inline-link">Lancement de Cloud Volumes ONTAP dans Google Cloud</block>
+  <block id="80a9aa4591dfcec1028b269fd96084b5" category="paragraph">Vous pouvez activer  et une vitesse d'écriture élevée lors du déploiement d'un type d'instance compatible. Pour activer l'unité de transmission maximale de 8 896 octets, vous devez choisir VPC-1, VPC-2 ou VPC-3 pour le déploiement. La MTU plus élevée permet un débit réseau supérieur. Pour plus d'informations sur le lancement de l'un de ces déploiements, voir <block ref="958eb36238d0859ba89677740ca359aa" category="inline-link-rx"></block>.</block>
+  <block id="d076c2db8ac31c31f4b9d088a8b87a24" category="paragraph">À partir de Cloud Volumes ONTAP 9.18.1, si vous sélectionnez les variantes LSSD (SSD locales) des machines virtuelles C3, Flash Cache est activé par défaut. Consultez ce tableau pour comprendre la variante de machine virtuelle et le nombre maximal de LSSD qu'elles prennent en charge :</block>
+  <block id="d54092cc3c2c2778d416f1225b37f056" category="cell">Type de VM</block>
+  <block id="7fbb74773227f16e493c8d262749ccfc" category="cell">Nombre de disques LSSD connectés</block>
+  <block id="e16e833ea94b9887a3dc1398681e4002" category="cell">c3-standard-4-lssd</block>
+  <block id="90a40b291206cfc7708cb3bc5d350153" category="cell">c3-standard-8-lssd</block>
+  <block id="4a9afdd54dd6c0b33c4de4aa1a9d70b0" category="cell">c3-standard-22-lssd</block>
+  <block id="d6c145d4553197e1dff7b37e2e78e57f" category="cell">c3-standard-44-lssd</block>
+  <block id="c11765d8ed27e45d59d4e9a92f2affd7" category="cell">c3-standard-88-lssd</block>
+  <block id="f2b67364b67c3341da14d3dd6cc4e565" category="section-title">Capacité système maximale en fonction du type de VM</block>
+  <block id="bd99c8077f7f97c91591a847f840881b" category="cell">Nombre maximal de disques de données pris en charge</block>
+  <block id="66c4d8e765ff8bcb8923251a797c3122" category="cell">Capacité maximale (en TiB)</block>
+  <block id="1adacbb72826f9b83c0140c9286c1820" category="cell">n2 (toutes variantes)</block>
+  <block id="c8ffe9a587b126f152ed3d89a146b445" category="cell">124</block>
+  <block id="d96409bf894217686ba124d7356686c9" category="cell">257</block>
+  <block id="0de9961457d561d5ed62313c6161dce3" category="cell">c3-standard-4</block>
+  <block id="8f115072b5277605f7d237770a30ab04" category="cell">c3-standard-8</block>
+  <block id="3b7cc07efa81c4ceb17419c4584c144f" category="cell">c3-standard-22</block>
+  <block id="578ae146a454ae8eb958e84ae9263447" category="cell">c3-standard-44</block>
+  <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
+  <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">La version Cloud Volumes ONTAP 9.18.1 à disponibilité générale est désormais disponible pour le déploiement et la mise à niveau sur Amazon Web Services (AWS), Microsoft Azure et Google Cloud.</block>
+  <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">Vous pouvez mettre à niveau vers Cloud Volumes ONTAP 9.18.1 à partir de la version 9.17.1 P1 et des correctifs ultérieurs sur AWS, Azure et Google Cloud. La Console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
 </blocks>
