@@ -908,4 +908,8 @@
   <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
   <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">La version Cloud Volumes ONTAP 9.18.1 à disponibilité générale est désormais disponible pour le déploiement et la mise à niveau sur Amazon Web Services (AWS), Microsoft Azure et Google Cloud.</block>
   <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">Vous pouvez mettre à niveau vers Cloud Volumes ONTAP 9.18.1 à partir de la version 9.17.1 P1 et des correctifs ultérieurs sur AWS, Azure et Google Cloud. La Console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.</block>
+  <block id="e819c4410e5eb8f68db481717f672a21" category="section-title">9.18.1 P1 (31 mars 2026)</block>
+  <block id="66b93dcdc5716dedd5e7fcf8a6f2c744" category="paragraph">Le correctif Cloud Volumes ONTAP 9.18.1 P1 est désormais disponible pour le déploiement et la mise à niveau sur AWS, Azure et Google Cloud. La Console vous invitera à mettre à niveau vos systèmes existants vers ce correctif.</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">Consultez la liste des bugs corrigés dans le patch P1</block>
+  <block id="d4e91a63e862afe5d30e173965c6c4a1" category="paragraph"><block ref="eb1c958143bf6120158dde219a58c506" category="inline-link-macro-rx"></block> (NetApp Connexion au site d'assistance requise).</block>
 </blocks>
