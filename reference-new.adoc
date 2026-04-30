@@ -20,6 +20,14 @@ Pour en savoir plus sur les fonctionnalités de Cloud Volumes ONTAP introduites 
 
 
 
+== 9.18.1 P2 (30 avril 2026)
+
+Le correctif Cloud Volumes ONTAP 9.18.1 P2 est désormais disponible pour le déploiement et la mise à niveau sur AWS, Azure et Google Cloud. La Console vous invitera à mettre à niveau vos systèmes existants vers ce correctif.
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.18.1P2["Consultez la liste des bugs corrigés dans le patch P2"^] (NetApp Connexion au site d'assistance requise).
+
+
+
 == 9.18.1 P1 (31 mars 2026)
 
 Le correctif Cloud Volumes ONTAP 9.18.1 P1 est désormais disponible pour le déploiement et la mise à niveau sur AWS, Azure et Google Cloud. La Console vous invitera à mettre à niveau vos systèmes existants vers ce correctif.
