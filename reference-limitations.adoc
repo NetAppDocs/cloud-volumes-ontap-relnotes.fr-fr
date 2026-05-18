@@ -22,7 +22,7 @@ Cloud Volumes ONTAP s'applique à tous les fournisseurs cloud : AWS, Azure et Go
 
 == Fonctions ONTAP non prises en charge
 
-Les fonctionnalités suivantes ne sont pas prises en charge par Cloud Volumes ONTAP :
+Certaines fonctionnalités d'ONTAP ne sont pas prises en charge avec Cloud Volumes ONTAP, notamment :
 
 * Déduplication à la volée au niveau des agrégats
 * La déduplication en arrière-plan au niveau de l'agrégat
@@ -44,6 +44,7 @@ L'activation de la vérification multi-administration sur Cloud Volumes ONTAP en
 * Modes SnapLock Compliance et Enterprise (seul le mode WORM cloud est pris en charge)
 * SnapMirror synchrone
 * VLAN
+* Gestionnaire de clés intégré (OKM) pour le chiffrement
 * Disponibilité continue des PME (CA)
 +
 https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["Actions PME disponibles en continu"^] pour les opérations non perturbatrices ne sont pas prises en charge.
