@@ -18,6 +18,7 @@ Google Cloud prend en charge plusieurs configurations Cloud Volumes ONTAP.
 
 
 
+[[supported-configurations-by-license]]
 == Configurations prises en charge par licence
 
 Cloud Volumes ONTAP est disponible dans Google Cloud en tant que système à nœud unique et en tant que paire haute disponibilité (HA) de nœuds pour la tolérance aux pannes et des opérations non perturbatrices.
@@ -28,6 +29,7 @@ Cloud Volumes ONTAP peut être exécuté sur une instance de machine virtuelle r
 
 
 
+[[single-node-systems]]
 === Systèmes à nœud unique
 
 [role="tabbed-block"]
@@ -95,7 +97,7 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 
 . ^3^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
 . ^4^ À compter du 11 août 2025, la licence Cloud Volumes ONTAP Optimized est obsolète et ne sera plus disponible à l'achat ou au renouvellement sur la place de marché Google Cloud pour les abonnements à la carte (PAYGO).  Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Nouveautés de Cloud Volumes ONTAP"^] .
-. ^5^ Vous pouvez déployer les machines virtuelles de la famille C3 nouvelle génération sur Cloud Volumes ONTAP 9.18.1 et versions ultérieures. Les machines c3-standard-44 et c3-standard-88 et leurs variantes LSSD prennent en charge par défaut la bande passante Tier-1 dans Google Cloud Console. Consultez link:reference-configs-gcp.html#flash-cache-support["Prise en charge de Flash Cache"] pour plus d'informations sur les variantes LSSD.
+. ^5^ Vous pouvez déployer les machines virtuelles de la famille C3 nouvelle génération sur https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#improved-cloud-volumes-ontap-support-with-google-cloud-c3-vms["Cloud Volumes ONTAP 9.18.1 et versions ultérieures"^]. Les machines c3-standard-44 et c3-standard-88 et leurs variantes LSSD prennent en charge par défaut la bande passante Tier-1 dans Google Cloud Console. Consultez link:reference-configs-gcp.html#flash-cache-support["Prise en charge de Flash Cache"] pour plus d'informations sur les variantes LSSD.
 
 
 --
@@ -160,7 +162,7 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 Le type de machine Custom-4-16384 n'est plus pris en charge par les nouveaux systèmes Cloud Volumes ONTAP. Si vous disposez d'un système existant fonctionnant sur ce type de machine, vous pouvez continuer à l'utiliser, mais nous vous recommandons de passer au type de machine n2-standard-4.
 
 . ^4^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
-. ^5^ Vous pouvez déployer les machines virtuelles de la famille C3 nouvelle génération sur Cloud Volumes ONTAP 9.18.1 et versions ultérieures. Les machines c3-standard-44 et c3-standard-88 et leurs variantes LSSD prennent en charge par défaut la bande passante Tier-1 dans Google Cloud Console. Consultez link:reference-configs-gcp.html#flash-cache-support["Prise en charge de Flash Cache"] pour plus d'informations sur les variantes LSSD.
+. ^5^ Vous pouvez déployer les machines virtuelles de la famille C3 nouvelle génération sur https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#improved-cloud-volumes-ontap-support-with-google-cloud-c3-vms["Cloud Volumes ONTAP 9.18.1 et versions ultérieures"^]. Les machines c3-standard-44 et c3-standard-88 et leurs variantes LSSD prennent en charge par défaut la bande passante Tier-1 dans Google Cloud Console. Consultez link:reference-configs-gcp.html#flash-cache-support["Prise en charge de Flash Cache"] pour plus d'informations sur les variantes LSSD.
 
 
 La console affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Cependant, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons rendu disponible uniquement pour un environnement de laboratoire spécifique.
@@ -175,6 +177,7 @@ Pour plus d'informations sur des types de machines spécifiques, reportez-vous �
 
 
 
+[[high-availability-ha-pairs]]
 === Paires à haute disponibilité (HA)
 
 [role="tabbed-block"]
@@ -192,6 +195,15 @@ Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP 
 
 
 | Types de machine pris en charge ^1^  a| 
+* c3-standard-8 ^5^
+* c3-standard-22, c3-standard-22-lssd ^5^
+* c3-standard-44, c3-standard-44-lssd ^5^
+* c3-standard-88, c3-standard-88-lssd ^5^
+* n1-standard-32 ^3^
+* n2-standard-16
+* n2-standard-32
+* n2-standard-48
+* n2-standard-64
 * n1-standard-8 ^1^
 * n1-standard-32 ^1^
 * n2-standard-4
@@ -206,6 +218,10 @@ Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP 
 * n2-standard-8
 
  a| 
+* c3-standard-8 ^5^
+* c3-standard-22, c3-standard-22-lssd ^5^
+* c3-standard-44, c3-standard-44-lssd ^5^
+* c3-standard-88, c3-standard-88-lssd ^5^
 * n1-standard-8 ^1^
 * n1-standard-32 ^1^
 * n2-standard-4
@@ -218,7 +234,7 @@ Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP 
 
 
 
-| Types de disque pris en charge ^2^ 3+| Disques persistants équilibrés ^3^, disques persistants hautes performances (SSD) ^3^ et disques persistants standard (HDD). 
+| Types de disque pris en charge ^2^ 3+| Disques persistants équilibrés ^3^, disques persistants hautes performances (SSD) ^3^ et disques persistants standard (HDD). Les machines virtuelles C3 prennent uniquement en charge les disques Hyperdisk Balanced. 
 |===
 Remarques :
 
@@ -232,6 +248,7 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 
 . ^3^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
 . ^4^ À compter du 11 août 2025, la licence Cloud Volumes ONTAP Optimized est obsolète et ne sera plus disponible à l'achat ou au renouvellement sur la place de marché Google Cloud pour les abonnements à la carte (PAYGO).  Pour plus d'informations, reportez-vous à https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Nouveautés de Cloud Volumes ONTAP"^] .
+. ^5^ Vous pouvez déployer les machines virtuelles de nouvelle génération de la famille C3 sur https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#support-for-next-generation-google-cloud-vms-in-cloud-volumes-ontap-ha["Cloud Volumes ONTAP 9.19.1 et versions ultérieures pour les déploiements HA sur une seule zone de disponibilité"^]. Les machines c3-standard-44 et c3-standard-88, ainsi que leurs variantes LSSD, prennent en charge par défaut la bande passante de niveau 1 dans Google Cloud Console. Consultez link:reference-configs-gcp.html#flash-cache-support["Prise en charge de Flash Cache"] pour plus d'informations sur les variantes LSSD.
 
 
 --
@@ -249,10 +266,14 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 * n2-standard-4
 
  a| 
+* c3-standard-8 ^5^
+* c3-standard-22, c3-standard-22-lssd ^5^
 * n1-standard-8 ^3^
 * n2-standard-8
 
  a| 
+* c3-standard-44, c3-standard-44-lssd ^5^
+* c3-standard-88, c3-standard-88-lssd ^5^
 * n1-standard-32 ^3^
 * n2-standard-16
 * n2-standard-32
@@ -260,6 +281,10 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 * n2-standard-64
 
  a| 
+* c3-standard-8 ^5^
+* c3-standard-22, c3-standard-22-lssd ^5^
+* c3-standard-44, c3-standard-44-lssd ^5^
+* c3-standard-88, c3-standard-88-lssd ^5^
 * n1-standard-8 ^3^
 * n1-standard-32 ^3^
 * n2-standard-4
@@ -272,7 +297,7 @@ link:reference-limits-gcp.html["En savoir plus sur les limites de disques dans G
 
 
 
-| Types de disques pris en charge 4+| Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). 
+| Types de disques pris en charge 4+| Disques persistants équilibrés ^4^, disques persistants hautes performances (SSD) ^4^ et disques persistants standard (HDD). Les machines virtuelles C3 prennent uniquement en charge les disques Hyperdisk Balanced. 
 |===
 Remarques :
 
@@ -288,7 +313,7 @@ Le type de machine Custom-4-16384 n'est plus pris en charge par les nouveaux sys
 . ^4^ les performances d'écriture améliorées sont activées lors de l'utilisation de disques persistants équilibrés et de disques persistants de performance (SSD).
 
 
-La console affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Cependant, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons rendu disponible uniquement pour un environnement de laboratoire spécifique.
+La console affiche un type de machine supplémentaire pris en charge pour Standard et BYOL : n1-highmem-4. Cependant, ce type de machine n'est pas destiné aux environnements de production. Nous l'avons rendu disponible uniquement pour un environnement de laboratoire spécifique. . ^5^ Vous pouvez déployer les machines virtuelles de nouvelle génération de la famille C3 sur https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#support-for-next-generation-google-cloud-vms-in-cloud-volumes-ontap-ha["Cloud Volumes ONTAP 9.19.1 et versions ultérieures pour les déploiements HA sur une seule zone de disponibilité"^]. Les machines c3-standard-44 et c3-standard-88 et leurs variantes LSSD prennent en charge par défaut la bande passante de niveau 1 dans la console Google Cloud. Consultez link:reference-configs-gcp.html#flash-cache-support["Prise en charge de Flash Cache"] pour plus d'informations sur les variantes LSSD.
 
 --
 ====
@@ -300,6 +325,7 @@ Pour plus d'informations sur des types de machines spécifiques, reportez-vous �
 
 
 
+[[flash-cache-support]]
 == Prise en charge de Flash Cache
 
 À partir de Cloud Volumes ONTAP 9.13.0, _Flash cache_, une vitesse d'écriture élevée et une unité de transmission maximale (MTU) supérieure de 1 8,896 octets sont disponibles pour les instances de déploiement de paires haute disponibilité suivantes :
@@ -315,7 +341,7 @@ Vous pouvez activer  et une vitesse d'écriture élevée lors du déploiement d'
 
 NOTE: _Flash Cache_, mode d'écriture élevé et une MTU de 8 896 dépendent des fonctionnalités et ne peuvent pas être désactivés individuellement dans une instance configurée.
 
-Dans les déploiements à nœud unique, à partir de Cloud Volumes ONTAP 9.18.1, si vous sélectionnez les variantes SSD locales (LSSD) des machines virtuelles C3, le cache Flash est activé par défaut. Vous ne pouvez pas changer de variante de machine virtuelle C3 LSSD dans votre déploiement Cloud Volumes ONTAP, même si la variante cible prend en charge le cache Flash.
+Les variantes SSD locales (LSSD) des machines virtuelles de la série C3 sont prises en charge dans Cloud Volumes ONTAP 9.18.1 et versions ultérieures pour les déploiements à nœud unique, et dans Cloud Volumes ONTAP 9.19.1 et versions ultérieures pour les déploiements HA dans une seule zone de disponibilité (AZ). Pour ces déploiements, si vous sélectionnez les variantes SSD locales (LSSD) des machines virtuelles de la série C3, Flash Cache est activé par défaut. Vous ne pouvez pas changer de variante de machine virtuelle C3 LSSD dans votre déploiement Cloud Volumes ONTAP, même si la variante cible prend en charge Flash Cache.
 
 Consultez ce tableau pour comprendre la variante de machine virtuelle et le nombre de disques LSSD qu'elle prend en charge :
 
@@ -340,47 +366,49 @@ Consultez ce tableau pour comprendre la variante de machine virtuelle et le nomb
 |===
 
 
+[[maximum-system-capacity-based-on-vm-type]]
 == Capacité système maximale en fonction du type de VM
 
-[cols="3*"]
+[cols="4*"]
 |===
-| Type de VM | Nombre maximal de disques de données pris en charge | Capacité maximale (en TiB) 
+| Type de VM | Nombre maximal de disques de données pris en charge pour les déploiements à nœud unique | Nombre maximal de disques de données pris en charge pour les déploiements HA à zone de disponibilité unique | Capacité maximale (en TiB) 
 
 
-| n2 (toutes variantes) | 124 | 257 
+| c3-standard-4 | 12 | S/O | 256 
 
 
-| c3-standard-4 | 12 | 256 
+| c3-standard-8 | 12 | 11 | 256 
 
 
-| c3-standard-8 | 12 | 256 
+| c3-standard-22 | 28 | 27 | 256 
 
 
-| c3-standard-22 | 28 | 256 
+| c3-standard-44 | 28 | 27 | 512 
 
 
-| c3-standard-44 | 28 | 512 
+| c3-standard-88 | 28 | 27 | 512 
 
 
-| c3-standard-88 | 28 | 512 
+| c3-standard-4-lssd | 12 | S/O | 256 
 
 
-| c3-standard-4-lssd | 12 | 256 
+| c3-standard-8-lssd | 12 | S/O | 256 
 
 
-| c3-standard-8-lssd | 12 | 256 
+| c3-standard-22-lssd | 28 | 27 | 256 
 
 
-| c3-standard-22-lssd | 28 | 256 
+| c3-standard-44-lssd | 28 | 27 | 512 
 
 
-| c3-standard-44-lssd | 28 | 512 
+| c3-standard-88-lssd | 28 | 27 | 512 
 
 
-| c3-standard-88-lssd | 28 | 512 
+| n2 (toutes variantes) | 124 | 124 | 257 
 |===
 
 
+[[supported-disk-sizes]]
 == Tailles de disque prises en charge
 
 Dans Google Cloud, un agrégat peut contenir jusqu'à 6 disques de même type et de même taille. Les tailles de disque suivantes sont prises en charge :
@@ -397,6 +425,7 @@ Dans Google Cloud, un agrégat peut contenir jusqu'à 6 disques de même type et
 
 
 
+[[supported-regions]]
 == Régions prises en charge
 
 Pour obtenir une prise en charge par région https://bluexp.netapp.com/cloud-volumes-global-regions["Régions Cloud volumes Global"^] de Google Cloud, consultezla section.

@@ -18,6 +18,7 @@ Cloud Volumes ONTAP présente des limites de configuration du stockage pour assu
 
 
 
+[[maximum-system-capacity-by-license]]
 == Capacité système maximale par licence
 
 La capacité maximale du système comprend le stockage sur disque ainsi que le stockage d'objets utilisé pour la hiérarchisation des données.
@@ -26,6 +27,7 @@ NetApp ne prend pas en charge le dépassement de la limite de capacité du syst�
 
 Pour certaines configurations, les limites de disque vous empêchent d'atteindre la limite de capacité en utilisant uniquement des disques. Dans ce cas, vous pouvez atteindre la limite de capacité de https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering des données inactives vers le stockage objet"^]. Reportez-vous aux limites de capacité et de disques ci-dessous pour plus de détails.
 
+[[cap-license-aws]]
 .Limite de capacité pour les licences basées sur la capacité
 Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation. Se référer à la  https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["Documentation AWS"^] pour plus d'informations.
 
@@ -59,6 +61,7 @@ Non, ce n'est pas le cas. Les données d'une paire AWS HA sont mises en miroir d
 
 
 
+[[aggregate-limits]]
 == Restrictions agrégées
 
 Cloud Volumes ONTAP utilise les volumes EBS comme disques et les regroupe dans _aggrégats_. Les agrégats fournissent du stockage aux volumes.
@@ -97,6 +100,7 @@ Remarques :
 
 
 
+[[disk-and-tiering-limits-by-ec2-instance]]
 == Limites de disque et de Tiering par instance EC2
 
 Les limites de capacité varient selon la famille de types d'instances EC2 que vous utilisez et selon que vous utilisez un système à nœud unique ou une paire haute disponibilité.
@@ -113,6 +117,7 @@ Les limites n'incluent pas le disque d'amorçage et le disque racine.
 
 
 
+[[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === Limites pour les différents modes de déploiement des licences basées sur la capacité
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un pack de licence basé sur la capacité. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^]
@@ -168,6 +173,7 @@ NOTE: Pour connaître la capacité maximale du système et les limites de capaci
 
 
 
+[[limits-for-different-deployment-modes-of-node-based-licensing]]
 === Limites des différents modes de déploiement des licences basées sur les nœuds
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent une licence basée sur les nœuds. Il s'agit du modèle de licence de génération précédente qui permet d'obtenir une licence Cloud Volumes ONTAP par nœud. Une licence basée sur les nœuds est toujours disponible pour les clients existants.
@@ -272,6 +278,7 @@ Les régions de cloud secret AWS et de cloud secret prennent en charge l'achat d
 
 
 
+[[storage-vm-limits]]
 == Limites des machines virtuelles de stockage
 
 Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
@@ -316,6 +323,7 @@ Les machines virtuelles de stockage que vous configurez pour la reprise après i
 
 
 
+[[storage-vm-limit-by-ec2-instance-type]]
 === Limite de VM de stockage par type d'instance EC2
 
 Lors de la création d'un VM de stockage supplémentaire, il est nécessaire d'allouer des adresses IP privées au port e0a. Le tableau ci-dessous identifie le nombre maximal d'adresses IP privées par interface, ainsi que le nombre d'adresses IP disponibles sur le port e0a après le déploiement de Cloud Volumes ONTAP. Le nombre d'adresses IP disponibles affecte directement le nombre maximal de VM de stockage pour cette configuration.
@@ -417,6 +425,7 @@ Comme elle nécessite une adresse IP privée, elle limite le nombre de VM de sto
 
 
 
+[[file-and-volume-limits]]
 == Limites au niveau des fichiers et des volumes
 
 [cols="22,22,56"]
@@ -459,6 +468,7 @@ Comme elle nécessite une adresse IP privée, elle limite le nombre de VM de sto
 
 
 
+[[iscsi-storage-limits]]
 == Limites de stockage iSCSI
 
 [cols="3*"]

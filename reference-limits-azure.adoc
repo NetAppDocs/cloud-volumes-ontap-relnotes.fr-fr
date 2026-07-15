@@ -18,12 +18,14 @@ Cloud Volumes ONTAP présente des limites de configuration du stockage pour assu
 
 
 
+[[maximum-system-capacity-by-license]]
 == Capacité système maximale par licence
 
 La capacité système maximale d'un système Cloud Volumes ONTAP est déterminée par sa licence. La capacité système maximale inclut le stockage sur disque et le stockage objet utilisé pour le Tiering des données.
 
 NetApp ne prend pas en charge le dépassement de la limite de capacité du système. Si vous atteignez la limite de capacité sous licence, la console NetApp affiche un message indiquant qu'une action est requise et vous empêche d'ajouter des disques supplémentaires.
 
+[[cap-license-azure]]
 .Limite de capacité pour les licences basées sur la capacité
 Avec des licences basées sur la capacité, chaque système Cloud Volumes ONTAP prend en charge la hiérarchisation du stockage d'objets.  La capacité totale à plusieurs niveaux peut évoluer jusqu'à la limite de compartiment du fournisseur de cloud.  Bien que la licence n'impose pas de restrictions de capacité, vous devez suivre les https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Bonnes pratiques de FabricPool"^] pour garantir des performances, une fiabilité et une rentabilité optimales lors de la configuration et de la gestion de la hiérarchisation.  Se référer à la https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Documentation Azure pour les disques gérés"^] et https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Documentation Azure pour le stockage d'objets blob"^] .
 
@@ -54,6 +56,7 @@ La limite de capacité s'adresse à l'ensemble de la paire haute disponibilité.
 
 
 
+[[aggregate-limits]]
 == Restrictions agrégées
 
 Cloud Volumes ONTAP utilise le stockage Azure comme disques et les regroupe dans des _agrégats_. Les agrégats fournissent du stockage aux volumes.
@@ -83,6 +86,7 @@ Remarques :
 
 
 
+[[disk-and-tiering-limits-by-vm-size]]
 == Limite des disques et du Tiering en fonction de la taille des machines virtuelles
 
 Les limites de capacité varient en fonction de la taille de la machine virtuelle et du type de système (nœud unique ou paire HA).
@@ -101,6 +105,7 @@ Les limites n'incluent pas le disque racine, le disque principal et VNVRAM.
 
 
 
+[[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === Limites pour les différents modes de déploiement des licences basées sur la capacité
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP utilisant un package de licence basé sur la capacité. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Découvrez les options des licences Cloud Volumes ONTAP"^] .
@@ -331,6 +336,7 @@ NOTE: Pour connaître la capacité maximale du système et les limites de capaci
 |===
 
 
+[[limits-for-different-deployment-modes-of-node-based-licensing]]
 === Limites des différents modes de déploiement des licences basées sur les nœuds
 
 Les limites de disque suivantes s'appliquent aux systèmes Cloud Volumes ONTAP qui utilisent des licences basées sur des nœuds.  La licence basée sur les nœuds est le modèle de génération précédente qui vous permet d'octroyer une licence Cloud Volumes ONTAP par nœud.  Les licences basées sur les nœuds sont toujours disponibles pour les clients existants.
@@ -618,6 +624,7 @@ Les paires HAUTE DISPONIBILITÉ ont deux types de configuration : un blob de pag
 ====
 
 
+[[storage-vm-limits]]
 == Limites des machines virtuelles de stockage
 
 Certaines configurations vous permettent de créer des machines virtuelles de stockage supplémentaires pour Cloud Volumes ONTAP.
@@ -663,6 +670,7 @@ Les machines virtuelles de stockage pour la reprise après sinistre (DR) n'ont p
 
 
 
+[[file-and-volume-limits]]
 == Limites au niveau des fichiers et des volumes
 
 [cols="22,22,56"]
@@ -705,6 +713,7 @@ Les machines virtuelles de stockage pour la reprise après sinistre (DR) n'ont p
 
 
 
+[[iscsi-storage-limits]]
 == Limites de stockage iSCSI
 
 [cols="3*"]
