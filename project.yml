@@ -62,38 +62,6 @@ sidebar:
     url: "/index.html"
   - title: Quoi de neuf
     url: "/reference-new.html"
-  - title: Présentation des licences
-    url: "/concept-licensing.html"
-  - title: Configurations compatibles
-    entries:
-    - title: AWS
-      url: "/reference-configs-aws.html"
-    - title: Azure
-      url: "/reference-configs-azure.html"
-    - title: Google Cloud
-      url: "/reference-configs-gcp.html"
-  - title: Limites de stockage
-    entries:
-    - title: AWS
-      url: "/reference-limits-aws.html"
-    - title: Azure
-      url: "/reference-limits-azure.html"
-    - title: Google Cloud
-      url: "/reference-limits-gcp.html"
-  - title: Problèmes connus
-    url: "/reference-issues.html"
-  - title: Limites connues
-    entries:
-    - title: Limitations communes
-      url: "/reference-limitations.html"
-    - title: Restrictions dans AWS
-      url: "/reference-limitations-aws.html"
-    - title: Restrictions dans Azure
-      url: "/reference-limitations-azure.html"
-    - title: Restrictions dans Google Cloud
-      url: "/reference-limitations-gcp.html"
-  - title: Les intégrations avec les fournisseurs cloud
-    url: "/reference-provider-integrations.html"
   - title: Mentions légales
     url: "/legal-notices.html"
 product-family:
