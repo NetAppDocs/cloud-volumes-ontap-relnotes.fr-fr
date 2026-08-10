@@ -20,10 +20,10 @@ Pour en savoir plus sur les fonctionnalités de Cloud Volumes ONTAP, les configu
 
 
 
-[[9-19-1-rc-13-july-2026]]
-== 9.19.1 RC (13 juillet 2026)
+[[9-19-1-10-august-2026]]
+== 9.19.1 (10 août 2026)
 
-La version candidate (RC) 9.19.1 de Cloud Volumes ONTAP est désormais disponible pour le déploiement et la mise à niveau uniquement sur Google Cloud. Cette version n'est pas disponible pour le déploiement et la mise à niveau sur Amazon Web Services (AWS) ni sur Microsoft Azure (Azure).
+La version 9.19.1 General Availability (GA) de Cloud Volumes ONTAP est désormais disponible pour le déploiement et la mise à niveau uniquement dans Amazon Web Services (AWS) et Google Cloud. Cette version n'est pas disponible pour le déploiement et la mise à niveau dans Microsoft Azure (Azure).
 
 
 
@@ -39,17 +39,17 @@ Lisez ces notes pour en savoir plus sur la mise à niveau vers cette version.
 
 Les mises à niveau de Cloud Volumes ONTAP doivent être effectuées depuis la console. Vous ne devez pas mettre à niveau Cloud Volumes ONTAP à l’aide de System Manager ou de l’interface de ligne de commande. Cela peut avoir un impact sur la stabilité du système.
 
-link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer une mise à niveau lorsque la console vous avertit"^] .
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html["Découvrez comment effectuer une mise à niveau lorsque la console vous avertit"^].
 
 
 
 [[supported-upgrade-path]]
 === Chemin de mise à niveau pris en charge
 
-La mise à niveau vers Cloud Volumes ONTAP 9.19.1 RC depuis la version 9.18.1 est possible uniquement sur Google Cloud. La console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP éligibles vers cette version.
+Vous pouvez mettre à niveau Cloud Volumes ONTAP de la version 9.18.1 à la version 9.19.1 sur AWS et Google Cloud. La console vous invitera à mettre à niveau les systèmes Cloud Volumes ONTAP compatibles vers cette version.
 
 
-NOTE: Sur AWS et Azure, vous ne serez pas invité à effectuer une mise à niveau vers la version 9.19.1 RC, car cette version n'est pas disponible pour le déploiement et la mise à niveau pour ces fournisseurs de cloud.
+NOTE: Dans Azure, vous ne serez pas invité à effectuer une mise à niveau vers la version 9.19.1, car cette version n'est pas disponible pour le déploiement et la mise à niveau chez ce fournisseur de cloud.
 
 
 
